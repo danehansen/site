@@ -1,0 +1,17 @@
+body {
+  --black000: #000;
+  --gray010: #1a1a1a;
+  --gray020: #333;
+  --gray030: #4d4d4d;
+  --gray040: #666;
+  --gray050: #808080;
+  --gray060: #999;
+  --gray070: #b3b3b3;
+  --gray080: #ccc;
+  --gray090: #e5e5e5;
+  --white100: #fff;
+
+  min-height: 400px;
+  background: var(--gray090);
+  color: var(--gray010);
+}

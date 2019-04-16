@@ -1,0 +1,31 @@
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = {
+  mode: "development",
+  entry: path.join(__dirname + "/src/index.js"),
+  output: {
+    path: path.join(__dirname + "/dist"),
+    filename: "index.[hash].js"
+  },
+  devtool: "source-map",
+  devServer: {
+    open: true,
+    contentBase: path.join(__dirname, "/dist"),
+    compress: true,
+    port: 6969
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "/src/index.html")
+    })
+  ],
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
+      }
+    ]
+  }
+};
