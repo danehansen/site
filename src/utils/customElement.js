@@ -1,8 +1,8 @@
-export function initClass(_class, elementName, templateHtml) {
-  const template = document.createElement("template");
-  template.innerHTML = templateHtml;
-  window.customElements.define(elementName, _class);
-  return template;
+export function initClass(customClass) {
+  customClass.TEMPLATE = document.createElement("template");
+  customClass.TEMPLATE.innerHTML = `<style>${customClass.CSS ||
+    ""}</style>${customClass.HTML || ""}`;
+  window.customElements.define(customClass.TAG_NAME, customClass);
 }
 
 export function initInstance(scope, template) {

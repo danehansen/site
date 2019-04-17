@@ -1,0 +1,57 @@
+page-element {
+  left: 0;
+}
+page-element + page-element {
+  left: var(--pageOffset);
+}
+page-element + page-element + page-element {
+  left: calc(var(--pageOffset) * 2);
+}
+page-element + page-element + page-element + page-element {
+  left: calc(var(--pageOffset) * 3);
+}
+page-element + page-element + page-element + page-element + page-element {
+  left: calc(var(--pageOffset) * 4);
+}
+page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element {
+  left: calc(var(--pageOffset) * 5);
+}
+page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element {
+  left: calc(var(--pageOffset) * 6);
+}
+page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element {
+  left: calc(var(--pageOffset) * 7);
+}
+page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element {
+  left: calc(var(--pageOffset) * 8);
+}
+
+page-element[selected] ~ page-element {
+  transform: translateX(calc(100% - var(--pageOffset)));
+}

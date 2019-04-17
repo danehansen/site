@@ -1,4 +1,9 @@
 import "./index.css";
-import "./elements/PageElement/PageElement.js";
+import { initClass } from "./utils/customElement";
 
-console.log("hello!");
+for (const customElement of [
+  require("./elements/TextElement/TextElement"),
+  require("./elements/PageElement/PageElement")
+]) {
+  initClass(customElement.default);
+}

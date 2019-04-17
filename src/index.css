@@ -1,3 +1,32 @@
+@font-face {
+  font-family: "title";
+  font-weight: regular;
+  src: url("./fonts/title.woff") format("woff");
+}
+
+@font-face {
+  font-family: "body";
+  font-weight: regular;
+  src: url("./fonts/body.woff") format("woff");
+}
+
+@font-face {
+  font-family: "body";
+  font-weight: bold;
+  src: url("./fonts/body-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "body";
+  font-style: italic;
+  font-weight: regular;
+  src: url("./fonts/body-italic.woff") format("woff");
+}
+
+html {
+  height: 100%;
+}
+
 body {
   --black000: #000;
   --gray010: #1a1a1a;
@@ -10,8 +39,21 @@ body {
   --gray080: #ccc;
   --gray090: #e5e5e5;
   --white100: #fff;
+  --green100: #0f0;
+  --red100: #f00;
+  --blue100: #00f;
+  --yellow100: #ff0;
+  --magenta100: #f0f;
+  --cyan100: #0ff;
 
-  min-height: 400px;
-  background: var(--gray090);
+  --pageOffset: 30px;
+
+  background: var(--black000);
   color: var(--gray010);
+  /* height: 100%; */
+  margin: 0;
+
+  width: 50%;
+  height: 50%;
+  position: relative;
 }

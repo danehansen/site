@@ -1,0 +1,17 @@
+:host([title]) {
+  color: var(--white100);
+  display: block;
+  font-family: "title";
+  font-size: 20px;
+  font-weight: bold;
+  height: var(--pageOffset);
+  line-height: calc(var(--pageOffset) + 6px);
+  text-transform: uppercase;
+}
+
+:host(:not([title])) {
+  color: var(--gray010);
+  font-family: "body";
+  font-size: 12px;
+  line-height: 150%;
+}

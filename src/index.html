@@ -5,42 +5,42 @@
     <title></title>
   </head>
   <body>
-    <page-element>
-      <h1 slot="title">tier 1</h1>
+    <page-element id="a">
+      <text-element title slot="title">a</text-element>
 
-      <page-element slot="pages">
-        <h1 slot="title">tier 2 A</h1>
+      <page-element slot="pages" id="a.b">
+        <text-element title slot="title">a > b</text-element>
 
-        <page-element slot="pages">
-          <h1 slot="title">tier 3 A</h1>
+        <page-element slot="pages" id="a.b.c">
+          <text-element title slot="title">a > b > c</text-element>
 
-          <page-element slot="pages">
-            <h1 slot="title">tier 4 A</h1>
+          <page-element slot="pages" id="a.b.c.i">
+            <text-element title slot="title">a > b > c > c i</text-element>
           </page-element>
 
-          <page-element slot="pages">
-            <h1 slot="title">tier 4 B</h1>
+          <page-element slot="pages" id="a.b.c.ii">
+            <text-element title slot="title">a > b > c > c ii</text-element>
           </page-element>
 
-          <page-element slot="pages">
-            <h1 slot="title">tier 4 C</h1>
+          <page-element slot="pages" id="a.b.c.iii">
+            <text-element title slot="title">a > b > c > c iii</text-element>
           </page-element>
         </page-element>
 
-        <page-element slot="pages">
-          <h1 slot="title">tier 3 B</h1>
+        <page-element slot="pages" id="a.b.i">
+          <text-element title slot="title">a > b > b i</text-element>
         </page-element>
 
-        <page-element slot="pages">
-          <h1 slot="title">tier 3 C</h1>
+        <page-element slot="pages" id="a.b.ii">
+          <text-element title slot="title">a > b > b ii</text-element>
         </page-element>
 
-        <page-element slot="pages">
-          <h1 slot="title">tier 3 D</h1>
+        <page-element slot="pages" id="a.b.iii">
+          <text-element title slot="title">a > b > b iii</text-element>
         </page-element>
 
-        <page-element slot="pages">
-          <h1 slot="title">tier 3 E</h1>
+        <page-element slot="pages" id="a.b.iv">
+          <text-element title slot="title">a > b > b iv</text-element>
         </page-element>
       </page-element>
     </page-element>

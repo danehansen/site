@@ -1,0 +1,64 @@
+:host {
+  background: var(--gray090);
+  border: 1px solid var(--gray050);
+  border-right: none;
+  border-bottom: none;
+  box-sizing: border-box;
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: calc(100% - var(--siblings, 0) * var(--pageOffset));
+}
+
+#childHolder {
+  position: absolute;
+  left: var(--pageOffset);
+  top: var(--pageOffset);
+  bottom: 0;
+  right: 0;
+}
+
+button {
+  position: absolute;
+  background: var(--green100);
+  width: var(--pageOffset);
+  height: 100%;
+  top: 0;
+  opacity: 0.2;
+  cursor: pointer;
+  outline: none;
+}
+
+:host([selected]) > button {
+  display: none;
+}
+
+/* slot[name="pages"]::slotted(page-element:nth-of-type(1)) {
+  left: 0;
+}
+slot[name="pages"]::slotted(page-element:nth-of-type(2)) {
+  left: var(--pageOffset);
+}
+slot[name="pages"]::slotted(page-element:nth-of-type(3)) {
+  left: calc(var(--pageOffset) * 2);
+}
+slot[name="pages"]::slotted(page-element:nth-of-type(4)) {
+  left: calc(var(--pageOffset) * 3);
+}
+slot[name="pages"]::slotted(page-element:nth-of-type(5)) {
+  left: calc(var(--pageOffset) * 4);
+}
+slot[name="pages"]::slotted(page-element:nth-of-type(6)) {
+  left: calc(var(--pageOffset) * 5);
+}
+slot[name="pages"]::slotted(page-element:nth-of-type(7)) {
+  left: calc(var(--pageOffset) * 6);
+}
+slot[name="pages"]::slotted(page-element:nth-of-type(8)) {
+  left: calc(var(--pageOffset) * 7);
+}
+slot[name="pages"]::slotted(page-element:nth-of-type(9)) {
+  left: calc(var(--pageOffset) * 8);
+}
+*/
