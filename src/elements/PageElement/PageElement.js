@@ -5,7 +5,7 @@ export default class PageElement extends HTMLElement {
   // _selectedPage = null;
 
   constructor() {
-    // console.log("PageElement.constructor");
+    console.log("PageElement.constructor");
     super();
     initInstance(this, PageElement.TEMPLATE);
     this._onClick = onClick.bind(this);
