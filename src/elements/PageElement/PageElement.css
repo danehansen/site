@@ -8,57 +8,54 @@
   height: 100%;
   position: absolute;
   top: 0;
-  width: calc(100% - var(--siblings, 0) * var(--pageOffset));
+  transition: transform 500ms;
+  transition-timing-function: transform cubic-bezier(1, 0, 0, 1);
+  width: calc(100% - var(--siblings, 0) * var(--pageYOffset));
 }
 
 #childHolder {
-  position: absolute;
-  left: var(--pageOffset);
-  top: var(--pageOffset);
+  background: rgba(255, 0, 0, 0.2);
   bottom: 0;
-  right: 0;
-}
-
-button {
   position: absolute;
-  background: var(--green100);
-  width: var(--pageOffset);
-  height: 100%;
-  top: 0;
-  opacity: 0.2;
-  cursor: pointer;
-  outline: none;
+  top: var(--pageYOffset);
+  transition: transform 500ms;
+  transition-timing-function: transform cubic-bezier(1, 0, 0, 1);
+  width: calc(100% - var(--pageXOffset));
 }
 
-:host([selected]) > button {
+:host(:not([selected])) #childHolder {
+  transform: translateX(var(--pageYOffset));
+}
+
+:host([selected]) #childHolder {
+  transform: translateX(var(--pageXOffset));
+}
+
+#link {
+  background: var(--green100);
+  height: 100%;
+  opacity: 0.2;
+  outline: none;
+  position: absolute;
+  top: 0;
+  width: var(--pageYOffset);
+}
+
+:host(:not([selected])) #link {
+  display: block;
+}
+
+:host([selected]) #link {
   display: none;
 }
 
-/* slot[name="pages"]::slotted(page-element:nth-of-type(1)) {
-  left: 0;
+#label {
+  padding: 0 6px;
+  transition: transform 500ms;
+  transform-origin: 15px 15px;
+  transition-timing-function: transform cubic-bezier(1, 0, 0, 1);
 }
-slot[name="pages"]::slotted(page-element:nth-of-type(2)) {
-  left: var(--pageOffset);
+
+:host(:not([selected])) #label {
+  transform: rotateZ(90deg);
 }
-slot[name="pages"]::slotted(page-element:nth-of-type(3)) {
-  left: calc(var(--pageOffset) * 2);
-}
-slot[name="pages"]::slotted(page-element:nth-of-type(4)) {
-  left: calc(var(--pageOffset) * 3);
-}
-slot[name="pages"]::slotted(page-element:nth-of-type(5)) {
-  left: calc(var(--pageOffset) * 4);
-}
-slot[name="pages"]::slotted(page-element:nth-of-type(6)) {
-  left: calc(var(--pageOffset) * 5);
-}
-slot[name="pages"]::slotted(page-element:nth-of-type(7)) {
-  left: calc(var(--pageOffset) * 6);
-}
-slot[name="pages"]::slotted(page-element:nth-of-type(8)) {
-  left: calc(var(--pageOffset) * 7);
-}
-slot[name="pages"]::slotted(page-element:nth-of-type(9)) {
-  left: calc(var(--pageOffset) * 8);
-}
-*/

@@ -2,16 +2,16 @@ page-element {
   left: 0;
 }
 page-element + page-element {
-  left: var(--pageOffset);
+  left: var(--pageYOffset);
 }
 page-element + page-element + page-element {
-  left: calc(var(--pageOffset) * 2);
+  left: calc(var(--pageYOffset) * 2);
 }
 page-element + page-element + page-element + page-element {
-  left: calc(var(--pageOffset) * 3);
+  left: calc(var(--pageYOffset) * 3);
 }
 page-element + page-element + page-element + page-element + page-element {
-  left: calc(var(--pageOffset) * 4);
+  left: calc(var(--pageYOffset) * 4);
 }
 page-element
   + page-element
@@ -19,7 +19,7 @@ page-element
   + page-element
   + page-element
   + page-element {
-  left: calc(var(--pageOffset) * 5);
+  left: calc(var(--pageYOffset) * 5);
 }
 page-element
   + page-element
@@ -28,17 +28,7 @@ page-element
   + page-element
   + page-element
   + page-element {
-  left: calc(var(--pageOffset) * 6);
-}
-page-element
-  + page-element
-  + page-element
-  + page-element
-  + page-element
-  + page-element
-  + page-element
-  + page-element {
-  left: calc(var(--pageOffset) * 7);
+  left: calc(var(--pageYOffset) * 6);
 }
 page-element
   + page-element
@@ -47,11 +37,21 @@ page-element
   + page-element
   + page-element
   + page-element
+  + page-element {
+  left: calc(var(--pageYOffset) * 7);
+}
+page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
+  + page-element
   + page-element
   + page-element {
-  left: calc(var(--pageOffset) * 8);
+  left: calc(var(--pageYOffset) * 8);
 }
 
 page-element[selected] ~ page-element {
-  transform: translateX(calc(100% - var(--pageOffset)));
+  transform: translateX(calc(100% - var(--pageYOffset)));
 }

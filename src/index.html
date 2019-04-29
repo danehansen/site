@@ -5,43 +5,23 @@
     <title></title>
   </head>
   <body>
-    <page-element id="a">
-      <text-element title slot="title">a</text-element>
+    <page-element id="a" name="A" selected>
+      <page-element slot="pages" id="a.b" name="ONE">
+        <page-element slot="pages" id="a.b.c" name="a">
+          <page-element slot="pages" id="a.b.c.i" name="one"></page-element>
 
-      <page-element slot="pages" id="a.b">
-        <text-element title slot="title">a > b</text-element>
+          <page-element slot="pages" id="a.b.c.ii" name="two"></page-element>
 
-        <page-element slot="pages" id="a.b.c">
-          <text-element title slot="title">a > b > c</text-element>
-
-          <page-element slot="pages" id="a.b.c.i">
-            <text-element title slot="title">a > b > c > c i</text-element>
-          </page-element>
-
-          <page-element slot="pages" id="a.b.c.ii">
-            <text-element title slot="title">a > b > c > c ii</text-element>
-          </page-element>
-
-          <page-element slot="pages" id="a.b.c.iii">
-            <text-element title slot="title">a > b > c > c iii</text-element>
-          </page-element>
+          <page-element slot="pages" id="a.b.c.iii" name="three"></page-element>
         </page-element>
 
-        <page-element slot="pages" id="a.b.i">
-          <text-element title slot="title">a > b > b i</text-element>
-        </page-element>
+        <page-element slot="pages" id="a.b.i" name="b"></page-element>
 
-        <page-element slot="pages" id="a.b.ii">
-          <text-element title slot="title">a > b > b ii</text-element>
-        </page-element>
+        <page-element slot="pages" id="a.b.ii" name="c"></page-element>
 
-        <page-element slot="pages" id="a.b.iii">
-          <text-element title slot="title">a > b > b iii</text-element>
-        </page-element>
+        <page-element slot="pages" id="a.b.iii" name="d"></page-element>
 
-        <page-element slot="pages" id="a.b.iv">
-          <text-element title slot="title">a > b > b iv</text-element>
-        </page-element>
+        <page-element slot="pages" id="a.b.iv" name="e"></page-element>
       </page-element>
     </page-element>
   </body>

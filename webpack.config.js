@@ -6,14 +6,17 @@ module.exports = {
   entry: path.join(__dirname + "/src/index.js"),
   output: {
     path: path.join(__dirname + "/dist"),
-    filename: "index.[hash].js"
+    filename: "index.[hash].js",
+    publicPath: "/"
   },
   devtool: "source-map",
   devServer: {
     open: true,
     contentBase: path.join(__dirname, "/dist"),
+    // contentBase: "/",
     compress: true,
-    port: 6969
+    port: 6969,
+    historyApiFallback: true
   },
   plugins: [
     new HtmlWebpackPlugin({

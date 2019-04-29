@@ -1,15 +1,12 @@
 import "./PageElementGlobal.css";
 import { initInstance } from "../../utils/customElement";
+import { changePage } from "../../utils/router";
 
 export default class PageElement extends HTMLElement {
-  // _selectedPage = null;
-
   constructor() {
-    console.log("PageElement.constructor");
     super();
+    // console.log("PageElement.constructor", this.href);
     initInstance(this, PageElement.TEMPLATE);
-    this._onClick = onClick.bind(this);
-    this._onClickReceived = onClickReceived.bind(this);
 
     const pages = [];
 
@@ -22,10 +19,12 @@ export default class PageElement extends HTMLElement {
       .getElementById("pages")
       .style.setProperty("--siblings", pages.length - 1);
 
-    this.shadowRoot
-      .querySelector("button")
-      .addEventListener("click", this._onClick);
-    this.addEventListener(_CLICK_EVENT, this._onClickReceived);
+    const anchorElement = this.shadowRoot.querySelector("a");
+    anchorElement.addEventListener("click", onClick.bind(this));
+    anchorElement.setAttribute("href", this.href);
+
+    const textElement = this.shadowRoot.querySelector("text-element");
+    textElement.innerHTML = this.getAttribute("name");
   }
 
   connectedCallback() {
@@ -48,32 +47,10 @@ export default class PageElement extends HTMLElement {
 }
 
 function onClick(evt) {
-  this.dispatchEvent(
-    new Event(_CLICK_EVENT, {
-      bubbles: true,
-      cancelable: true,
-      composed: false
-    })
-  );
-  this.setAttribute("selected", "");
-}
-
-function onClickReceived(evt) {
-  console.log(this.getAttribute("id"), this.getAttribute("selected"));
-  if (evt.target !== this) {
-    if (this.getAttribute("selected") !== null) {
-      evt.stopPropagation();
-    } else {
-      this.setAttribute("selected", "");
-    }
-    if (this._selectedPage) {
-      this._selectedPage.removeAttribute("selected");
-    }
-    this._selectedPage = evt.target;
-  }
+  evt.preventDefault();
+  changePage(this.href);
 }
 
 PageElement.TAG_NAME = "page-element";
 PageElement.HTML = require("!raw-loader!./PageElement.html").default;
 PageElement.CSS = require("!raw-loader!./PageElement.css").default;
-const _CLICK_EVENT = "PageElement.CLICK_EVENT";

@@ -46,14 +46,12 @@ body {
   --magenta100: #f0f;
   --cyan100: #0ff;
 
-  --pageOffset: 30px;
+  --pageXOffset: 6px;
+  --pageYOffset: 30px;
 
   background: var(--black000);
   color: var(--gray010);
-  /* height: 100%; */
+  height: 100%;
   margin: 0;
-
-  width: 50%;
-  height: 50%;
-  position: relative;
+  overflow: hidden;
 }

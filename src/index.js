@@ -1,4 +1,5 @@
 import "./index.css";
+import "./utils/router";
 import { initClass } from "./utils/customElement";
 
 for (const customElement of [
