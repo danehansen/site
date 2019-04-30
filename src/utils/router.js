@@ -1,4 +1,5 @@
 const SITE_MAP = getSiteMap();
+let activeContentElement;
 
 function makeTreeNode(element) {
   const fullName = element.getAttribute("name");
@@ -7,7 +8,8 @@ function makeTreeNode(element) {
     childBranches: [],
     element,
     isSelected,
-    routeName: titleToRoute(fullName)
+    routeName: titleToRoute(fullName),
+    contentElement: element.querySelector(":scope > [slot=content]")
   };
   return branch;
 }
@@ -90,6 +92,15 @@ function setDOMToRoute(fullRoute) {
           childBranch.isSelected = false;
           childBranch.element.removeAttribute("selected");
         }
+      }
+    } else {
+      const { contentElement } = currentBranch;
+      if (activeContentElement && activeContentElement !== contentElement) {
+        activeContentElement.removeAttribute("selected");
+      }
+      if (contentElement && contentElement !== activeContentElement) {
+        contentElement.setAttribute("selected", "");
+        activeContentElement = contentElement;
       }
     }
   }

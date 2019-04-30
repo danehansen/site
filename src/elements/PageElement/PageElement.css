@@ -14,7 +14,6 @@
 }
 
 #childHolder {
-  background: rgba(255, 0, 0, 0.2);
   bottom: 0;
   position: absolute;
   top: var(--pageYOffset);
@@ -32,7 +31,6 @@
 }
 
 #link {
-  background: var(--green100);
   height: 100%;
   opacity: 0.2;
   outline: none;

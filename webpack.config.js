@@ -20,6 +20,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      meta: {
+        viewport: "width=device-width, initial-scale=1, maximum-scale=1"
+      },
       template: path.join(__dirname, "/src/index.html")
     })
   ],
