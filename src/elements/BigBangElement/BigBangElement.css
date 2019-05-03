@@ -5,10 +5,43 @@
   width: 100%;
 }
 
-:host([selected]) {
-  background: rgba(0, 255, 0, 0.2);
+text-element {
+  color: var(--white100);
 }
 
-:host(:not([selected])) {
-  background: rgba(255, 0, 0, 0.2);
+canvas {
+  background-color: var(--gray020);
+  cursor: grab !important;
+  height: 100%;
+  top: 0;
+  width: 100%;
+}
+
+canvas.grabbing {
+  cursor: grabbing !important;
+}
+
+.invisible {
+  position: absolute;
+}
+
+form {
+  color: var(--white100);
+  left: var(--pageXOffset);
+  position: absolute;
+  top: var(--pageYOffset);
+}
+
+tr {
+  line-height: 23px;
+}
+
+th {
+  font: inherit;
+  text-align: right;
+}
+
+td {
+  padding-left: 5px;
+  text-align: left;
 }

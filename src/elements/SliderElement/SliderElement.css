@@ -1,0 +1,24 @@
+:host {
+  display: block;
+  position: relative;
+}
+
+input {
+  -webkit-appearance: none;
+  background-color: var(--gray070);
+  cursor: pointer;
+  height: 1px;
+  margin: 0;
+  outline: 0;
+  vertical-align: middle;
+  width: 100%;
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background: var(--gray080);
+  border-radius: calc(var(--buttonHeight) * 0.5);
+  border: none;
+  height: var(--buttonHeight);
+  width: var(--buttonHeight);
+}

@@ -96,12 +96,17 @@ function setDOMToRoute(fullRoute) {
     } else {
       const { contentElement } = currentBranch;
       if (activeContentElement && activeContentElement !== contentElement) {
-        activeContentElement.removeAttribute("selected");
+        activeContentElement.removeAttribute("active");
+        const { style } = activeContentElement;
+        setTimeout(() => {
+          style.display = null;
+        }, 500);
       }
       if (contentElement && contentElement !== activeContentElement) {
-        contentElement.setAttribute("selected", "");
-        activeContentElement = contentElement;
+        contentElement.style.display = "block";
+        contentElement.setAttribute("active", "");
       }
+      activeContentElement = contentElement;
     }
   }
 }

@@ -1,0 +1,28 @@
+:host {
+  background-color: var(--white100);
+  border-radius: 50%;
+  display: inline-block;
+  height: var(--buttonHeight);
+  position: relative;
+  width: var(--buttonHeight);
+}
+
+:host(:not([checked])) {
+  cursor: pointer;
+}
+
+:host(:not([checked])) #fill {
+  opacity: 0.1;
+}
+
+#fill {
+  --size: calc(var(--buttonHeight) - 4px);
+  background-color: var(--gray010);
+  border-radius: 50%;
+  height: var(--size);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: var(--size);
+}

@@ -1,15 +1,14 @@
 :host {
   background: var(--gray090);
-  border: 1px solid var(--gray050);
-  border-right: none;
-  border-bottom: none;
+  border-left: 1px solid var(--gray050);
+  border-top: 1px solid var(--gray050);
   box-sizing: border-box;
   display: block;
   height: 100%;
   position: absolute;
   top: 0;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
   transition: transform 500ms;
-  transition-timing-function: transform cubic-bezier(1, 0, 0, 1);
   width: calc(100% - var(--siblings, 0) * var(--pageYOffset));
 }
 
@@ -17,8 +16,8 @@
   bottom: 0;
   position: absolute;
   top: var(--pageYOffset);
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
   transition: transform 500ms;
-  transition-timing-function: transform cubic-bezier(1, 0, 0, 1);
   width: calc(100% - var(--pageXOffset));
 }
 
@@ -49,11 +48,22 @@
 
 #label {
   padding: 0 6px;
+  position: absolute;
+  top: 0;
+  transform-origin: 100% 0;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
   transition: transform 500ms;
-  transform-origin: 15px 15px;
-  transition-timing-function: transform cubic-bezier(1, 0, 0, 1);
 }
 
 :host(:not([selected])) #label {
-  transform: rotateZ(90deg);
+  transform: translateX(-100%) rotateZ(-90deg);
+}
+
+#content {
+  display: block;
+  transition: opacity 500ms linear;
+}
+
+:host(:not([selected])) #content {
+  opacity: 0;
 }

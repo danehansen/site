@@ -17,5 +17,9 @@
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1"
+  },
+  "dependencies": {
+    "@danehansen/math": "^0.3.1",
+    "@danehansen/point": "^0.2.5"
   }
 }

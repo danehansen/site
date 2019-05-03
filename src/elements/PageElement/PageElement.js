@@ -5,7 +5,6 @@ import { changePage } from "../../utils/router";
 export default class PageElement extends HTMLElement {
   constructor() {
     super();
-    // console.log("PageElement.constructor", this.href);
     initInstance(this, PageElement.TEMPLATE);
 
     const pages = [];
@@ -25,24 +24,6 @@ export default class PageElement extends HTMLElement {
 
     const textElement = this.shadowRoot.querySelector("text-element");
     textElement.innerHTML = this.getAttribute("name");
-  }
-
-  connectedCallback() {
-    // console.log("PageElement.connectedCallback");
-  }
-
-  disconnectedCallback() {
-    // console.log("PageElement.disconnectedCallback");
-  }
-
-  attributeChangedCallback(attributeName, oldValue, newValue, namespace) {
-    // console.log(
-    //   "PageElement.attributeChangedCallback",
-    //   attributeName,
-    //   oldValue,
-    //   newValue,
-    //   namespace
-    // );
   }
 }
 
