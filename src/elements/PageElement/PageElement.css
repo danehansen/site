@@ -52,11 +52,21 @@
   top: 0;
   transform-origin: 100% 0;
   transition-timing-function: cubic-bezier(1, 0, 0, 1);
-  transition: transform 500ms;
+  transition: transform 500ms, opacity 500ms;
 }
 
-:host(:not([selected])) #label {
+:host([selected]) #label {
+  transition: transform 500ms, opacity 500ms, visibility 500ms;
+}
+
+:host(:not([selected])) #label,
+:host([contains-content]) #label {
   transform: translateX(-100%) rotateZ(-90deg);
+}
+
+:host([selected][contains-content]) #label {
+  opacity: 0;
+  visibility: hidden;
 }
 
 #content {

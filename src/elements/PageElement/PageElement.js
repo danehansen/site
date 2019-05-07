@@ -7,16 +7,21 @@ export default class PageElement extends HTMLElement {
     super();
     initInstance(this, PageElement.TEMPLATE);
 
-    const pages = [];
+    let numPages = 0;
 
     for (const child of this.children) {
-      if (child.tagName.toLowerCase() === PageElement.TAG_NAME.toLowerCase()) {
-        pages.push(child);
+      if (child.tagName.toLowerCase() === PageElement.TAG_NAME) {
+        numPages++;
       }
     }
     this.shadowRoot
       .getElementById("pages")
-      .style.setProperty("--siblings", pages.length - 1);
+      .style.setProperty("--siblings", numPages - 1);
+
+    const containsContent = !!this.querySelector(":scope > [slot=content]");
+    if (containsContent) {
+      this.setAttribute("contains-content", "");
+    }
 
     const anchorElement = this.shadowRoot.querySelector("a");
     anchorElement.addEventListener("click", onClick.bind(this));

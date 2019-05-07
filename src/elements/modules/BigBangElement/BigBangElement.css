@@ -9,7 +9,7 @@ text-element {
   color: var(--white100);
 }
 
-canvas {
+universe-element {
   background-color: var(--gray020);
   cursor: grab !important;
   height: 100%;
@@ -17,7 +17,7 @@ canvas {
   width: 100%;
 }
 
-canvas.grabbing {
+universe-element.grabbing {
   cursor: grabbing !important;
 }
 
@@ -29,11 +29,11 @@ form {
   color: var(--white100);
   left: var(--pageXOffset);
   position: absolute;
-  top: var(--pageYOffset);
+  top: var(--pageXOffset);
 }
 
-tr {
-  line-height: 23px;
+table {
+  border-collapse: collapse;
 }
 
 th {
@@ -42,6 +42,5 @@ th {
 }
 
 td {
-  padding-left: 5px;
   text-align: left;
 }

@@ -30,11 +30,6 @@ export default class SliderElement extends HTMLElement {
     this._inputElement.addEventListener("input", this._onInput);
   }
 
-  disconnectedCallback() {
-    this._inputElement.removeEventListener("change", this._onChange);
-    this._inputElement.removeEventListener("input", this._onInput);
-  }
-
   attributeChangedCallback(attributeName, oldValue, newValue, namespace) {
     this._inputElement.setAttribute(attributeName, newValue);
   }

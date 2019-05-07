@@ -1,0 +1,39 @@
+:host {
+  --excess: 200px;
+  -webkit-overflow-scrolling: touch;
+  /* background: rgba(255, 0, 0, 0.2); */
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  overflow: scroll;
+}
+
+:host::-webkit-scrollbar {
+  display: none;
+}
+
+#scroller {
+  height: calc(100% + var(--excess) * 3);
+  width: calc(100% + var(--excess) * 3);
+  /* TODO: apply this for pinch zoom later */
+  /* touch-action: manipulation; */
+
+  /* background: repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 255, 0),
+      rgba(0, 0, 255, 0.2) var(--excess)
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 0, 0, 0),
+      rgba(255, 0, 0, 0.2) var(--excess)
+    ); */
+
+  /* width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: blue; */
+}

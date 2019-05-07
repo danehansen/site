@@ -1,5 +1,4 @@
-import { initInstance } from "../../utils/customElement";
-import Universe from "./Universe";
+import { initInstance } from "../../../utils/customElement";
 
 export default class BigBangElement extends HTMLElement {
   constructor() {
@@ -11,10 +10,12 @@ export default class BigBangElement extends HTMLElement {
     this._onAntimatterChange = this._onAntimatterChange.bind(this);
     this._onBangClick = this._onBangClick.bind(this);
     this._onResize = this._onResize.bind(this);
+    this._onPress = this._onPress.bind(this);
+    this._onRelease = this._onRelease.bind(this);
     this._onZoomPlusClick = this._onZoomClick.bind(this, 4 / 3);
     this._onZoomMinusClick = this._onZoomClick.bind(this, 3 / 4);
+    this._onScroll = this._onScroll.bind(this);
 
-    this._canvas = this.shadowRoot.querySelector("canvas");
     this._totalMassInput = this.shadowRoot.getElementById("totalMass");
     this._maxMassInput = this.shadowRoot.getElementById("maxMass");
     this._speedInput = this.shadowRoot.getElementById("speed");
@@ -23,11 +24,18 @@ export default class BigBangElement extends HTMLElement {
     this._zoomPlusButton = this.shadowRoot.getElementById("zoomPlus");
     this._zoomMinusButton = this.shadowRoot.getElementById("zoomMinus");
     this._bangButton = this.shadowRoot.getElementById("bang");
-    this._universe = new Universe(this._canvas);
+    this._universe = this.shadowRoot.querySelector("universe-element");
+    this._scrollCaptrueElement = this.shadowRoot.querySelector(
+      "scroll-capture-element"
+    );
+
+    this._universe.setAttribute("max-mass", this._maxMassInput.value);
+    this._universe.setAttribute("speed", this._speedInput.value);
+    this._universe.setAttribute("total-mass", this._totalMassInput.value);
   }
 
   connectedCallback() {
-    if (this.getAttribute("active") !== null) {
+    if (this.hasAttribute("active")) {
       this._init();
     }
   }
@@ -39,26 +47,34 @@ export default class BigBangElement extends HTMLElement {
   attributeChangedCallback(attributeName, oldValue, newValue, namespace) {
     switch (attributeName) {
       case "active": {
-        if (newValue !== null) {
-          this._init();
-        } else if (newValue === null) {
+        if (newValue === null) {
           this._destroy();
+        } else {
+          this._init();
         }
       }
     }
   }
 
-  _init() {
+  async _init() {
     if (this._active) {
       return;
     }
     this._active = true;
 
+    const dependancies = [
+      "scroll-capture-element",
+      "slider-element",
+      "universe-element"
+    ];
+    await Promise.all(
+      dependancies.map(str => window.customElements.whenDefined(str))
+    );
+
     this._onResize();
     this._onTotalMassChange();
     this._onMaxMassChange();
     this._onSpeedChange();
-    this._onAntimatterChange();
 
     this._totalMassInput.addEventListener("input", this._onTotalMassChange);
     this._maxMassInput.addEventListener("input", this._onMaxMassChange);
@@ -76,17 +92,22 @@ export default class BigBangElement extends HTMLElement {
     this._bangButton.addEventListener("click", this._onBangClick);
     window.addEventListener("resize", this._onResize);
 
+    this._universe.addEventListener("mousedown", this._onPress);
+    this._universe.addEventListener("mouseup", this._onRelease);
+
+    this._scrollCaptrueElement.addEventListener("scroll", this._onScroll);
+
     this._onBangClick();
-    this._setDragger();
   }
 
   _destroy() {
     if (!this._active) {
       return;
     }
-    this._active = true;
-    this._universe.stop();
+    this._active = false;
+    this._universe.active = false;
 
+    this._scrollCaptrueElement.removeEventListener("scroll", this._onScroll);
     this._totalMassInput.removeEventListener("input", this._onTotalMassChange);
     this._maxMassInput.removeEventListener("input", this._onMaxMassChange);
     this._speedInput.removeEventListener("input", this._onSpeedChange);
@@ -102,31 +123,34 @@ export default class BigBangElement extends HTMLElement {
     );
     this._bangButton.removeEventListener("click", this._onBangClick);
     window.removeEventListener("resize", this._onResize);
+
+    this._universe.removeEventListener("mousedown", this._onPress);
+    this._universe.removeEventListener("mouseup", this._onRelease);
   }
 
   _onResize() {
-    this._universe.width = window.innerWidth;
-    this._universe.height = window.innerHeight;
+    const { devicePixelRatio } = window;
+    this._universe.width = this.offsetWidth * devicePixelRatio;
+    this._universe.height = this.offsetHeight * devicePixelRatio;
   }
 
   _onTotalMassChange(evt) {
-    this._universe.totalMass = parseFloat(this._totalMassInput.value);
+    this._universe.totalMass = this._totalMassInput.value;
     if (evt) {
       this._onBangClick();
     }
   }
 
   _onMaxMassChange(evt) {
-    this._universe.maxMass = parseFloat(this._maxMassInput.value);
+    this._universe.maxMass = this._maxMassInput.value;
     if (evt) {
       this._onBangClick();
     }
   }
 
   _onZoomClick(amount, evt) {
-    // evt.preventDefault();
-    // this._scale *= parseFloat(amount);
-    // TweenLite.to(this._universe, 0.3, { scale: this._scale });
+    evt.preventDefault();
+    this._universe.scale *= parseFloat(amount);
   }
 
   _onSpeedChange(evt) {
@@ -134,58 +158,44 @@ export default class BigBangElement extends HTMLElement {
   }
 
   _onAntimatterChange(evt) {
-    this._universe.antimatter = this._antimatterYesInput.checked;
-    if (evt) {
-      this._onBangClick();
+    if (evt.target === this._antimatterYesInput) {
+      this._universe.antimatter = true;
+      if (this._antimatterYesInput.checked) {
+        this._antimatterNoInput.checked = false;
+      }
+    } else {
+      this._universe.antimatter = false;
+      if (this._antimatterYesInput.checked) {
+        this._antimatterYesInput.checked = false;
+      }
     }
-  }
-
-  _setDragger() {
-    // if (draggable) {
-    //   draggable.kill();
-    //   TweenLite.set(".invisible", { clearProps: "all" });
-    // }
-    // draggable = new Draggable(".invisible", {
-    //   throwProps: true,
-    //   trigger: canvas,
-    //   onPress: onPress,
-    //   onDrag: onDrag,
-    //   onRelease: onRelease,
-    //   zIndexBoost: false,
-    //   onThrowUpdate: onDrag,
-    //   cursor: "grab"
-    // });
+    this._onBangClick();
   }
 
   _onPress() {
-    //   canvas.className = "grabbing";
-    //   universe.stop();
+    this._universe.className = "grabbing";
+    this._universe.active = false;
   }
-  //
+
   _onRelease() {
-    //   canvas.className = "";
-    //   universe.start();
+    this._universe.className = "";
+    this._universe.active = true;
   }
 
   _onBangClick(evt) {
     if (evt) {
       evt.preventDefault();
-      this._scale = 1;
       this._x = 0;
       this._y = 0;
-      this._setDragger();
     }
+    this._scrollCaptrueElement.reset();
     this._universe.bang();
   }
 
-  _onDrag() {
-    //   var diffX = draggable.x - x;
-    //   var diffY = draggable.y - y;
-    //   x = draggable.x;
-    //   y = draggable.y;
-    //   universe.x = universe.x + diffX / scale;
-    //   universe.y = universe.y + diffY / scale;
-    //   universe.draw();
+  _onScroll(evt) {
+    const { target } = evt;
+    this._universe.x = target.x;
+    this._universe.y = target.y;
   }
 }
 

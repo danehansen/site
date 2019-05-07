@@ -26,10 +26,12 @@ export function moveParticle(particle) {
   particle.y = destY;
 }
 
-export function setParticleMass(particle, num, pixelRatio) {
+export function setParticleMass(particle, num) {
   particle.mass = num;
-  particle.radius =
-    Math.pow(Math.abs(num) / DENSITY / ((4 / 3) * Math.PI), 1 / 3) * pixelRatio;
+  particle.radius = Math.pow(
+    Math.abs(num) / DENSITY / ((4 / 3) * Math.PI),
+    1 / 3
+  );
   particle.color = num > 0 ? MATTER_COLOR : ANTIMATTER_COLOR;
 }
 
@@ -134,7 +136,7 @@ function closestPointOfApproach(ax, ay, avx, avy, bx, by, bvx, bvy) {
   return -(xDiff * vxDiff + yDiff * vyDiff) / c;
 }
 
-export function combine(particleA, particleB, pixelRatio) {
+export function combine(particleA, particleB) {
   const m1 = particleA.mass;
   const m2 = particleB.mass;
   const m2a = Math.abs(m2);
@@ -143,8 +145,8 @@ export function combine(particleA, particleB, pixelRatio) {
   particleA.y = interpolate(particleA.y, particleB.y, ratio);
   particleA.destX = interpolate(particleA.destX, particleB.destX, ratio);
   particleA.destY = interpolate(particleA.destY, particleB.destY, ratio);
-  setParticleMass(particleA, m1 + m2, pixelRatio);
-  setParticleMass(particleB, 0, pixelRatio);
+  setParticleMass(particleA, m1 + m2);
+  setParticleMass(particleB, 0);
 }
 
 function interpolate(num1, num2, f) {

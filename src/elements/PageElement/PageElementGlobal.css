@@ -55,3 +55,7 @@ page-element
 page-element[selected] ~ page-element {
   transform: translateX(calc(100% - var(--pageYOffset)));
 }
+
+body > page-element {
+  border: none;
+}
