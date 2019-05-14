@@ -15,7 +15,14 @@ export default class RadioElement extends HTMLElement {
   }
 
   connectedCallback() {
-    this.addEventListener("click", this._onClick);
+    console.log("HERE", this.parentNode.tagName);
+    const { parentNode } = this;
+    if (this.parentNode.tagName.toLowerCase() === "label") {
+      this._clickListener = this.parentNode;
+    } else {
+      this._clickListener = this;
+    }
+    this._clickListener.addEventListener("click", this._onClick);
   }
 
   get checked() {

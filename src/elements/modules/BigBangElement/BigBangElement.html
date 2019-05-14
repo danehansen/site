@@ -1,75 +1,62 @@
 <universe-element></universe-element>
 <scroll-capture-element></scroll-capture-element>
 <form>
-  <text-element>
-    <table>
-      <tr>
-        <th>Total mass:</th>
-        <td>
-          <slider-element
-            id="totalMass"
-            max="100000"
-            min="100"
-            value="60000"
-          ></slider-element>
-        </td>
-      </tr>
-      <tr>
-        <th>Max mass:</th>
-        <td>
-          <slider-element
-            id="maxMass"
-            max="5000"
-            min="50"
-            value="400"
-          ></slider-element>
-        </td>
-      </tr>
-      <tr>
-        <th>Include antimatter:</th>
-        <td>
-          <label>
-            <radio-element
-              checked
-              id="antimatterNo"
-              name="antimatter"
-              value="no"
-            ></radio-element>
-            <label for="antimatterNo">No</label>
-          </label>
-          <label>
-            <radio-element
-              id="antimatterYes"
-              name="antimatter"
-              value="yes"
-            ></radio-element>
-            <label for="antimatterYes">Yes</label>
-          </label>
-        </td>
-      </tr>
-      <tr>
-        <th>Speed:</th>
-        <td>
-          <slider-element
-            id="speed"
-            max="10"
-            min="0"
-            step="0.1"
-            value="1"
-          ></slider-element>
-        </td>
-      </tr>
-      <tr>
-        <th>Zoom:</th>
-        <td>
-          <button-element id="zoomPlus">+</button-element>
-          <button-element id="zoomMinus">-</button-element>
-        </td>
-      </tr>
-      <tr>
-        <th></th>
-        <td><button-element type="submit" id="bang">BANG!</button-element></td>
-      </tr>
-    </table>
-  </text-element>
+  <label>
+    <text-element>Total mass:</text-element>
+    <slider-element
+      id="totalMass"
+      max="100000"
+      min="100"
+      value="60000"
+    ></slider-element>
+  </label>
+  <label>
+    <text-element>Max mass:</text-element>
+    <slider-element
+      id="maxMass"
+      max="5000"
+      min="50"
+      value="400"
+    ></slider-element>
+  </label>
+  <label>
+    <text-element>Include antimatter:</text-element>
+    <div>
+      <label>
+        <radio-element
+          checked
+          id="antimatterNo"
+          name="antimatter"
+          value="no"
+        ></radio-element>
+        <text-element>No</text-element>
+      </label>
+      <label>
+        <radio-element
+          id="antimatterYes"
+          name="antimatter"
+          value="yes"
+        ></radio-element>
+        <text-element>Yes</text-element>
+      </label>
+    </div>
+  </label>
+  <label>
+    <text-element>Speed:</text-element>
+    <slider-element
+      id="speed"
+      max="10"
+      min="0"
+      step="0.1"
+      value="1"
+    ></slider-element>
+  </label>
+  <label>
+    <text-element>Zoom:</text-element>
+    <div>
+      <button-element id="zoomPlus">+</button-element>
+      <button-element id="zoomMinus">-</button-element>
+    </div>
+  </label>
+  <button-element type="submit" id="bang">BANG!</button-element>
 </form>

@@ -9,38 +9,9 @@ text-element {
   color: var(--white100);
 }
 
-universe-element {
-  background-color: var(--gray020);
-  cursor: grab !important;
-  height: 100%;
-  top: 0;
-  width: 100%;
-}
-
-universe-element.grabbing {
-  cursor: grabbing !important;
-}
-
-.invisible {
-  position: absolute;
-}
-
 form {
   color: var(--white100);
   left: var(--pageXOffset);
   position: absolute;
   top: var(--pageXOffset);
-}
-
-table {
-  border-collapse: collapse;
-}
-
-th {
-  font: inherit;
-  text-align: right;
-}
-
-td {
-  text-align: left;
 }
