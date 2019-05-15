@@ -19,8 +19,7 @@ export default class BigBangElement extends HTMLElement {
     this._totalMassInput = this.shadowRoot.getElementById("totalMass");
     this._maxMassInput = this.shadowRoot.getElementById("maxMass");
     this._speedInput = this.shadowRoot.getElementById("speed");
-    this._antimatterYesInput = this.shadowRoot.getElementById("antimatterYes");
-    this._antimatterNoInput = this.shadowRoot.getElementById("antimatterNo");
+    this._antimatterHolder = this.shadowRoot.getElementById("antimatter");
     this._zoomPlusButton = this.shadowRoot.getElementById("zoomPlus");
     this._zoomMinusButton = this.shadowRoot.getElementById("zoomMinus");
     this._bangButton = this.shadowRoot.getElementById("bang");
@@ -71,6 +70,7 @@ export default class BigBangElement extends HTMLElement {
       dependancies.map(str => window.customElements.whenDefined(str))
     );
 
+    this._universe.antimatter = this._antimatterHolder.value === "true";
     this._onResize();
     this._onTotalMassChange();
     this._onMaxMassChange();
@@ -81,14 +81,7 @@ export default class BigBangElement extends HTMLElement {
     this._speedInput.addEventListener("input", this._onSpeedChange);
     this._zoomPlusButton.addEventListener("click", this._onZoomPlusClick);
     this._zoomMinusButton.addEventListener("click", this._onZoomMinusClick);
-    this._antimatterYesInput.addEventListener(
-      "change",
-      this._onAntimatterChange
-    );
-    this._antimatterNoInput.addEventListener(
-      "change",
-      this._onAntimatterChange
-    );
+    this._antimatterHolder.addEventListener("change", this._onAntimatterChange);
     this._bangButton.addEventListener("click", this._onBangClick);
     window.addEventListener("resize", this._onResize);
 
@@ -113,11 +106,7 @@ export default class BigBangElement extends HTMLElement {
     this._speedInput.removeEventListener("input", this._onSpeedChange);
     this._zoomPlusButton.removeEventListener("click", this._onZoomPlusClick);
     this._zoomMinusButton.removeEventListener("click", this._onZoomMinusClick);
-    this._antimatterYesInput.removeEventListener(
-      "change",
-      this._onAntimatterChange
-    );
-    this._antimatterNoInput.removeEventListener(
+    this._antimatterHolder.removeEventListener(
       "change",
       this._onAntimatterChange
     );
@@ -158,17 +147,7 @@ export default class BigBangElement extends HTMLElement {
   }
 
   _onAntimatterChange(evt) {
-    if (evt.target === this._antimatterYesInput) {
-      this._universe.antimatter = true;
-      if (this._antimatterYesInput.checked) {
-        this._antimatterNoInput.checked = false;
-      }
-    } else {
-      this._universe.antimatter = false;
-      if (this._antimatterYesInput.checked) {
-        this._antimatterYesInput.checked = false;
-      }
-    }
+    this._universe.antimatter = evt.target.value === "true";
     this._onBangClick();
   }
 

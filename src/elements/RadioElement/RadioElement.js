@@ -3,7 +3,7 @@ import { initInstance } from "../../utils/customElement";
 function onClick(evt) {
   if (!this.checked) {
     this.checked = true;
-    this.dispatchEvent(new Event("change"));
+    this.dispatchEvent(new Event("change", { bubbles: true }));
   }
 }
 
@@ -15,7 +15,6 @@ export default class RadioElement extends HTMLElement {
   }
 
   connectedCallback() {
-    console.log("HERE", this.parentNode.tagName);
     const { parentNode } = this;
     if (this.parentNode.tagName.toLowerCase() === "label") {
       this._clickListener = this.parentNode;
