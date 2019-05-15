@@ -1,0 +1,88 @@
+:host {
+  background: var(--gray090);
+  border-left: 1px solid var(--gray050);
+  border-top: 1px solid var(--gray050);
+  box-sizing: border-box;
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition: transform var(--pageTransitionTime);
+  width: calc(100% - var(--siblings, 0) * var(--pageYOffset));
+}
+
+#branchHolder {
+  bottom: 0;
+  position: absolute;
+  top: var(--pageYOffset);
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition: transform var(--pageTransitionTime);
+  width: calc(100% - var(--pageXOffset));
+}
+
+:host(:not([selected])) #branchHolder {
+  transform: translateX(var(--pageYOffset));
+}
+
+:host([selected]) #branchHolder {
+  transform: translateX(var(--pageXOffset));
+}
+
+a {
+  height: 100%;
+  opacity: 0.2;
+  outline: none;
+  position: absolute;
+  top: 0;
+  width: var(--pageYOffset);
+}
+
+:host(:not([selected])) a {
+  display: block;
+}
+
+:host([selected]) a {
+  display: none;
+}
+
+type-setter {
+  padding: 0 6px;
+  position: absolute;
+  top: 0;
+  transform-origin: 100% 0;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  transition: transform var(--pageTransitionTime),
+    opacity var(--pageTransitionTime);
+}
+
+:host([selected]) type-setter {
+  transition: transform var(--pageTransitionTime),
+    opacity var(--pageTransitionTime), visibility var(--pageTransitionTime);
+}
+
+:host(:not([selected])) type-setter,
+:host([contains-content]) type-setter {
+  transform: translateX(-100%) rotateZ(-90deg);
+}
+
+:host([selected][contains-content]) type-setter {
+  opacity: 0;
+  visibility: hidden;
+}
+
+[name="content"] {
+  display: block;
+  transition: opacity var(--pageTransitionTime) linear;
+}
+
+:host(:not([selected])) [name="content"] {
+  opacity: 0;
+}
+
+[name="content"]::slotted(*) {
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}

@@ -1,0 +1,21 @@
+<control-group>
+  <label>
+    <type-setter>Resolution:</type-setter>
+    <range-slider
+      id="resolution"
+      max="100000"
+      min="100"
+      value="60000"
+    ></range-slider>
+  </label>
+  <label>
+    <type-setter>Variant:</type-setter>
+    <radio-group id="variant">
+      <radio-button checked value="ascii">ASCII</radio-button>
+      <radio-button value="glitch">Glitch</radio-button>
+      <radio-button value="halftone">Halftone</radio-button>
+      <radio-button value="pixelate">Pixelate</radio-button>
+      <radio-button value="codePage437">Code Page 437</radio-button>
+    </radio-group>
+  </label>
+</control-group>

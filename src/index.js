@@ -3,17 +3,17 @@ import "utils/router";
 import { initClass } from "utils/customElement";
 
 for (const customElement of [
-  require("elements/ButtonElement/ButtonElement"),
-  require("elements/ControlsElement/ControlsElement"),
-  require("elements/modules/BigBangElement/BigBangElement"),
-  require("elements/modules/BigBangElement/UniverseElement/UniverseElement"),
-  require("elements/modules/VideoFiltersElement/VideoFiltersElement"),
-  require("elements/PageElement/PageElement"),
-  require("elements/RadioElement/RadioElement"),
-  require("elements/RadioGroupElement/RadioGroupElement"),
-  require("elements/ScrollCaptureElement/ScrollCaptureElement"),
-  require("elements/SliderElement/SliderElement"),
-  require("elements/TextElement/TextElement")
+  require("elements/BasicButton/BasicButton"),
+  require("elements/ControlGroup/ControlGroup"),
+  require("elements/DemoBigBang/DemoBigBang"),
+  require("elements/DemoBigBang/GravitySimulation/GravitySimulation"),
+  require("elements/DemoVideoFilters/DemoVideoFilters"),
+  require("elements/TreeBranch/TreeBranch"),
+  require("elements/RadioButton/RadioButton"),
+  require("elements/RadioGroup/RadioGroup"),
+  require("elements/ScrollCapture/ScrollCapture"),
+  require("elements/RangeSlider/RangeSlider"),
+  require("elements/TypeSetter/TypeSetter")
 ]) {
   initClass(customElement.default);
 }

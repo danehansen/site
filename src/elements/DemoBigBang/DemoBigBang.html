@@ -1,0 +1,42 @@
+<gravity-simulation></gravity-simulation>
+<scroll-capture></scroll-capture>
+<control-group>
+  <label>
+    <type-setter>Total mass:</type-setter>
+    <range-slider
+      id="totalMass"
+      max="100000"
+      min="100"
+      value="60000"
+    ></range-slider>
+  </label>
+  <label>
+    <type-setter>Max mass:</type-setter>
+    <range-slider id="maxMass" max="5000" min="50" value="400"></range-slider>
+  </label>
+  <label>
+    <type-setter>Include antimatter:</type-setter>
+    <radio-group id="antimatter">
+      <radio-button checked value="false">No</radio-button
+      ><radio-button value="true">Yes</radio-button>
+    </radio-group>
+  </label>
+  <label>
+    <type-setter>Speed:</type-setter>
+    <range-slider
+      id="speed"
+      max="10"
+      min="0"
+      step="0.1"
+      value="1"
+    ></range-slider>
+  </label>
+  <label>
+    <type-setter>Zoom:</type-setter>
+    <div>
+      <basic-button id="zoomPlus">+</basic-button>
+      <basic-button id="zoomMinus">-</basic-button>
+    </div>
+  </label>
+  <basic-button id="bang">bang!</basic-button>
+</control-group>

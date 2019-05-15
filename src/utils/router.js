@@ -21,7 +21,7 @@ function makeTreeNode(element) {
 
 function getSiteMap() {
   function addChildrenToTree(branch, href = "") {
-    const children = branch.element.querySelectorAll(":scope > page-element");
+    const children = branch.element.querySelectorAll(":scope > tree-branch");
     for (const child of children) {
       const obj = makeTreeNode(child);
       branch.childBranches.push(obj);
@@ -31,7 +31,7 @@ function getSiteMap() {
     }
   }
 
-  const trunk = makeTreeNode(document.querySelector("page-element"));
+  const trunk = makeTreeNode(document.querySelector("tree-branch"));
   addChildrenToTree(trunk);
   return trunk;
 }

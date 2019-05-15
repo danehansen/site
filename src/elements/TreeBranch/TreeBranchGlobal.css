@@ -1,0 +1,61 @@
+tree-branch {
+  left: 0;
+}
+tree-branch + tree-branch {
+  left: var(--pageYOffset);
+}
+tree-branch + tree-branch + tree-branch {
+  left: calc(var(--pageYOffset) * 2);
+}
+tree-branch + tree-branch + tree-branch + tree-branch {
+  left: calc(var(--pageYOffset) * 3);
+}
+tree-branch + tree-branch + tree-branch + tree-branch + tree-branch {
+  left: calc(var(--pageYOffset) * 4);
+}
+tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch {
+  left: calc(var(--pageYOffset) * 5);
+}
+tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch {
+  left: calc(var(--pageYOffset) * 6);
+}
+tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch {
+  left: calc(var(--pageYOffset) * 7);
+}
+tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch
+  + tree-branch {
+  left: calc(var(--pageYOffset) * 8);
+}
+
+tree-branch[selected] ~ tree-branch {
+  transform: translateX(calc(100% - var(--pageYOffset)));
+}
+
+body > tree-branch {
+  border: none;
+}

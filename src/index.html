@@ -5,16 +5,16 @@
     <title></title>
   </head>
   <body>
-    <page-element name="test" selected>
-      <page-element slot="pages" name="experimentation">
-        <page-element slot="pages" name="big bang">
-          <big-bang-element slot="content"></big-bang-element>
-        </page-element>
+    <tree-branch name="test" selected>
+      <tree-branch slot="branches" name="experimentation">
+        <tree-branch slot="branches" name="big bang">
+          <demo-big-bang slot="content"></demo-big-bang>
+        </tree-branch>
 
-        <page-element slot="pages" name="video filters">
-          <video-filters-element slot="content"></video-filters-element>
-        </page-element>
-      </page-element>
-    </page-element>
+        <tree-branch slot="branches" name="video filters">
+          <demo-video-filters slot="content"></demo-video-filters>
+        </tree-branch>
+      </tree-branch>
+    </tree-branch>
   </body>
 </html>

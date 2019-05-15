@@ -1,0 +1,21 @@
+:host {
+  background-color: var(--gray080);
+  border-radius: calc(var(--buttonHeight) * 0.5);
+  display: inline-block;
+  font-weight: bold;
+  height: var(--buttonHeight);
+  line-height: 0;
+  min-width: var(--buttonHeight);
+  padding: 0 8px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: transform 200ms;
+}
+
+:host(:not([disabled])) {
+  cursor: pointer;
+}
+
+:host(:hover) {
+  transform: scale(1.2);
+}

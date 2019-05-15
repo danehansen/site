@@ -1,0 +1,12 @@
+type-setter {
+  color: var(--white100);
+}
+
+control-group {
+  color: var(--white100);
+}
+
+#zoomPlus,
+#zoomMinus {
+  padding: 0;
+}
