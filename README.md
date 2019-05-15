@@ -8,6 +8,8 @@ WIP personal site.
 - Extreme use of custom elements as opposed to a framework.
 - `index.html` acts as the entire site map/content holder.
 - CSS always preferred over JS when possible.
+- No reset/normalized CSS.
+- No overriding CSS.
 
 ## To run site:
 
