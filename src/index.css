@@ -48,11 +48,9 @@ body {
 
   --pageXOffset: 6px;
   --pageYOffset: 30px;
-
   --buttonHeight: 16px;
 
   background: var(--black000);
-  color: var(--gray010);
   height: 100%;
   margin: 0;
   overflow: hidden;

@@ -8,7 +8,7 @@
   position: absolute;
   top: 0;
   transition-timing-function: cubic-bezier(1, 0, 0, 1);
-  transition: transform 500ms;
+  transition: transform var(--pageTransitionTime);
   width: calc(100% - var(--siblings, 0) * var(--pageYOffset));
 }
 
@@ -17,7 +17,7 @@
   position: absolute;
   top: var(--pageYOffset);
   transition-timing-function: cubic-bezier(1, 0, 0, 1);
-  transition: transform 500ms;
+  transition: transform var(--pageTransitionTime);
   width: calc(100% - var(--pageXOffset));
 }
 
@@ -52,11 +52,13 @@
   top: 0;
   transform-origin: 100% 0;
   transition-timing-function: cubic-bezier(1, 0, 0, 1);
-  transition: transform 500ms, opacity 500ms;
+  transition: transform var(--pageTransitionTime),
+    opacity var(--pageTransitionTime);
 }
 
 :host([selected]) #label {
-  transition: transform 500ms, opacity 500ms, visibility 500ms;
+  transition: transform var(--pageTransitionTime),
+    opacity var(--pageTransitionTime), visibility var(--pageTransitionTime);
 }
 
 :host(:not([selected])) #label,
@@ -71,9 +73,16 @@
 
 #content {
   display: block;
-  transition: opacity 500ms linear;
+  transition: opacity var(--pageTransitionTime) linear;
 }
 
 :host(:not([selected])) #content {
   opacity: 0;
+}
+
+#content::slotted(*) {
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }

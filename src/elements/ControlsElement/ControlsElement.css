@@ -1,0 +1,6 @@
+:host {
+  display: block;
+  left: var(--pageXOffset);
+  position: absolute;
+  top: var(--pageXOffset);
+}

@@ -1,4 +1,4 @@
-import { initInstance } from "../../../utils/customElement";
+import { initInstance } from "utils/customElement";
 
 export default class BigBangElement extends HTMLElement {
   constructor() {

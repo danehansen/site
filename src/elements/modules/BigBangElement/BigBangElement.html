@@ -1,6 +1,6 @@
 <universe-element></universe-element>
 <scroll-capture-element></scroll-capture-element>
-<form>
+<controls-element>
   <label>
     <text-element>Total mass:</text-element>
     <slider-element
@@ -21,16 +21,10 @@
   </label>
   <label>
     <text-element>Include antimatter:</text-element>
-    <radio-holder-element id="antimatter">
-      <label>
-        <radio-element checked value="false"></radio-element>
-        <text-element>No</text-element>
-      </label>
-      <label>
-        <radio-element value="true"></radio-element>
-        <text-element>Yes</text-element>
-      </label>
-    </radio-holder-element>
+    <radio-group-element id="antimatter">
+      <radio-element checked value="false">No</radio-element>
+      <radio-element value="true">Yes</radio-element>
+    </radio-group-element>
   </label>
   <label>
     <text-element>Speed:</text-element>
@@ -50,4 +44,4 @@
     </div>
   </label>
   <button-element type="submit" id="bang">BANG!</button-element>
-</form>
+</controls-element>

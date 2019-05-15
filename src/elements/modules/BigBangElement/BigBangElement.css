@@ -1,17 +1,7 @@
-:host {
-  display: block;
-  height: 100%;
-  position: absolute;
-  width: 100%;
-}
-
 text-element {
   color: var(--white100);
 }
 
-form {
+controls-element {
   color: var(--white100);
-  left: var(--pageXOffset);
-  position: absolute;
-  top: var(--pageXOffset);
 }

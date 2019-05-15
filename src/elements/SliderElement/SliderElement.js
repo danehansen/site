@@ -1,15 +1,11 @@
-import { initInstance } from "../../utils/customElement";
+import { initInstance } from "utils/customElement";
 
 function onChange(evt) {
-  evt.stopImmediatePropagation();
   this.setAttribute("value", evt.currentTarget.value);
-  this.dispatchEvent(new Event("change"));
 }
 
 function onInput(evt) {
   this.setAttribute("value", evt.currentTarget.value);
-  evt.stopImmediatePropagation();
-  this.dispatchEvent(new Event("input"));
 }
 
 export default class SliderElement extends HTMLElement {

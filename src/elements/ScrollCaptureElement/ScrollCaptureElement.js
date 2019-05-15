@@ -1,4 +1,4 @@
-import { initInstance } from "../../utils/customElement";
+import { initInstance } from "utils/customElement";
 
 const EXCESS = 200;
 

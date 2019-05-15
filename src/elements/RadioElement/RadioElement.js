@@ -1,4 +1,4 @@
-import { initInstance } from "../../utils/customElement";
+import { initInstance } from "utils/customElement";
 
 function onClick(evt) {
   if (!this.checked) {
@@ -15,13 +15,7 @@ export default class RadioElement extends HTMLElement {
   }
 
   connectedCallback() {
-    const { parentNode } = this;
-    if (this.parentNode.tagName.toLowerCase() === "label") {
-      this._clickListener = this.parentNode;
-    } else {
-      this._clickListener = this;
-    }
-    this._clickListener.addEventListener("click", this._onClick);
+    this.addEventListener("click", this._onClick);
   }
 
   get checked() {

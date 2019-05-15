@@ -1,6 +1,6 @@
 import "./PageElementGlobal.css";
-import { initInstance } from "../../utils/customElement";
-import { changePage } from "../../utils/router";
+import { initInstance } from "utils/customElement";
+import { changePage } from "utils/router";
 
 export default class PageElement extends HTMLElement {
   constructor() {

@@ -1,4 +1,9 @@
 :host {
+  align-items: center;
+  display: inline-flex;
+}
+
+#circle {
   background-color: var(--white100);
   border-radius: 50%;
   display: inline-block;
@@ -25,4 +30,8 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width: var(--size);
+}
+
+text-element {
+  color: inherit;
 }

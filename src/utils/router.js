@@ -1,5 +1,10 @@
+const PAGE_TRANSITION_TIME = 500;
 const SITE_MAP = getSiteMap();
 let activeContentElement;
+document.body.style.setProperty(
+  "--pageTransitionTime",
+  `${PAGE_TRANSITION_TIME}ms`
+);
 
 function makeTreeNode(element) {
   const fullName = element.getAttribute("name");
@@ -100,7 +105,7 @@ function setDOMToRoute(fullRoute) {
         const { style } = activeContentElement;
         setTimeout(() => {
           style.display = null;
-        }, 500);
+        }, PAGE_TRANSITION_TIME);
       }
       if (contentElement && contentElement !== activeContentElement) {
         contentElement.style.display = "block";
