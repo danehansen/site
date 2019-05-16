@@ -17,11 +17,11 @@
 }
 
 :host(:not([checked])) #fill {
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 #fill {
-  --size: calc(var(--buttonHeight) - 4px);
+  --size: calc(var(--buttonHeight) - 6px);
   background-color: var(--gray010);
   border-radius: 50%;
   height: var(--size);
