@@ -143,3 +143,7 @@ export function changePage(href) {
 }
 
 changePage();
+
+window.addEventListener("popstate", function(evt) {
+  changePage();
+});
