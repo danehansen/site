@@ -1,55 +1,26 @@
 tree-branch {
   left: 0;
 }
-tree-branch + tree-branch {
+tree-branch:nth-of-type(2) {
   left: var(--pageYOffset);
 }
-tree-branch + tree-branch + tree-branch {
+tree-branch:nth-of-type(3) {
   left: calc(var(--pageYOffset) * 2);
 }
-tree-branch + tree-branch + tree-branch + tree-branch {
+tree-branch:nth-of-type(4) {
   left: calc(var(--pageYOffset) * 3);
 }
-tree-branch + tree-branch + tree-branch + tree-branch + tree-branch {
+tree-branch:nth-of-type(5) {
   left: calc(var(--pageYOffset) * 4);
 }
-tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch {
+tree-branch:nth-of-type(6) {
   left: calc(var(--pageYOffset) * 5);
 }
-tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch {
+tree-branch:nth-of-type(7) {
   left: calc(var(--pageYOffset) * 6);
 }
-tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch {
+tree-branch:nth-of-type(8) {
   left: calc(var(--pageYOffset) * 7);
-}
-tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch
-  + tree-branch {
-  left: calc(var(--pageYOffset) * 8);
 }
 
 tree-branch[selected] ~ tree-branch {
