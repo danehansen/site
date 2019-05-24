@@ -10,6 +10,7 @@ WIP personal site.
 - CSS always preferred over JS when possible.
 - No reset/normalized CSS.
 - No overriding CSS.
+- Host site from github.com.
 
 ## To run site:
 
