@@ -1,20 +1,19 @@
+<ascii-video id="ascii" fit="cover" inverse>
+  <video></video>
+</ascii-video>
+
+<ascii-video id="codePage437" fit="cover" inverse> </ascii-video>
+
 <control-group>
+  <div id="controlBackground"></div>
   <label>
     <type-setter>Resolution:</type-setter>
-    <range-slider
-      id="resolution"
-      max="100000"
-      min="100"
-      value="60000"
-    ></range-slider>
+    <range-slider max="10" min="0" step="0.0001"></range-slider>
   </label>
   <label>
     <type-setter>Variant:</type-setter>
     <radio-group id="variant">
       <radio-button checked value="ascii">ASCII</radio-button>
-      <radio-button value="glitch">Glitch</radio-button>
-      <radio-button value="halftone">Halftone</radio-button>
-      <radio-button value="pixelate">Pixelate</radio-button>
       <radio-button value="codePage437">Code Page 437</radio-button>
     </radio-group>
   </label>

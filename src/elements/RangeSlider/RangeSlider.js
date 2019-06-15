@@ -27,7 +27,7 @@ export default class RangeSlider extends HTMLElement {
   }
 
   attributeChangedCallback(attributeName, oldValue, newValue, namespace) {
-    this._inputElement.setAttribute(attributeName, newValue);
+    this._inputElement[attributeName] = newValue;
   }
 
   get min() {

@@ -13,7 +13,6 @@ module.exports = {
   devServer: {
     open: true,
     contentBase: path.join(__dirname, "/dist"),
-    // contentBase: "/",
     compress: true,
     port: 6969,
     historyApiFallback: true
@@ -35,7 +34,12 @@ module.exports = {
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/,
         use: ["file-loader"]
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: ["file-loader"]
       }
+      // TODO: take out jpg loader later
     ]
   },
   resolve: {

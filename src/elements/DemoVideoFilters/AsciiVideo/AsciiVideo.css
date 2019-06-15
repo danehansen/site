@@ -1,0 +1,20 @@
+:host {
+  -webkit-font-smoothing: none;
+  align-items: center;
+  display: flex;
+  font-family: monospace;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#textMeasurer {
+  background-color: inherit;
+  display: none;
+  font: inherit;
+  position: absolute;
+}
+
+#asciiHolder {
+  font: inherit;
+  white-space: nowrap;
+}

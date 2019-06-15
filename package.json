@@ -19,7 +19,8 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "@danehansen/math": "^0.3.1",
+    "@danehansen/image-data-reader": "^0.0.1",
+    "@danehansen/math": "^0.3.3",
     "@danehansen/point": "^0.2.5"
   }
 }
