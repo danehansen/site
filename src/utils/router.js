@@ -37,7 +37,7 @@ function getSiteMap() {
 }
 
 function titleToRoute(title) {
-  return title.toLowerCase().replace(/\W/u, "");
+  return title.toLowerCase().replace(/\W/ug, "");
 }
 
 function getStringRoute(str) {

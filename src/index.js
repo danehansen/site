@@ -15,7 +15,7 @@ for (const customElement of [
   require("elements/RangeSlider/RangeSlider"),
   require("elements/TypeSetter/TypeSetter"),
   require("elements/DemoVideoFilters/AsciiImage/AsciiImage"),
-  require("elements/DemoVideoFilters/AsciiVideo/AsciiVideo")
+  require("elements/DemoVideoFilters/AsciiVideo/AsciiVideo"),
 ]) {
   initClass(customElement.default);
 }

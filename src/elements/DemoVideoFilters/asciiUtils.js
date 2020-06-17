@@ -197,12 +197,13 @@ function brightnessToChar(brightness, brightnessMap) {
   return b;
 }
 
-export function dataToString(idr, columns, rows, brightnessMap) {
+function dataToString(idr, columns, rows, brightnessMap, mirror) {
   let str = "";
   for (let y = 0; y < rows; y++) {
     for (let x = 0; x < columns; x++) {
+      let mirroredX = mirror ? (columns - x - 1) : x;
       str += brightnessToChar(
-        Math.min(WHITE_BRIGHTNESS - 1, Math.max(0, idr.brightness(x, y))),
+        Math.min(WHITE_BRIGHTNESS - 1, Math.max(0, idr.brightness(mirroredX, y))),
         brightnessMap
       );
       if (x === columns - 1 && y < rows - 1) {
@@ -219,6 +220,7 @@ export function doSomething({
   destHeight,
   destWidth,
   fit,
+  mirror,
   rowHeight,
   source,
   sourceHeight,
@@ -295,6 +297,7 @@ export function doSomething({
     imageDataReader,
     renderedColumns,
     renderedRows,
-    brightnessMap
+    brightnessMap,
+    mirror
   );
 }

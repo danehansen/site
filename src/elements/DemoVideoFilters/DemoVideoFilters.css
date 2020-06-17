@@ -24,6 +24,12 @@ ascii-video {
   display: none;
 }
 
+video {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
 #ascii {
   background-color: var(--blue100);
   color: var(--white100);

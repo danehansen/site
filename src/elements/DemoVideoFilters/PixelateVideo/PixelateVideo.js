@@ -1,20 +1,18 @@
 import { initInstance } from "utils/customElement";
-import { doSomething, getCharacterData } from "../asciiUtils";
-import {debounce} from 'lodash';
 
-export default class AsciiVideo extends HTMLElement {
+export default class PixelateVideo extends HTMLElement {
   constructor() {
-    // console.log("AsciiVideo.constructor");
+    // console.log("PixelateVideo.constructor");
     super();
-    initInstance(this, AsciiVideo.TEMPLATE);
+    initInstance(this, PixelateVideo.TEMPLATE);
     this.render = this.render.bind(this);
-    this._init = debounce(this._init.bind(this));
+    this._init = this._init.bind(this);
     this._destroy = this._destroy.bind(this);
     this._onMutationObserved = this._onMutationObserved.bind(this);
   }
 
   connectedCallback() {
-    // console.log("AsciiVideo.connectedCallback");
+    // console.log("PixelateVideo.connectedCallback");
     this._isConnected = true;
     this._mutationObserver = new MutationObserver(this._onMutationObserved);
     this._mutationObserver.observe(this, {
@@ -24,14 +22,14 @@ export default class AsciiVideo extends HTMLElement {
   }
 
   disconnectedCallback() {
-    // console.log("AsciiVideo.disconnectedCallback");
+    // console.log("PixelateVideo.disconnectedCallback");
     this._isConnected = false;
     this._mutationObserve.disconnect();
     this._destroy();
   }
 
   attributeChangedCallback(attributeName, oldValue, newValue, namespace) {
-    // console.log("AsciiVideo.attributeChangedCallback");
+    // console.log("PixelateVideo.attributeChangedCallback");
     this._init();
   }
 
@@ -71,32 +69,8 @@ export default class AsciiVideo extends HTMLElement {
     }
   }
 
-  get inverse() {
-    return this.hasAttribute("inverse");
-  }
-
-  set inverse(value) {
-    if (!value || value === "") {
-      this.removeAttribute("inverse");
-    } else {
-      this.setAttribute("inverse", "");
-    }
-  }
-
-  get mirror() {
-    return this.hasAttribute("mirror");
-  }
-
-  set mirror(value) {
-    if (!value || value === "") {
-      this.removeAttribute("mirror");
-    } else {
-      this.setAttribute("mirror", "");
-    }
-  }
-
   _init() {
-    // console.log("AsciiVideo._init");
+    // console.log("PixelateVideo._init");
     this._destroy();
     if (this._isConnected && !this.disabled) {
       this._sourceNode = this.querySelector("video");
@@ -104,24 +78,14 @@ export default class AsciiVideo extends HTMLElement {
         this._sourceNode.addEventListener("playing", this._init);
         this._sourceNode.addEventListener("pause", this._destroy);
         if (!this._sourceNode.paused) {
-
-          const textMeasurerNode = this.shadowRoot.getElementById("textMeasurer");
-          getCharacterData(textMeasurerNode, this.inverse).then(
-            ({ columnWidth, rowHeight, brightnessMap }) => {
-              this._columnWidth = columnWidth;
-              this._rowHeight = rowHeight;
-              this._brightnessMap = brightnessMap;
-              this._interval = setInterval(this.render, 1000 / this.fps);
-            }
-          );
-
+          this._interval = setInterval(this.render, 1000 / this.fps);
         }
       }
     }
   }
 
   _destroy() {
-    // console.log("AsciiVideo._destroy");
+    // console.log("PixelateVideo._destroy");
     if (this._sourceNode) {
       this._sourceNode.removeEventListener("playing", this._init);
       this._sourceNode.removeEventListener("pause", this._destroy);
@@ -134,7 +98,7 @@ export default class AsciiVideo extends HTMLElement {
   }
 
   _onMutationObserved(mutationList) {
-    // console.log("AsciiVideo._onMutationObserved");
+    // console.log("PixelateVideo._onMutationObserved");
     for (const mutation of mutationList) {
       switch (mutation.type) {
         case "childList":
@@ -145,23 +109,27 @@ export default class AsciiVideo extends HTMLElement {
   }
 
   render() {
-    // console.log("AsciiVideo.render");
-    this.shadowRoot.getElementById("asciiHolder").innerHTML = doSomething({
-      brightnessMap: this._brightnessMap,
-      columnWidth: this._columnWidth,
-      destHeight: this.offsetHeight,
-      destWidth: this.offsetWidth,
-      fit: this.fit,
-      rowHeight: this._rowHeight,
-      source: this._sourceNode,
-      sourceHeight: this._sourceNode.videoHeight,
-      sourceWidth: this._sourceNode.videoWidth,
-      mirror: this.mirror
-    });
+    // console.log("PixelateVideo.render");
+    // const textMeasurerNode = this.shadowRoot.getElementById("textMeasurer");
+    // getCharacterData(textMeasurerNode, this.inverse).then(
+    //   ({ columnWidth, rowHeight, brightnessMap }) => {
+    //     this.shadowRoot.getElementById("asciiHolder").innerHTML = doSomething({
+    //       brightnessMap,
+    //       columnWidth,
+    //       destHeight: this.offsetHeight,
+    //       destWidth: this.offsetWidth,
+    //       fit: this.fit,
+    //       rowHeight,
+    //       source: this._sourceNode,
+    //       sourceHeight: this._sourceNode.videoHeight,
+    //       sourceWidth: this._sourceNode.videoWidth
+    //     });
+    //   }
+    // );
   }
 }
 
-AsciiVideo.TAG_NAME = "ascii-video";
-AsciiVideo.HTML = require("!raw-loader!./AsciiVideo.html").default;
-AsciiVideo.CSS = require("!raw-loader!./AsciiVideo.css").default;
-AsciiVideo.observedAttributes = ["disabled", "fit", "fps", "inverse",  "mirror"];
+PixelateVideo.TAG_NAME = "pixelate-video";
+PixelateVideo.HTML = require("!raw-loader!./PixelateVideo.html").default;
+PixelateVideo.CSS = require("!raw-loader!./PixelateVideo.css").default;
+PixelateVideo.observedAttributes = ["disabled", "fit", "fps"];
