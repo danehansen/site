@@ -2,7 +2,6 @@
   background-color: var(--gray080);
   border-radius: calc(var(--buttonHeight) * 0.5);
   display: inline-block;
-  font-weight: bold;
   height: var(--buttonHeight);
   line-height: 0;
   min-width: var(--buttonHeight);
@@ -18,4 +17,10 @@
 
 :host(:hover) {
   transform: scale(1.2);
+}
+
+div {
+  color: var(--bodyColor);
+  font: var(--bodyFont);
+  font-weight: bold;
 }

@@ -2,7 +2,7 @@
 <scroll-capture></scroll-capture>
 <control-group>
   <label>
-    <type-setter>Total mass:</type-setter>
+    <div>Total mass:</div>
     <range-slider
       id="totalMass"
       max="100000"
@@ -11,18 +11,18 @@
     ></range-slider>
   </label>
   <label>
-    <type-setter>Max mass:</type-setter>
+    <div>Max mass:</div>
     <range-slider id="maxMass" max="5000" min="50" value="400"></range-slider>
   </label>
   <label>
-    <type-setter>Include antimatter:</type-setter>
+    <div>Include antimatter:</div>
     <radio-group id="antimatter">
       <radio-button checked value="false">No</radio-button
       ><radio-button value="true">Yes</radio-button>
     </radio-group>
   </label>
   <label>
-    <type-setter>Speed:</type-setter>
+    <div>Speed:</div>
     <range-slider
       id="speed"
       max="10"
@@ -32,7 +32,7 @@
     ></range-slider>
   </label>
   <label>
-    <type-setter>Zoom:</type-setter>
+    <div>Zoom:</div>
     <div>
       <basic-button id="zoomPlus">+</basic-button>
       <basic-button id="zoomMinus">-</basic-button>

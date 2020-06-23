@@ -3,11 +3,12 @@
 }
 
 control-group {
-  position: relative;
   display: inline-block;
+  position: relative;
 }
 
 label {
+  font: var(--bodyFont);
   position: relative;
 }
 

@@ -64,6 +64,11 @@ body {
   --pageYOffset: 30px;
   --buttonHeight: 16px;
 
+  --bodyColor: var(--gray010);
+  --bodyFont: normal normal normal 12px/150% "body";
+  /* --titleFont: normal normal bold 20px/calc(var(--pageYOffset) + 6px) "title"; */
+  --titleFont: normal normal bold 20px/calc(var(--pageYOffset) + 6px) "title";
+
   background: var(--black000);
   height: 100%;
   margin: 0;

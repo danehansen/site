@@ -32,7 +32,6 @@
   width: var(--size);
 }
 
-type-setter {
-  color: inherit;
+#text {
   margin-left: 3px;
 }

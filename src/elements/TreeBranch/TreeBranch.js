@@ -26,7 +26,7 @@ export default class TreeBranch extends HTMLElement {
     anchorElement.addEventListener("click", onClick.bind(this));
     anchorElement.setAttribute("href", this.href);
 
-    const textElement = this.shadowRoot.querySelector("type-setter");
+    const textElement = this.shadowRoot.querySelector("h1");
     textElement.innerHTML = this.getAttribute("name");
   }
 }
