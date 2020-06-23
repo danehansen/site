@@ -1,4 +1,5 @@
 import { initInstance } from "utils/customElement";
+import { getCrop } from "../asciiUtils";
 
 export default class PixelateVideo extends HTMLElement {
   constructor() {
@@ -69,6 +70,30 @@ export default class PixelateVideo extends HTMLElement {
     }
   }
 
+  get pixelation() {
+    return parseInt(this.getAttribute("pixelation")) || 1;
+  }
+
+  set pixelation(value) {
+    if (!value || value === "") {
+      this.removeAttribute("pixelation");
+    } else {
+      this.setAttribute("pixelation", value);
+    }
+  }
+
+  get mirror() {
+    return this.hasAttribute("mirror");
+  }
+
+  set mirror(value) {
+    if (!value || value === "") {
+      this.removeAttribute("mirror");
+    } else {
+      this.setAttribute("mirror", "");
+    }
+  }
+
   _init() {
     // console.log("PixelateVideo._init");
     this._destroy();
@@ -110,26 +135,38 @@ export default class PixelateVideo extends HTMLElement {
 
   render() {
     // console.log("PixelateVideo.render");
-    // const textMeasurerNode = this.shadowRoot.getElementById("textMeasurer");
-    // getCharacterData(textMeasurerNode, this.inverse).then(
-    //   ({ columnWidth, rowHeight, brightnessMap }) => {
-    //     this.shadowRoot.getElementById("asciiHolder").innerHTML = doSomething({
-    //       brightnessMap,
-    //       columnWidth,
-    //       destHeight: this.offsetHeight,
-    //       destWidth: this.offsetWidth,
-    //       fit: this.fit,
-    //       rowHeight,
-    //       source: this._sourceNode,
-    //       sourceHeight: this._sourceNode.videoHeight,
-    //       sourceWidth: this._sourceNode.videoWidth
-    //     });
-    //   }
-    // );
+
+    const { offsetWidth, offsetHeight, pixelation } = this;
+    const columns = Math.round(offsetWidth / pixelation);
+    const rows = Math.round(offsetHeight / pixelation);
+    const columnWidth = Math.floor(offsetWidth / columns);
+    const rowHeight = Math.floor(offsetHeight / rows);
+
+    const {imageDataReader} = getCrop({
+      columnWidth,
+      destHeight: this.offsetHeight,
+      destWidth: this.offsetWidth,
+      fit: this.fit,
+      rowHeight,
+      source: this._sourceNode,
+      sourceHeight: this._sourceNode.videoHeight,
+      sourceWidth: this._sourceNode.videoWidth,
+    })
+
+    let str = '';
+    for (let y = 0; y < rows; y++) {
+      for (let x = 0; x < columns; x++) {
+        const xPixel = this.mirror ? columns - x - 1 : x;
+        str += `<span class="pixel" style="width: ${100 / columns}%; height: ${100 / rows}%; background-color: rgb(${imageDataReader.red(xPixel, y)}, ${imageDataReader.green(xPixel, y)}, ${imageDataReader.blue(xPixel, y)});"></span>`
+      }
+      str+=`<br/>`
+    }
+
+    this.shadowRoot.getElementById("pixelHolder").innerHTML = str;
   }
 }
 
 PixelateVideo.TAG_NAME = "pixelate-video";
 PixelateVideo.HTML = require("!raw-loader!./PixelateVideo.html").default;
 PixelateVideo.CSS = require("!raw-loader!./PixelateVideo.css").default;
-PixelateVideo.observedAttributes = ["disabled", "fit", "fps"];
+PixelateVideo.observedAttributes = ["disabled", "fit", "fps", "mirror", "pixelation"];

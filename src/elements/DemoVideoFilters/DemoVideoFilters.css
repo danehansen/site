@@ -20,7 +20,7 @@ label {
   opacity: 0.9;
 }
 
-ascii-video {
+ascii-video, pixelate-video {
   display: none;
 }
 
@@ -44,13 +44,7 @@ video {
   top: 0;
 }
 
-#codePage437 {
-  background-color: var(--black000);
-  color: var(--green100);
-  font-size: 20em;
-  font-family: "clacon";
-  line-height: 80%;
-
+#pixelate {
   position: absolute;
   width: 100%;
   height: 100%;

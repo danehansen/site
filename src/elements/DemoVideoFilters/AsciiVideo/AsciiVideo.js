@@ -1,6 +1,6 @@
 import { initInstance } from "utils/customElement";
-import { doSomething, getCharacterData } from "../asciiUtils";
-import {debounce} from 'lodash';
+import { dataToString, getCharacterData, getCrop } from "../asciiUtils";
+import { debounce } from 'lodash';
 
 export default class AsciiVideo extends HTMLElement {
   constructor() {
@@ -146,8 +146,8 @@ export default class AsciiVideo extends HTMLElement {
 
   render() {
     // console.log("AsciiVideo.render");
-    this.shadowRoot.getElementById("asciiHolder").innerHTML = doSomething({
-      brightnessMap: this._brightnessMap,
+
+    const crop = getCrop({
       columnWidth: this._columnWidth,
       destHeight: this.offsetHeight,
       destWidth: this.offsetWidth,
@@ -156,8 +156,15 @@ export default class AsciiVideo extends HTMLElement {
       source: this._sourceNode,
       sourceHeight: this._sourceNode.videoHeight,
       sourceWidth: this._sourceNode.videoWidth,
-      mirror: this.mirror
-    });
+    })
+
+    this.shadowRoot.getElementById("asciiHolder").innerHTML = dataToString(
+      crop.imageDataReader,
+      crop.renderedColumns,
+      crop.renderedRows,
+      this._brightnessMap,
+      this.mirror
+    );
   }
 }
 

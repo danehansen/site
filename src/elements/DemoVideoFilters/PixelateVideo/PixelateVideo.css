@@ -6,4 +6,11 @@
 }
 
 #pixelHolder {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.pixel {
+  display: inline-block;
 }

@@ -12,7 +12,7 @@ export default class DemoVideoFilters extends HTMLElement {
     this._radioNode = this.shadowRoot.querySelector("radio-group");
     this._videoNode = this.shadowRoot.querySelector("video");
     this._asciiNode = this.shadowRoot.getElementById("ascii");
-    this._codePage437Node = this.shadowRoot.getElementById("codePage437");
+    this._pixelateNode = this.shadowRoot.getElementById("pixelate");
 
     this._permissionGranted = this._permissionGranted.bind(this);
     this._permissionDenied = this._permissionDenied.bind(this);
@@ -55,7 +55,7 @@ export default class DemoVideoFilters extends HTMLElement {
       return;
     }
     this._active = true;
-    const dependancies = ["ascii-video"];
+    const dependancies = ["ascii-video", "pixelate-video"];
     this._videoNode.setAttribute("autoplay", "");
     await Promise.all(
       dependancies.map(str => window.customElements.whenDefined(str))
@@ -114,8 +114,8 @@ export default class DemoVideoFilters extends HTMLElement {
       case "ascii":
         this._activeNode = this._asciiNode;
         break;
-      case "codePage437":
-        this._activeNode = this._codePage437Node;
+      case "pixelate":
+        this._activeNode = this._pixelateNode;
         break;
     }
     this._activeNode.style.display = "flex";

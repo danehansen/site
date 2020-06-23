@@ -197,7 +197,7 @@ function brightnessToChar(brightness, brightnessMap) {
   return b;
 }
 
-function dataToString(idr, columns, rows, brightnessMap, mirror) {
+export function dataToString(idr, columns, rows, brightnessMap, mirror) {
   let str = "";
   for (let y = 0; y < rows; y++) {
     for (let x = 0; x < columns; x++) {
@@ -214,13 +214,11 @@ function dataToString(idr, columns, rows, brightnessMap, mirror) {
   return str;
 }
 
-export function doSomething({
-  brightnessMap,
+export function getCrop({
   columnWidth,
   destHeight,
   destWidth,
   fit,
-  mirror,
   rowHeight,
   source,
   sourceHeight,
@@ -293,11 +291,10 @@ export function doSomething({
     renderedRows
   );
   imageDataReader.adjustContrast();
-  return dataToString(
+
+  return {
     imageDataReader,
     renderedColumns,
     renderedRows,
-    brightnessMap,
-    mirror
-  );
+  }
 }
