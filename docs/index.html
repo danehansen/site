@@ -19,5 +19,22 @@
   <a href="https://google.com">Visit Google</a>
 
 </body>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XCRQF0PSH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-8XCRQF0PSH');
+
+  (function () {
+    setTimeout(() => {
+      console.log('calling gtag...')
+      const x = gtag('event', 'conversion', { 'send_to': '<TARGET_ID1>' });
+      console.log('called gtag:', x)
+    }, 1000)
+  })()
+</script>
 
 </html>
