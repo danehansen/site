@@ -1,5 +1,5 @@
 import { initInstance } from "utils/customElement";
-import { dataToString, getCharacterData, getCrop } from "../asciiUtils";
+import { dataToString, getCharacterData, getCrop } from "../filterUtils";
 import { debounce } from 'lodash';
 
 export default class AsciiVideo extends HTMLElement {

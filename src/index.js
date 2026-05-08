@@ -16,6 +16,7 @@ for (const customElement of [
   // require("elements/DemoVideoFilters/AsciiImage/AsciiImage"),
   require("elements/DemoVideoFilters/AsciiVideo/AsciiVideo"),
   require("elements/DemoVideoFilters/PixelateVideo/PixelateVideo"),
+  require("elements/DemoVideoFilters/GlitchVideo/GlitchVideo"),
 ]) {
   initClass(customElement.default);
 }

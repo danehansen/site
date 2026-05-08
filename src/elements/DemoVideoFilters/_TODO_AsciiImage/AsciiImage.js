@@ -1,5 +1,5 @@
 import { initInstance } from "utils/customElement";
-import { doSomething, dataToString, getCharacterData } from "../asciiUtils";
+import { doSomething, dataToString, getCharacterData } from "../filterUtils";
 
 export default class AsciiImage extends HTMLElement {
   constructor() {

@@ -1,5 +1,5 @@
 import { initInstance } from "utils/customElement";
-import { getCrop } from "../asciiUtils";
+import { getCrop } from "../filterUtils";
 
 export default class PixelateVideo extends HTMLElement {
   constructor() {
@@ -144,8 +144,8 @@ export default class PixelateVideo extends HTMLElement {
 
     const {imageDataReader} = getCrop({
       columnWidth,
-      destHeight: this.offsetHeight,
-      destWidth: this.offsetWidth,
+      destHeight: offsetHeight,
+      destWidth: offsetWidth,
       fit: this.fit,
       rowHeight,
       source: this._sourceNode,

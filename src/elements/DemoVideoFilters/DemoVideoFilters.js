@@ -13,6 +13,7 @@ export default class DemoVideoFilters extends HTMLElement {
     this._videoNode = this.shadowRoot.querySelector("video");
     this._asciiNode = this.shadowRoot.getElementById("ascii");
     this._pixelateNode = this.shadowRoot.getElementById("pixelate");
+    this._glitchNode = this.shadowRoot.getElementById("glitch");
 
     this._permissionGranted = this._permissionGranted.bind(this);
     this._permissionDenied = this._permissionDenied.bind(this);
@@ -55,7 +56,7 @@ export default class DemoVideoFilters extends HTMLElement {
       return;
     }
     this._active = true;
-    const dependancies = ["ascii-video", "pixelate-video"];
+    const dependancies = ["ascii-video", "pixelate-video", "glitch-video"];
     this._videoNode.setAttribute("autoplay", "");
     await Promise.all(
       dependancies.map(str => window.customElements.whenDefined(str))
@@ -116,6 +117,9 @@ export default class DemoVideoFilters extends HTMLElement {
         break;
       case "pixelate":
         this._activeNode = this._pixelateNode;
+        break;
+      case "glitch":
+        this._activeNode = this._glitchNode;
         break;
     }
     this._activeNode.style.display = "flex";
