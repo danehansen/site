@@ -7,16 +7,14 @@
 </head>
 
 <body>
-
   <h1>Welcome to My Website</h1>
   <p>This is a basic paragraph of text on a simple HTML page.</p>
 
   <ul>
-    <li>First item in a list</li>
-    <li>Second item in a list</li>
+    <li><a href="./dane_hansen_resume.pdf" id="resume">resume</li>
+    <li><a href="https://github.com/danehansen" target="_blank" id="gitHub">GitHub</li>
+    <li><a href="https://github.com/danehansen" target="_blank" id="linkedIn">LinkedIn</li>
   </ul>
-
-  <a href="https://google.com">Visit Google</a>
 
 </body>
 <!-- Google tag (gtag.js) -->
@@ -31,9 +29,31 @@
   (function () {
     setTimeout(() => {
       console.log('calling gtag...')
-      const x = gtag('event', 'conversion', { 'send_to': '<TARGET_ID1>' });
-      console.log('called gtag:', x)
+      const x = gtag('event', 'custom_page_view', {
+        'arg': 'page view',
+      });
     }, 1000)
+
+    document.getElementById('resume').addEventListener('click', () => {
+      console.log('resume click')
+      const x = gtag('event', 'custom_select_content', {
+        'arg': 'resume',
+      });
+    })
+
+    document.getElementById('gitHub').addEventListener('click', () => {
+      console.log('GitHub click')
+      const x = gtag('event', 'custom_select_content', {
+        'arg': 'GitHub',
+      });
+    })
+
+    document.getElementById('linkedIn').addEventListener('click', () => {
+      console.log('LinkedIn click')
+      const x = gtag('event', 'custom_select_content', {
+        'arg': 'LinkedIn',
+      });
+    })
   })()
 </script>
 
