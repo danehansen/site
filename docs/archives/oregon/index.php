@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8" />
+		
+		<title>Welcome to the Future of Football</title>		
+		<link rel="author" href="humans.txt" />
+		<meta name="author" content="Super Top Secret">
+		<link rel="shortcut icon"	href="img/favicon.png"/>
+		<meta property="og:url" content="http://www.oregongridiron.com">
+		<meta property="og:title" content="Welcome to the Future of Football">
+		<meta property="og:description" content="Welcome to the Future of Football. Check out www.oregongridiron.com and learn how Oregon is leading the way.">
+		<meta property="og:image" content="http://oregongridiron.com/img/share-img.jpg">
+		<meta name="title" content="Welcome to the Future of Football"/>
+		<meta name="description" content="Welcome to the Future of Football. Check out how Oregon is leading the way."/>
+		
+		<link rel="stylesheet" type="text/css" href="css/min.css"/>
+		<script src="js/min.js"></script>
+		
+		<!--
+		<link rel="stylesheet" type="text/css" href="min/?g=css">
+		<?php 
+			/*if($_SERVER['HTTP_HOST'] == 'oregon.dev'||$_SERVER['HTTP_HOST'] == 'oregon.loc'||$_SERVER['HTTP_HOST'] == 'oregon-recruitment-site.fzni.stackablehost.com'||$_SERVER['HTTP_HOST'] == 'www.oregon.loc') {
+			  include 'php/js.php';
+			} else {
+			  echo "<script src=\"min/?g=js\"></script>";
+			}*/
+		?>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-8283237-2', { 'cookieDomain': 'none' });
+		</script>-->
+<!--
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMDDDDDDDNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMM7?+??????????????????????+78MMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMNI???????????????????????????????????+8MMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMM$???????????????+$DMMMMMMMMOI???????????????+MMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMM$??????????????+DMMMMMMMMMMMMMMMMMMI??????????????IMMMMMMMMMMMMMMM
+	MMMMMMMMMMMM???????????????+MMMMMMMMMMMMMMMMMMMMMMMN??????????????+MMMMMMMMMMMMM
+	MMMMMMMMMMM+??????????????8MMMMMMMMMMMMMMMMMMMMMMMMMM+??????????????NMMMMMMMMMMM
+	MMMMMMMMMN??????????????+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMI??????????????+MMMMMMMMMM
+	MMMMMMMM7???????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMD??????????????+MMMMMMMMM
+	MMMMMMMN???????????????DMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+??????????????+MMMMMMMM
+	MMMMMMM????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMO???????????????8MMMMMMM
+	MMMMMM????????????????ZMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+??????????????+MMMMMMM
+	MMMMMM????????????????NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+???????????????$MMMMMM
+	MMMMMM????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM????????????????+MMMMMM
+	MMMMM8????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM7????????????????MMMMMM
+	MMMMM$????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM$????????????????MMMMMM
+	MMMMM7????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMZ????????????????MMMMMM
+	MMMMMI????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMZ????????????????MMMMMM
+	MMMMMI????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMZ????????????????MMMMMM
+	MMMMMI????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMZ????????????????MMMMMM
+	MMMMM7????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMZ????????????????MMMMMM
+	MMMMM7????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM$????????????????MMMMMM
+	MMMMMO????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM7????????????????MMMMMM
+	MMMMMN????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMI???????????????+MMMMMM
+	MMMMMM????????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM????????????????IMMMMMM
+	MMMMMM+???????????????DMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+???????????????NMMMMMM
+	MMMMMM8???????????????7MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN???????????????7MMMMMMM
+	MMMMMMM$??????????????+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMI???????????????MMMMMMMM
+	MMMMMMMM+???????????????MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM???????????????NMMMMMMMM
+	MMMMMMMMMI??????????????DMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM+??????????????MMMMMMMMMM
+	MMMMMMMMMM$??????????????+MMMMMMMMMMMMMMMMMMMMMMMMMMMM???????????????MMMMMMMMMMM
+	MMMMMMMMMMMM+??????????????ZMMMMMMMMMMMMMMMMMMMMMMMM+?????????????+DMMMMMMMMMMMM
+	MMMMMMMMMMMMMM??????????????+NMMMMMMMMMMMMMMMMMMMM7??????????????IMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMM7+?????????????+DMMMMMMMMMMMMMM7???????????????NMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMD+????????????????++++++???????????????+7MMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMM$????????????????????????????+IDMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMD$7??++++++++?I$OMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+	MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+-->
+	</head>
+	<body ng-controller="AppCtrl">
+		<!-- <p id="fps"></p> -->
+		<div id="cursor"></div>
+		<nav id="leftNav">
+			<div class="slider">
+				<div class="mask">
+					<ul class="maskee">
+						<li ng-repeat="tier1 in NAV | omitfirst">
+							<a class="{{tier1.title | nospace}}" ng-href="#!/{{tier1.title | nospace}}" ng-mouseenter="onLiOver($event)" ng-mouseleave="onLiOut($event)" ng-click="closeMenu($event)">
+								<video loop="true"></video>
+								<div></div>
+								<p>{{tier1.title}}</p>
+							</a>
+							<ul>
+								<li ng-repeat="tier2 in tier1.subsections | limitTo:tier1.subsections.length-1">
+									<a class="{{tier2.title | nospace}}" ng-href="#!/{{tier1.title | nospace}}/{{tier2.title | nospace}}" ng-mouseenter="onLiOver($event)" ng-mouseleave="onLiOut($event)" ng-click="closeMenu()">
+										<video loop="true"></video>
+										<div></div>
+										<p>{{tier2.title}}</p>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="scrollbar" draggable="true"></div>
+				<footer>
+					<div>
+						<p>sound:</p>
+						<a ng-mouseenter="onOver()" class="sound" ng-click="onMuteClick()" >
+							<div class="white"></div>
+						</a>
+					</div>
+					<div>
+						<p>visit us at:</p>
+						<a ng-mouseenter="onOver()" ng-click="onClick()" href="http://instagram.com/oregongridiron/" target="_blank"><i class="icon-instagramm"></i></a>
+						<a ng-mouseenter="onOver()" ng-click="onClick()" href="https://twitter.com/oregongridiron" target="_blank"><i class="icon-twitter"></i></a>
+						<a ng-mouseenter="onOver()" ng-click="onClick()" href="http://vimeo.com/oregongridiron/" target="_blank"><i class="icon-vimeo"></i></a>
+					</div>
+				</footer>
+			</div>
+			<a href="#!/" class="oh" ng-mouseenter="onTitleButtonOver()" ng-mouseleave="onTitleButtonOut()"></a>
+			<a href="" ng-mouseenter="onOver()" class="openClose">
+				<div class="normal"></div>
+				<div class="hover"></div>
+			</a>
+		</nav>
+		<nav id="rightNav">
+			<div class="angledMask">
+				<div ng-mouseleave="onStraightOut()" class="straight">
+					<a ng-mouseenter="onOver()" class="envelope" href="mailto:?Subject=Welcome%20to%20the%20Future%20of%20Football&body=Welcome%20to%20the%20Future%20of%20Football.%20Check%20out%20www.oregongridiron.com%20and%20learn%20how%20Oregon%20is%20leading%20the%20way.">
+						<img ng-src="img/rightnav/envelope.png" class="env_img"/>
+						<div class="hover">
+							<img ng-src="img/rightnav/envelope_over.png" class="env_img"/>
+						</div>
+					</a>
+					<a ng-mouseenter="onOver()" href=""><i class="icon-twitter"></i></a>
+					<a ng-mouseenter="onOver()" href=""><i class="icon-facebook"></i></a>
+					<a ng-mouseenter="onOver()" href=""><i class="icon-gplus"></i></a>
+				</div>
+			</div>
+			<a ng-mouseenter="onShareOver()" href="" class="share">
+				<img ng-src="img/rightnav/share.png"/>
+				<div class="hover">
+					<img ng-src="img/rightnav/share_over.png"/>
+				</div>
+			</a>
+		</nav>
+		<nav id="topNav">
+			<a ng-mouseenter="onArrowOver()" ng-mouseleave="onArrowOut()" class="arrow horizontal left" href="">
+				<div class="green">
+					<div class="inner">
+						<img ng-src="img/arrows/left_green_inner.png"/>
+					</div>
+				</div>
+				<div class="white">
+					<div class="inner">
+						<img ng-src="img/arrows/left_white_inner.png"/>
+					</div>
+				</div>
+				<p><span>previous</span></p>
+			</a>
+			<a ng-mouseenter="onArrowOver()" ng-mouseleave="onArrowOut()" class="arrow vertical x" href="">
+				<div class="green"></div>
+				<div class="white"></div>
+				<p><span>leave experience</span></p>
+			</a>
+			<a ng-mouseenter="onArrowOver()" ng-mouseleave="onArrowOut()" class="arrow horizontal right" href="">
+				<div class="green">
+					<div class="inner">
+						<img ng-src="img/arrows/right_green_inner.png"/>
+					</div>
+				</div>
+				<div class="white">
+					<div class="inner">
+						<img ng-src="img/arrows/right_white_inner.png"/>
+					</div>
+				</div>
+				<p><span>next</span></p>
+			</a>
+		</nav>
+		<a ng-mouseenter="onArrowOver()" ng-mouseleave="onArrowOut()" class="arrow vertical up" href="" id="upArrowNav">
+			<div class="green">
+				<div class="inner">
+					<img ng-src="img/arrows/up_green_inner.png"/>
+				</div>
+			</div>
+			<div class="white">
+				<div class="inner">
+					<img ng-src="img/arrows/up_white_inner.png"/>
+				</div>
+			</div>
+			<p><span></span></p>
+		</a>
+		<a ng-mouseenter="onArrowOver()" ng-mouseleave="onArrowOut()" class="arrow vertical down pause" href="" id="downArrowNav">
+			<div class="green">
+				<div class="inner">
+					<img ng-src="img/arrows/down_green_inner.png"/>
+				</div>
+			</div>
+			<div class="white">
+				<div class="inner">
+					<img ng-src="img/arrows/down_white_inner.png"/>
+				</div>
+			</div>
+			<p class="pause"><span class="pause"></span></p>
+		</a>
+		<a ng-mouseenter="onArrowOver()" ng-mouseleave="onArrowOut()"class="arrow horizontal left pause" href="" id="leftArrowNav">
+			<div class="green">
+				<div class="inner">
+					<img ng-src="img/arrows/left_green_inner.png"/>
+				</div>
+			</div>
+			<div class="white">
+				<div class="inner">
+					<img ng-src="img/arrows/left_white_inner.png"/>
+				</div>
+			</div>
+			<p class="pause"><span class="pause"></span></p>
+		</a>
+		<a ng-mouseenter="onArrowOver()" ng-mouseleave="onArrowOut()" class="arrow horizontal right pause" href="" id="rightArrowNav">
+			<div class="green">
+				<div class="inner">
+					<img ng-src="img/arrows/right_green_inner.png"/>
+				</div>
+			</div>
+			<div class="white">
+				<div class="inner">
+					<img ng-src="img/arrows/right_white_inner.png"/>
+				</div>
+			</div>
+			<p class="pause"><span class="pause"></span></p>
+		</a>
+		<ul id="sideSquares">
+		</ul>
+		<ul id="bottomSquares">
+			<li ng-repeat="tier1 in NAV"><a class="pause" ng-mouseenter="onOver()" href="" ng-click="onBottomSquaresClick($event)"></a></li>
+		</ul>
+		<div id="videoHolder">
+			<video preload="none">
+				<source type="video/mp4" src="vid/home/home.mp4"></source>
+				<source type="video/webm" src="vid/home/home.webm"></source>
+			</video>
+		</div>
+		<div id="blackCover"></div>
+		<div ng-view ng-animate="{leave:'outro',enter:'intro'}" id="realContentContainer"></div>
+	</body>
+</html>

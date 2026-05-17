@@ -1,0 +1,279 @@
+#explorecampus .map_overlay {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background: rgba(0,0,0,0.5);
+	left: 0;
+	z-index: 1;
+}
+	#explorecampus .map_overlay .titleCardButton {
+		left:50%;
+		top:50%;
+		margin-left:-109px;
+		margin-top:70px;
+		visibility: hidden;
+	}
+#explorecampus #the_map_holder {
+	width:100%;
+	height:100%;
+	position: relative;
+	background: #000;
+}
+	#explorecampus #the_map {
+		width:5500px;
+		height:3118px;
+		background: url(../img/explorecampus/explore-campus.png);
+		background-position: left top;
+		position: absolute;
+		cursor: -webkit-grab;
+		cursor: -moz-grab;
+		cursor: grab;
+	}
+	#explorecampus #the_map:active,
+	#explorecampus #the_map.active {
+		cursor: -webkit-grabbing;
+		cursor: -moz-grabbing;
+		cursor: grabbing;
+	}
+		#explorecampus #map_locations_list li {
+			position: absolute;
+			/*display: none;*/
+		}
+		#explorecampus #map_locations_list #thirteenth-street {
+			display: block;
+		}
+			#explorecampus .diamondButton .diagonal {
+				width:40px;
+				height:40px;
+				left:-20px;
+				top:-20px;
+			}
+			#explorecampus .diamondButton .transGreen {
+				top:0;
+				left:0;
+			}
+				#explorecampus .diamondButton .green {
+					background-color:1px solid rgba(196,210,55,1);
+					-webkit-transition:background-color 0.3s;
+					-moz-transition:background-color 0.3s;
+					-o-transition:background-color 0.3s;
+					transition:background-color 0.3s;
+				}
+				#explorecampus .diamondButton:hover .green {
+					background-color: rgba(0,0,0,1);
+					-webkit-transition:background-color 0.3s;
+					-moz-transition:background-color 0.3s;
+					-o-transition:background-color 0.3s;
+					transition:background-color 0.3s;
+				}
+			#explorecampus #map_locations_list li .positioner {
+				position: absolute;
+				left:-230px;
+				top:-217px;
+				width:655px;
+				height:240px;
+				background: rgba(0,0,0,0.8);
+				border:1px solid rgba(196,210,55,0.33);
+				/*display: none;*/
+				visibility: hidden;
+				z-index:1;
+			}
+				#explorecampus #map_locations_list li .campus_image {
+					width:258px;
+					height:240px;
+					background-position: center center;
+					background-size: cover;
+					float: left;
+				}
+				#explorecampus #map_locations_list li .location_information {
+					width:363px;
+					float: right;
+					padding-right: 10px;
+					position: relative;
+					height:240px;
+				}
+				#explorecampus #map_locations_list li .close_btn {
+					position: absolute;
+					top:6px;
+					right:6px;
+					text-indent: -54321px;
+					background-image: url(../img/diamond/x.png);
+					background-size: 14px 14px;
+					width:14px;
+					height: 14px; 
+					cursor: pointer;
+					display: block;
+				}
+				#explorecampus #map_locations_list li .close_btn:hover {
+					background-image: url(../img/diamond/x-white.png);
+				}
+
+				#explorecampus #map_locations_list li h3 {
+					font-family:"UniversLTStd-UltraCn";
+					font-size: 26px;
+					text-transform: uppercase;
+					font-weight:normal;
+					letter-spacing: 0.1em;
+					-webkit-font-smoothing: antialiased;
+					color:#fff;
+					position: relative;
+					margin:18px 0 0 0;
+					float: left;
+					padding:8px 0;
+				}
+					#explorecampus #map_locations_list li h3:before,
+					#explorecampus #map_locations_list li h3:after {
+						display:block;
+						position:absolute;
+						width:55px;
+						content:"";
+						background:url(../img/bgs/check_yellow.png);
+						background-size:2px 2px;
+						background-position: 1px 0;
+						height:2px;
+						left:0;
+						top:0;
+					}
+					#explorecampus #map_locations_list li h3:after {
+						bottom:3px;
+						top:auto;
+					}
+					#explorecampus #map_locations_list li p {
+						font-size:12px;
+						font-family:"UniversLTStd-Light";
+						color:#fff;
+						clear: left;
+						float: left;
+						padding-top:8px;
+						line-height: 130%;
+					}
+					#explorecampus #map_locations_list li .map_poi_link {
+						position: absolute;
+						bottom:10px;
+						left:0;
+						font-size:12px;
+						font-family:"UniversLTStd-Light";
+						color:#c4d237;
+						line-height: 130%;
+						font-style: italic;
+					}
+					#explorecampus #map_locations_list li .map_poi_link:hover {
+						color:#fff;
+					}
+
+.loading_information {
+	color:#fff;
+	width:880px;
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin-left: -440px;
+	height: 400px;
+	margin-top: -200px;
+}
+	.loading_information h2 {
+		text-align: center;
+		font-size: 32px;
+		letter-spacing:8px;
+		font-family: 'UniversLTStd-UltraCn', Arial, sans-serif;
+		text-transform: uppercase;
+		margin-bottom: 15px;
+		padding-top:130px;
+	}
+	.loading_information h3 {
+		text-align: center;
+		font-family: 'Gin-Round', Arial, sans-serif;
+		letter-spacing: 8px;
+		font-size: 59px;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+		.loading_information .instructions_and_factoids {
+			margin-top:40px;
+			position: relative;
+			top:30px;
+			visibility: hidden;
+		}
+			.loading_information .border_top,
+			.loading_information .border_bottom {
+				background: url(../img/bgs/check_yellow.png);
+				background-size: 2px 2px;
+				background-repeat: repeat-x;
+				width:75px;
+				height: 2px;
+				position: absolute;
+				left:50%;
+				margin-left:-38px;
+				top:0px;
+			}
+			.loading_information .border_bottom {
+				top:95px;
+			}
+			.loading_information ul {
+				height:200px;
+				overflow: hidden;
+				background: 422px 143px no-repeat url(../img/sequence/loading/loading_mouse.png);
+			}
+			.loading_information ul li {
+				font-size: 16px;
+				text-align: center;
+				font-family:"UniversLTStd-Light";
+				height:176px;
+				line-height: 150%;
+				padding-top: 24px;
+				position: absolute;
+				width: 800px;
+				left: 40px;
+			}
+			.loading_information ul li + li {
+				visibility: hidden;
+			}
+			.loading_information ul li.instructions_mouse {
+			}
+			.preloader_animation {
+				width:87px;
+				position: absolute;
+				height:87px;
+				left:50%;
+				margin-left:-50px;
+				transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+			}
+				.preloader_animation div,
+				.preloader_animation div.grey_diamond {
+					width: 40px;
+					height: 40px;
+					background: #c4d237;
+					position: absolute;
+				}
+				.preloader_animation div.grey_diamond {
+					background: #2d2d2d;
+				}
+				.preloader_animation div.grey_diamond.no_more_grey {
+					display: none;
+				}
+				.preloader_animation .preloader_diamond_1,
+				.preloader_animation .backer1 {
+					top:0;
+					right:47;
+					width:0;
+				}
+				.preloader_animation .preloader_diamond_2,
+				.preloader_animation .backer2 {
+					top:0;
+					right:0;
+					height:0px;
+				}
+				.preloader_animation .preloader_diamond_3,
+				.preloader_animation .backer3 {
+					bottom:0;
+					right:0;
+					width:0px
+				}
+				.preloader_animation .preloader_diamond_4,
+				.preloader_animation .backer4 {
+					bottom:0;
+					left:0;
+					height:0px;
+				}

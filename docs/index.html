@@ -8,22 +8,22 @@
 
 <body>
   <h1>Welcome to My Website</h1>
-  <p>This is a basic paragraph of text on a simple HTML page.</p>
-
   <ul>
     <li><a href="./dane_hansen_resume.pdf" target="_blank" id="resume">resume</a></li>
     <li><a href="https://github.com/danehansen" target="_blank" id="gitHub">GitHub</a></li>
     <li><a href="https://www.linkedin.com/in/danehanes/" target="_blank" id="linkedIn">LinkedIn</a></li>
   </ul>
 
-  <p>client examples</p>
+  <h2>client examples</h2>
   <ul>
-    <li><a href="./archives/snapbac" target="_blank" id="snapbac">Snapbac</a></li>
-    <li><a href="./archives/oakley" target="_blank" id="oakley">Oakley</a></li>
-    <li><a href="./archives/nike" target="_blank" id="nike">Nike</a></li>
     <!-- <li><a href="./archives/db5" target="_blank" id="db5">DB5</a></li> -->
-    <li><a href="./archives/jaybird" target="_blank" id="jaybird">jaybirdsport.com</a></li>
-    <li><a href="./archives/jaybird/dashboard" target="_blank" id="jaybirdreign">jaybirdreign.com</a></li>
+    <li><a href="./archives/jaybird" target="_blank" id="jaybird">Jaybird</a></li>
+    <li><a href="./archives/jaybird/dashboard" target="_blank" id="jaybirdreign">Jaybird Reign</a></li>
+    <li><a href="./archives/nike" target="_blank" id="nike">Nike</a></li>
+    <li><a href="./archives/oakley" target="_blank" id="oakley">Oakley</a></li>
+    <!-- <li><a href="./archives/oregon" target="_blank" id="oregon">Oregon Gridiron</a></li> -->
+    <li><a href="./archives/snapbac" target="_blank" id="snapbac">Snapbac</a></li>
+    <li><a href="./archives/solarstash" target="_blank" id="solarstash">SolarStash</a></li>
   </ul>
 
 </body>
@@ -65,27 +65,6 @@
       });
     })
 
-    document.getElementById('snapbac').addEventListener('click', () => {
-      console.log('snapbac click')
-      const x = gtag('event', 'custom_select_content', {
-        'arg': 'snapbac',
-      });
-    })
-
-    document.getElementById('oakley').addEventListener('click', () => {
-      console.log('oakley click')
-      const x = gtag('event', 'custom_select_content', {
-        'arg': 'oakley',
-      });
-    })
-
-    document.getElementById('nike').addEventListener('click', () => {
-      console.log('nike click')
-      const x = gtag('event', 'custom_select_content', {
-        'arg': 'nike',
-      });
-    })
-
     // document.getElementById('db5').addEventListener('click', () => {
     //   console.log('db5 click')
     //   const x = gtag('event', 'custom_select_content', {
@@ -104,6 +83,41 @@
       console.log('jaybirdreign click')
       const x = gtag('event', 'custom_select_content', {
         'arg': 'jaybirdreign',
+      });
+    })
+
+    document.getElementById('nike').addEventListener('click', () => {
+      console.log('nike click')
+      const x = gtag('event', 'custom_select_content', {
+        'arg': 'nike',
+      });
+    })
+
+    document.getElementById('oakley').addEventListener('click', () => {
+      console.log('oakley click')
+      const x = gtag('event', 'custom_select_content', {
+        'arg': 'oakley',
+      });
+    })
+
+    // document.getElementById('oregon').addEventListener('click', () => {
+    //   console.log('oregon click')
+    //   const x = gtag('event', 'custom_select_content', {
+    //     'arg': 'oregon',
+    //   });
+    // })
+
+    document.getElementById('snapbac').addEventListener('click', () => {
+      console.log('snapbac click')
+      const x = gtag('event', 'custom_select_content', {
+        'arg': 'snapbac',
+      });
+    })
+
+    document.getElementById('solarstash').addEventListener('click', () => {
+      console.log('solarstash click')
+      const x = gtag('event', 'custom_select_content', {
+        'arg': 'solarstash',
       });
     })
   })()

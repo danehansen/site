@@ -1,0 +1,46 @@
+<section id="{{id}}">
+	<div class="map_overlay">
+		<div class="unfoldingText">
+			<canvas></canvas>
+			<h1>Explore Campus</h1>
+			<p>Welcome to the U of O, a world-class teaching and research university with nearly 300 academic programs. Located in the heart of the Pacific Northwest, Eugene is a lively college town renowned for its natural beauty, recreational opportunities and focus on the arts. Hit the link below to explore campus.</p>
+		</div>
+		<a class="titleCardButton" href="" ng-mouseenter="onTitleButtonOver()" ng-mouseleave="onTitleButtonOut()">
+			<div class="border"></div>
+			<div class="top"></div>
+			<div class="bottom"></div>
+			<p>click to explore</p>
+		</a>
+	</div>
+	<div id="the_map_holder">
+		<div id="the_map">
+			<ul id="map_locations_list">
+				<li ng-repeat="location in locations" class="location" id="{{location.id}}" style="left:{{location.left}}px; top:{{location.top}}px;">
+					<a href="" class="diamondButton" ng-mouseenter="onOver()">
+						<div class="diagonal">
+							<div class="transGreen">
+								<div class="green">
+								</div>
+							</div>
+						</div>
+						<div class="straight">
+							<div class="plus"></div>
+							<div class="x"></div>
+						</div>
+					</a>
+					<div class="positioner">
+						<div class="campus_image" style="background-image: url(img/explorecampus/{{location.image}})"></div>
+						<div class="location_information">
+							<h3>{{location.title}}</h3>
+							<p>
+								 {{location.paragraph}}
+							</p>
+							<a ng-href="{{location.url}}" target="{{location.target}}" class="map_poi_link" ng-mouseenter="onOver()">learn more</a>
+						</div>
+						<a href="" class="close_btn" ng-mouseenter="onOver()">close</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>

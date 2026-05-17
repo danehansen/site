@@ -1,0 +1,53 @@
+<section id="{{id}}" class="">
+	<div id="meshHolder"></div>
+	<div id="uniformHolder">
+		<div style="width:{{uniforms.length | multiply:uniformWidth}}px">
+			<ul>
+				<li class="uniformAndHeadline" ng-repeat="uniform in uniforms" style="left:{{$index | multiplyPlus:uniformWidth:margin}}px">
+					<div class="scaler">
+						<img ng-if="$first" class="wing left" src="img/uniforms/wing_left.png"/>
+						<img ng-if="$first" class="wing right" src="img/uniforms/wing_right.png"/>
+						<img class="uniform" ng-src="{{uniform.img}}"/>
+						<ul>
+							<li ng-repeat="hotspot in uniform.hotspots" style="left:{{hotspot.x}}%;top:{{hotspot.y}}%" class="unfoldingHotspot">
+								<canvas></canvas>
+								<a href="" class="diamondButton">
+									<div class="diagonal">
+										<div class="border top left"></div>
+										<div class="border top right"></div>
+										<div class="border bottom right"></div>
+										<div class="border bottom left"></div>
+										<div class="transGreen">
+											<div class="green">
+												<div class="black"></div>
+											</div>
+										</div>
+									</div>
+									<div class="straight">
+										<div class="outerTitle">
+											<h1>{{hotspot.title}}</h1>
+										</div>
+										<div class="plus"></div>
+										<div class="x"></div>
+									</div>
+								</a>
+								<img ng-src="{{hotspot.img}}"/>
+							</li>
+						</ul>
+					</div>
+					<h1 class="numberedLockup">{{$index | twodigits}}.&nbsp;<span>{{uniform.title}}</span></h1>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<footer class="timeline">
+		<div class="indicator"></div>
+		<div ng-repeat="uniform in uniforms" class="point" data-hotspot-point="{{$index}}" style="left:{{uniform.progress | times100}}%" ng-mouseenter="onOver()">
+			<div class="line"></div>
+			<div class="dot"></div>
+			<div class="mask{{uniform.progress | rightside}}">
+				<p class="numberedLockup">{{$index | twodigits}}.&nbsp;<span ng-bind-html-unsafe="removeSpaces(uniform.title)"></span></p>
+			</div>
+		</div>
+	</footer>
+ </section>

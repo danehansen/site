@@ -1,0 +1,73 @@
+
+<section class="hotspots">
+	<canvas class="preloader"></canvas>
+	<div class="loading_information">
+		<div class="preloader_animation">
+			<div class="backer1 grey_diamond"></div>
+			<div class="backer2 grey_diamond"></div>
+			<div class="backer3 grey_diamond"></div>
+			<div class="backer4 grey_diamond"></div>
+			<div class="preloader_diamond_1"></div>
+			<div class="preloader_diamond_2"></div>
+			<div class="preloader_diamond_3"></div>
+			<div class="preloader_diamond_4"></div>
+		</div>
+		<h2>Loading</h2>
+		<h3>{{pageTitle}}</h3>
+		<div class="instructions_and_factoids">
+			<span class="border_top"></span>
+			<ul>
+				<li class="instructions_mouse">
+					To navigate this experience scroll, drag the timeline bar below or click on<br/>timeline tick marks. Click on hotspots for additional info.
+				</li>
+				<li ng-repeat="fact in facts" ng-bind-html-unsafe="fact">
+				</li>
+			</ul>
+			<span class="border_bottom"></span>
+		</div>
+	</div>
+	<div class="imgSequence">
+		<div class="size">
+			<div class="spriteHolder">
+				<img />
+			</div>
+			<div class="hiResHolder"></div>
+			<div ng-repeat="hotspot in hotspots" class="unfoldingHotspot" id="hotspot{{$index}}">
+				<canvas></canvas>
+				<a href="" class="diamondButton">
+					<div class="diagonal">
+						<div class="border top left"></div>
+						<div class="border top right"></div>
+						<div class="border bottom right"></div>
+						<div class="border bottom left"></div>
+						<div class="transGreen">
+							<div class="green">
+								<div class="black"></div>
+							</div>
+						</div>
+					</div>
+					<div class="straight">
+						<div class="outerTitle">
+							<h1>{{hotspot.title}}</h1>
+						</div>
+						<div class="plus"></div>
+						<div class="x"></div>
+					</div>
+				</a>
+				<p ng-if="isText(hotspot.content)">{{hotspot.content}}</p>
+				<img ng-if="isImg(hotspot.content)" ng-src="{{hotspot.content}}"/>
+				<video ng-if="isVideo(hotspot.content)" loop="true" preload="auto"></video>
+			</div>
+		</div>
+	</div>
+	<footer class="timeline">
+		<div class="indicator"></div>
+		<div ng-repeat="hotspot in hotspots" class="point" data-hotspot-point="{{$index}}" style="left:{{hotspot.progress | times100}}%" ng-mouseenter="onOver()">
+			<div class="line"></div>
+			<div class="dot"></div>
+			<div class="mask{{hotspot.progress | rightside}}">
+				<p class="numberedLockup">{{$index | twodigits}}.&nbsp;<span ng-bind-html-unsafe="removeSpaces(hotspot.title)"></span></p>
+			</div>
+		</div>
+	</footer>
+</section>

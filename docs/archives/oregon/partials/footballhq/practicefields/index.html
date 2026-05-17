@@ -1,0 +1,41 @@
+<section id="{{id}}" class="slits">
+	<ul class="floaties">
+		<li class="slanted">
+			<div class="unslanted">
+				<video loop="true">
+					<source type="video/mp4" src="vid/titlecards/outdoor.mp4"></source>
+					<source type="video/webm" src="vid/titlecards/outdoor.webm"></source>
+				</video>
+			</div>
+		</li>
+		<li class="slanted">
+			<div class="unslanted">
+				<video loop="true">
+					<source type="video/mp4" src="vid/titlecards/indoor.mp4"></source>
+					<source type="video/webm" src="vid/titlecards/indoor.webm"></source>
+				</video>
+			</div>
+		</li>
+	</ul>
+	<div class="mesh"></div>
+	<ul class="absoluties">
+		<li>
+			<h1 class="headline">outdoor<br/>practice</h1>
+			<a ng-mouseenter="onTitleButtonOver()" ng-mouseleave="onTitleButtonOut()" class="titleCardButton" ng-href="#!/footballhq/{{id}}/exploreoutdoor">
+				<div class="border"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<p>click to explore</p>
+			</a>
+		</li>
+		<li>
+			<h1 class="headline">indoor<br/>practice</h1>
+			<a ng-mouseenter="onTitleButtonOver()" ng-mouseleave="onTitleButtonOut()" class="titleCardButton" ng-href="#!/footballhq/{{id}}/exploreindoor">
+				<div class="border"></div>
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<p>click to explore</p>
+			</a>
+		</li>
+	</ul>
+</section>

@@ -1,0 +1,1460 @@
+@font-face
+{
+	font-family:'NexaThin';
+	src:url('../fonts/nexa_thin-webfont.eot');
+	src:url('../fonts/nexa_thin-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/nexa_thin-webfont.woff') format('woff'),
+		url('../fonts/nexa_thin-webfont.ttf') format('truetype'),
+		url('../fonts/nexa_thin-webfont.svg#nexa_thinregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face
+{
+	font-family:'NexaLight';
+	src:url('../fonts/nexa_light-webfont.eot');
+	src:url('../fonts/nexa_light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/nexa_light-webfont.woff') format('woff'),
+		url('../fonts/nexa_light-webfont.ttf') format('truetype'),
+		url('../fonts/nexa_light-webfont.svg#nexa_lightregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face
+{
+	font-family:'NexaBook';
+	src:url('../fonts/nexa_book-webfont.eot');
+	src:url('../fonts/nexa_book-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/nexa_book-webfont.woff') format('woff'),
+		url('../fonts/nexa_book-webfont.ttf') format('truetype'),
+		url('../fonts/nexa_book-webfont.svg#nexa_bookregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face
+{
+	font-family:'NexaRegular';
+	src:url('../fonts/nexa_regular-webfont.eot');
+	src:url('../fonts/nexa_regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/nexa_regular-webfont.woff') format('woff'),
+		url('../fonts/nexa_regular-webfont.ttf') format('truetype'),
+		url('../fonts/nexa_regular-webfont.svg#nexa_regularregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face
+{
+	font-family:'NexaBold';
+	src:url('../fonts/nexa_bold-webfont.eot');
+	src:url('../fonts/nexa_bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/nexa_bold-webfont.woff') format('woff'),
+		url('../fonts/nexa_bold-webfont.ttf') format('truetype'),
+		url('../fonts/nexa_bold-webfont.svg#nexa_boldregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face
+{
+	font-family:'NexaHeavy';
+	src:url('../fonts/nexa_heavy-webfont.eot');
+	src:url('../fonts/nexa_heavy-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/nexa_heavy-webfont.woff') format('woff'),
+		url('../fonts/nexa_heavy-webfont.ttf') format('truetype'),
+		url('../fonts/nexa_heavy-webfont.svg#nexa_heavyregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face
+{
+	font-family:'NexaBlack';
+	src:url('../fonts/nexa_black-webfont.eot');
+	src:url('../fonts/nexa_black-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/nexa_black-webfont.woff') format('woff'),
+		url('../fonts/nexa_black-webfont.ttf') format('truetype'),
+		url('../fonts/nexa_black-webfont.svg#nexa_blackregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+html
+{
+	width:100%;
+	min-width:960px;
+	height:100%;
+	overflow:hidden;
+	position:relative;
+}
+
+body
+{
+	background-image:url("../img/sec2_bg.png");
+	position:relative;
+	min-width:960px;
+	width:100%;
+	height:100%;
+	font-family:"NexaLight", sans;
+	font-size:12px;
+	line-height:144%;
+	color:#000;
+	letter-spacing:1px;
+	overflow:hidden;
+}
+
+h1
+{
+	text-transform:uppercase;
+	font-size:59px;
+	border-bottom:1px solid #000;
+	padding-bottom:27px;
+	margin-bottom:6px;
+	letter-spacing:0;
+	line-height:100%;
+}
+
+h2
+{
+	font-size:39px;
+	text-transform:uppercase;
+	color:#424242;
+	font-family:"NexaBlack", sans;
+	position:absolute;
+	top:113px;
+	left:6px;
+}
+
+h3
+{
+	color:#424242;
+	font-family:"NexaBlack", sans;
+	font-size:25px;
+	text-transform:uppercase;
+	line-height:130%;
+	margin-bottom:16px;
+}
+
+article
+{
+	left:635px;
+	width:300px;
+	position:absolute;
+	text-align:left;
+}
+
+	article > a
+	{
+		display:block;
+		width:65px;
+		height:23px;
+		background-color:#424242;
+		text-transform:uppercase;
+		color:#FFF;
+		text-decoration:none;
+		text-align:center;
+		line-height:85%;
+		padding-top:5px;
+	}
+
+	article > a:after
+	{
+		content:url("../img/v.png");
+		display:block;
+	}
+
+	#article1 h3, #article2 h3, #article3 h3
+	{
+		border-bottom:1px solid #A6A6A6;
+		padding:9px 0 11px 0;
+		width:100%;
+		margin-bottom:7px;
+	}
+
+	#article1 p, #article2 p, #article3 p
+	{
+		padding-bottom:11px;
+	}
+
+	article > ul
+	{
+		border-bottom:1px solid #A6A6A6;
+		padding:0 0 25px 0;
+	}
+
+	article > ul, #sec8 ul, #sec9 ul
+	{
+		padding-left:15px;
+		text-indent:-15px;
+	}
+
+	article > ul > li:before, #sec8 ul > li:before, #sec9 ul > li:before
+	{
+		color:#8D8D8D;
+		font-size:21px;
+		line-height:0;
+		position:relative;
+		top:3px;
+		content:'• ';
+	}
+
+		article > ul > li.fact:before
+		{
+			color:inherit;
+			font-size:inherit;
+			line-height:inherit;
+			position:static;
+			top:inherit;
+			content:none;
+		}
+
+		article > ul > li.fact
+		{
+			clear:left;
+			text-transform:uppercase;
+			font-size:15px;
+			margin:4px 0 -31px -16px;
+			padding:14px 0 0 0;
+			text-indent:0;
+			line-height:95%;
+			width:280px;
+			height:77px;
+			font-family:"NexaRegular", sans;
+			color:#424242;
+		}
+
+			article > ul > li.fact > strong
+			{
+				float:left;
+				font-size:56px;
+				font-family:"NexaBlack", sans;
+				line-height:100%;
+				margin:-6px 4px 0 0;
+			}
+
+	nav
+	{
+		position:absolute;
+		z-index:1;
+		width:100%;
+		min-width:960px;
+		background-color:#FFF;
+		height:54px;
+	}
+
+		nav > img
+		{
+			position:absolute;
+			width:100%;
+			height:23px;
+			top:54px;
+			z-index:-1;
+		}
+
+		nav > img + div
+		{
+			width:960px;
+			margin:0 auto;
+			text-align:center;
+			position:relative;
+		}
+
+		nav > div > ul
+		{
+			position:absolute;
+			margin-top:25px;
+			height:29px;
+			z-index:2;
+		}
+
+		nav > div > ul > li
+		{
+			display:inline-block;
+			position:absolute;
+			width:95px;
+			text-align:center;
+		}
+
+			nav > div > ul > li:first-child
+			{
+				left:-15px;
+			}
+
+			nav > div > ul > li:first-child + li
+			{
+				left:90px;
+			}
+
+			nav > div > ul > li:first-child + li + li
+			{
+				left:201px;
+			}
+
+			nav > div > ul > li:first-child + li + li + li
+			{
+				left:658px;
+			}
+
+			nav > div > ul > li:first-child + li + li + li + li
+			{
+				left:773px;
+			}
+
+			nav > div > ul > li:first-child + li + li + li + li + li
+			{
+				left:864px;
+			}
+
+		nav > div > ul:first-child + img
+		{
+			position:absolute;
+			top:46px;
+			left:16.5px;
+			z-index:-100;
+		}
+
+		nav > div > ul > li > a
+		{
+			color:#A9A8A8;
+			font-size:14px;
+			font-family:"NexaBook", sans;
+			text-transform:uppercase;
+			text-decoration:none;
+			letter-spacing:1px;
+		}
+
+			nav > div > ul > li > a:hover
+			{
+				color:#000;
+			}
+
+			nav > div > ul > li > a.selected
+			{
+				color:#000;
+				font-family:"NexaHeavy", sans;
+			}
+
+		nav > div > ul + img + img
+		{
+			margin-top:11px;
+		}
+
+		nav > div > img + a
+		{
+			position:absolute;
+			top:54px;
+			left:785px;
+		}
+
+	body > nav + div
+	{
+		position:absolute;
+		width:100%;
+		height:100%;
+		bottom:0;
+	}
+
+	body > div > section
+	{
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:100%;
+		left:0%;
+		overflow:hidden;
+	}
+
+	body > div > section > div
+	{
+		position:relative;
+		width:960px;
+		height:100%;
+		margin:0 auto;
+	}
+
+		#sec1
+		{
+			min-height:800px; 
+			background-image:url("../img/hero.jpg");
+			background-color:#FFF;
+			background-repeat:no-repeat;
+			background-position:center top;
+			top:0;
+		}
+
+			#sec1 article
+			{
+				top:147px;
+				left:50%;
+				width:570px;
+				margin-left:-285px;
+				text-align:center;
+				position:relative;
+			}
+
+			#sec1 article > h1
+			{
+				position:relative;
+			}
+
+			#sec1 article > p
+			{
+				text-align:left;
+				margin-bottom:20px;
+				position:relative;
+				width:95%;
+			}
+
+			#sec1 article > a
+			{
+				font-family:"NexaHeavy", sans;
+				width:auto;
+				height:20px;
+				background-color:#FFF200;
+				color:#424242;
+				display:inline-block;
+				padding:12px 11px 0 11px;
+				margin-top:12px;
+			}
+
+			#sec1 article > a:after
+			{
+				content:"";
+				display:inline;
+			}
+
+		#sec2
+		{
+		}
+
+			#sec2 > div:first-child
+			{
+				width:100%;
+				height:100%;
+				position:absolute;
+				background-image:url("../img/sunshine.jpg");
+				background-color:#FFF;
+				top:100%;
+				background-repeat:no-repeat;
+				background-position:top center;
+			}
+
+			#article1, #article2, #article3
+			{
+				top:100%;
+			}
+
+			#article1 ul + p, #article3 ul + p
+			{
+				font-size:8px;
+				text-transform:uppercase;
+			}
+
+			#pin
+			{
+				position:absolute;
+				top:50%;
+				margin-top:-225px;
+				left:-40px;
+			}
+
+			#article2 > div
+			{
+				margin:0 0 0 -21px;
+			}
+
+				#article2 > div > div
+				{
+					position:absolute;
+					top:4px;
+					left:0;
+					width:277px;
+					height:65px;
+					overflow:hidden;
+				}
+
+				#article2 > div > div > img
+				{
+					position:absolute;
+					top:65px;
+					left:25px;
+				}
+
+					#article2 > div > div > img + img
+					{
+						left:74px;
+					}
+
+					#article2 > div > div > img + img + img
+					{
+						left:123px;
+					}
+
+					#article2 > div > div > img + img + img + img
+					{
+						left:172px;
+					}
+
+					#article2 > div > div > img + img + img + img + img
+					{
+						left:221px;
+					}
+
+			#pin img
+			{
+				position:absolute;
+				left:0;
+				top:0;
+			}
+
+			#pin div
+			{
+				position:absolute;
+				top:0;
+			}
+
+				#pocket
+				{
+					width:608px;
+					height:550px;
+				}
+
+				#pin > div > #phone
+				{
+					top:97px;
+					left:110px;
+				}
+
+				#pocket > #closedLeft, #pocket > #closedRight
+				{
+					height:320px;
+				}
+
+				#pocket > #openLeft, #pocket > #openRight, #pocket > #closedLeft, #pocket > #closedRight
+				{
+					overflow:hidden;
+					width:100%;
+				}
+
+				#pocket > #openLeft, #pocket > #openRight
+				{
+					height:230px;
+					top:auto;
+					bottom:0;
+				}
+
+				#pocket > #openLeft > img
+				{
+					top:-320px;
+					left:-2px;
+				}
+
+				#pocket > #openRight > img 
+				{
+					top:-320px;
+					left:2px;
+				}
+
+		#sec3
+		{
+			height:1105px;
+			min-height:100%;
+			font-size:17px;
+			line-height:115%;
+			letter-spacing:0;
+			color:#ADB0B2;
+			background-color:#EFEFEF;
+		}
+
+		#sec3 strong
+		{
+			font-family:"NexaBlack", sans;
+			color:#9A9DA0;
+		}
+		
+			#sec3 h4
+			{
+				font-family:"NexaBlack", sans;
+				font-size:27px;
+				color:#FFF200;
+				background-color:#9A9DA0;
+				width:287px;
+				padding:8px 0 6px 20px;
+				margin-bottom:7px;
+				letter-spacing:4px;
+				text-transform:uppercase;
+			}
+
+				#sec3 > div div, #sec3 img, #sec3 p
+				{
+					position:absolute;
+				}
+
+				#sec3 > div section > section
+				{
+					float:left;
+				}
+
+				#sec3 > div > section:first-child
+				{
+					margin:25px 10px 10px 10px;
+					height:520px;
+				}
+
+					#sec3 > div > section:first-child > section:first-child
+					{
+						border-right:1px solid #CFD2D3;
+						width:658px;
+						height:100%;
+					}
+
+						#sec3 > div > section:first-child > section:first-child > div:first-child
+						{
+							background-color:#999B9D;
+							width:250px;
+							height:220px;
+							top:-1px;
+							left:416px;
+						}
+
+						#sec3 > div > section:first-child > section:first-child > div:first-child + div
+						{
+							background-color:#FFF200;
+							width:250px;
+							height:220px;
+							top:-1px;
+							left:416px;
+						}
+
+						#sec3 > div > section:first-child > section:first-child > div:first-child + div + div
+						{
+							background-color:#FFF200;
+							width:46px;
+							height:115px;
+							top:270px;
+							left:257px;
+						}
+
+						#sec3 > div > section:first-child > section:first-child > div + img
+						{
+							top:-7px;
+							left:21px;
+						}
+
+						#sec3 > div > section:first-child > section:first-child > img + img
+						{
+							top:106px;
+							left:186px;
+						}
+
+						#sec3 > div > section:first-child > section:first-child > img + p
+						{
+							top:127px;
+							left:53px;
+							color:#E9EBEB;
+						}
+
+							#sec3 > div > section:first-child > section > p strong
+							{
+								font-family:"NexaBlack", sans;
+								font-size:68px;
+							}
+
+							#sec3 > div > section:first-child > section > img + p strong
+							{
+								color:inherit;
+							}
+
+						#sec3 > div > section:first-child > section:first-child > img + p + p
+						{
+							top:249px;
+							left:53px;
+							border-top:2px solid #FFF200;
+							padding-top:42px;
+							width:245px;
+						}
+
+						#sec3 > div > section:first-child > section:first-child > img + p + p + p
+						{
+							top:402px;
+							border-top:2px solid #FFF200;
+							width:245px;
+							left:53px;
+							padding-top:35px;
+						}
+
+							#sec3 > div > section:first-child > section:first-child > img + p + p + p strong + strong
+							{
+								font-size:18px;
+								margin:-2px 0 -16px 67px;
+								display:block;
+							}
+
+						#sec3 > div > section:first-child > section:first-child > img + p + p + p + p
+						{
+							left:501px;
+							top:45px;
+							text-align:center;
+							width:130px;
+							font-size:13px;
+							line-height:100%;
+							color:#FFF200;
+						}
+
+							#sec3 > div > section:first-child > section:first-child > img + p + p + p + p strong
+							{
+								font-size:20px;
+								color:inherit;
+							}
+
+						#sec3 > div > section:first-child > section:first-child > img + p + p + p + p + p
+						{
+							top:163px;
+							left:439px;
+							text-align:right;
+							width:146px;
+							font-size:11px;
+							line-height:110%;
+						}
+
+							#sec3 > div > section:first-child > section:first-child > img + p + p + p + p + p strong
+							{
+								font-size:37px;
+							}
+
+						#sec3 > div > section:first-child > section:first-child > img + p + p + p + p + p + p
+						{
+							top:258px;
+							left:381px;
+							text-align:right;
+						}
+
+							#sec3 > div > section:first-child > section:first-child > img + p + p + p + p + p + p strong
+							{
+								font-size:inherit;
+								font-family:"NexaBold", sans;
+							}
+
+							#sec3 > div > section:first-child > section:first-child > img + p + p + p + p + p + p strong strong
+							{
+								font-size:68px;
+								margin:27px -4px 5px 0;
+								display:block;
+								font-family:"NexaBlack", sans;
+								position:relative;
+								height:19px;
+							}
+
+								#perPhone span
+								{
+									position:absolute;
+									display:block;
+									text-align:center;
+									top:0;
+									width:60px;
+								}
+
+									#perPhone .dollar
+									{
+										left:33px;
+									}
+
+									#perPhone .tens
+									{
+										left:79px;
+									}
+
+									#perPhone .ones
+									{
+										left:124px;
+									}
+
+									#perPhone .decimal
+									{
+										left:158px;
+									}
+
+									#perPhone .tenths
+									{
+										left:188px;
+									}
+
+									#perPhone .hundredths
+									{
+										left:231px;
+									}
+
+							#sec3 > div > section:first-child > section:first-child > img + p + p + p + p + p + p strong + br + br + strong
+							{
+								font-size:inherit;
+								font-family:"NexaBlack", sans;
+							}
+
+					#sec3 > div > section:first-child > section:first-child + section
+					{
+						text-align:right;
+					}
+
+						#sec3 > div > section:first-child > section + section > canvas
+						{
+							width:150px;
+							height:150px;
+							top:24px;
+							left:684px;
+							position:absolute;
+						}
+
+						#sec3 > div > section:first-child > section:first-child + section > canvas + div
+						{
+							background-color:#999B9D;
+							width:203px;
+							height:178px;
+							top:246px;
+							left:697px;
+						}
+						
+						#sec3 > div > section:first-child > section:first-child + section > canvas + div + div
+						{
+							background-color:#FFF200;
+							width:203px;
+							height:178px;
+							top:246px;
+							left:697px;
+						}
+
+						#sec3 > div > section:first-child > section:first-child + section > div + img
+						{
+							top:26px;
+							left:836px;
+						}
+
+						#sec3 > div > section:first-child > section:first-child + section > img + img
+						{
+							top:241px;
+							left:692px;
+						}
+
+						#sec3 > div > section:first-child > section:first-child + section > img + p
+						{
+							top:180px;
+							left:692px;
+						}
+
+						#sec3 > div > section:first-child > section:first-child + section > img + p + p
+						{
+							top:370px;
+							left:677px;
+							font-size:69px;
+							text-align:right;
+							font-family:"NexaBlack", sans;
+							width:200px;
+						}
+
+						#sec3 > div > section:first-child > section:first-child + section > img + p + p + p
+						{
+							top:431px;
+							left:698px;
+							width:200px;
+						}
+
+							#sec3 > div > section:first-child > section:first-child + section > img + p + p + p strong
+							{
+								font-family:"NexaBold", sans;
+								font-size:inherit;
+							}
+
+				#sec3 > div > section:first-child + section
+				{
+					height:240px;
+					margin:0 10px;
+					border-bottom:1px solid #CFD2D3;
+					border-top:1px solid #CFD2D3;
+				}
+
+					#sec3 > div > section:first-child + section > section:first-child
+					{
+						top:10px;
+						width:317px;
+						height:220px;
+						border-right:1px solid #CFD2D3;
+						margin:10px 0;
+					}
+
+						#sec3 > div > section:first-child + section > section:first-child > img:first-child
+						{
+							top:540px;
+							left:55px;
+						}
+
+						#sec3 > div > section:first-child + section > section:first-child > img:first-child + img
+						{
+							top:622px;
+							left:56px;
+						}
+
+						#sec3 > div > section:first-child + section > section:first-child > img:first-child + img + img
+						{
+							top:694px;
+							left:56px;
+						}
+
+						#sec3 > div > section:first-child + section > section:first-child > p > strong
+						{
+							font-family:"NexaBold", sans;
+						}
+
+						#sec3 > div > section:first-child + section > section:first-child > img + p
+						{
+							top:562px;
+							left:109px;
+						}
+
+						#sec3 > div > section:first-child + section > section:first-child > img + p + p
+						{
+							top:632px;
+							left:109px;
+						}
+
+						#sec3 > div > section:first-child + section > section:first-child > img + p + p + p
+						{
+							top:711px;
+							left:109px;
+						}
+
+						#sec3 > div > section:first-child + section > section:first-child + section > p:first-child
+						{
+							top:536px;
+							left:345px;
+						}
+
+						#sec3 > div > section:first-child + section > section:first-child + section > ul
+						{
+							top:564px;
+							left:343px;
+							position:absolute;
+							width:600px;
+						}
+
+							#sec3 > div > section:first-child + section > section:first-child + section > ul > li
+							{
+								float:left;
+								margin:0 3px -2px 0;
+							}
+
+							#sec3 > div > section:first-child + section > section:first-child + section > ul > li > img
+							{
+								position:relative;
+							}
+
+						#sec3 > div > section:first-child + section > section:first-child + section > ul + p
+						{
+							top:643px;
+							left:341px;
+						}
+
+							#sec3 > div > section:first-child + section > section:first-child + section > ul + p strong
+							{
+								font-size:26px;
+							}
+
+							#sec3 > div > section:first-child + section > section:first-child + section > ul + p strong + strong
+							{
+								top:30px;
+								left:429px;
+								display:block;
+								font-size:50px;
+								position:absolute;
+								font-family:"NexaBook", sans;
+								line-height:71%;
+							}
+
+							#sec3 > div > section:first-child + section > section:first-child + section > ul + p strong > strong
+							{
+								position:absolute;
+								top:25px;
+								left:-431px;
+								letter-spacing:-4px;
+								display:block;
+								font-size:114px;
+								text-align:right;
+								width:414px;
+							}
+
+								#kWhr span
+								{
+									position:absolute;
+									width:90px;
+									text-align:center;
+									top:0;
+								}
+
+									#kWhr .tenThousand
+									{
+										left:-8px;
+									}
+
+									#kWhr .thousand
+									{
+										left:67px;
+									}
+
+									#kWhr .comma
+									{
+										left:119px;
+									}
+
+									#kWhr .hundred
+									{
+										left:171px;
+									}
+
+									#kWhr .ten
+									{
+										left:250px;
+									}
+
+									#kWhr .one
+									{
+										left:329px;
+									}
+
+				#sec3 > div > section:first-child + section + section
+				{
+					padding-top:26px;
+				}
+
+					#sec3 > div > section:first-child + section + section > section
+					{
+						float:left;
+						padding:0 82px 0 38px;
+					}
+
+						#sec3 > div > section:first-child + section + section > section > ul
+						{
+							padding:0 0 16px 23px;
+							width:300px;
+							font-size:12px;
+							line-height:135%;
+							letter-spacing:1px;
+						}
+
+						#sec3 > div > section:first-child + section + section > section > ul strong
+						{
+							font-family:"NexaBold", sans;
+						}
+
+
+		#sec4
+		{
+			height:100%;
+			min-height:1500px;
+			background-color:#FFF;
+		}
+
+			#sec4 > div > h2
+			{
+				border-bottom:1px solid #424242;
+				left:0;
+				padding:0 120px 21px 7px;
+			}
+
+			#sec4 > div > p
+			{
+				font-family:"NexaBook", sans;
+				position:relative;
+				top:151px;
+				line-height:200%;
+				padding-top:20px;
+			}
+
+				#sec4 > div > p > strong
+				{
+					font-family:"NexaBlack", sans;
+				}
+
+			#sec4 > div > iframe
+			{
+				margin:190px 0 -120px 0;
+			}
+
+			#sec4 > div > ul + p
+			{
+				top:50px;
+				border-top:none;
+			}
+
+				#sec4 > div > ul + p > a
+				{
+					color:#000;
+				}
+
+			#sec4 ul
+			{
+				padding-top:205px;
+			}
+
+			#sec4 li
+			{
+				width:265px;
+				height:343px;
+				float:left;
+				position:relative;
+				margin-right:55px;
+			}
+
+				#sec4 li img
+				{
+					bottom:190px;
+					position:absolute;
+				}
+
+				#sec4 li h3
+				{
+					font-size:14px;
+					font-family:"NexaHeavy", sans;
+					top:180px;
+					position:absolute;
+				}
+
+				#sec4 li p
+				{
+					font-size:8px;
+					font-family:"NexaBook", sans;
+					top:207px;
+					position:absolute;
+				}
+
+		#sec5
+		{
+			height:889px;
+			min-height:100%;
+			background-image:url("../img/sec5_bg.jpg");
+			background-color:#FFF;
+			background-repeat:no-repeat;
+			background-position:center bottom;
+		}
+
+			#sec5 > div
+			{
+				height:889px;
+				margin-left:-480px;
+				bottom:0;
+				left:50%;
+				position:absolute;
+			}
+
+			#sec5 p
+			{
+				position:absolute;
+				top:260px;
+				width:887px;
+				left:50%;
+				margin-left:-444px;
+				color:#777;
+				font-family:"NexaLight", sans;
+				background-color:#FFF;
+				padding:10px 15px;
+				font-size:16px;
+			}
+
+			#sec5 form
+			{
+				width:887px;
+				position:absolute;
+				top:-50px;
+				left:37px;
+			}
+
+			#sec5 form + form
+			{
+				top:177px;
+				left:487px;
+				width:437px;
+			}
+
+			#sec5 form + form > input:first-child
+			{
+				width:421px;
+			}
+
+			#sec5 form input, #sec5 form textarea
+			{
+				letter-spacing:5px;
+				font-size:17px;
+				font-family:"NexaHeavy", sans;
+				text-transform:uppercase;
+				color:#FFF;
+				display:block;
+				position:absolute;
+				padding:0 8px;
+			}
+
+			#sec5 form input
+			{
+				width:406px;
+				height:48px;
+				background-color:rgba(30,30,30,0.6);
+				top:411px;
+			}
+
+			#sec5 form input + input
+			{
+				top:498px;
+			}	
+
+			#sec5 form textarea
+			{
+				width:421px;
+				height:122px;
+				background-color:rgba(30,30,30,0.6);
+				right:0;
+				padding-top:13px;
+				top:411px;
+			}
+
+			#sec5 form textarea + input, #sec5 form + form > input + input
+			{
+				cursor:pointer;
+				font-family:"NexaLight", sans;
+				font-size:12px;
+				top:566px;
+				width:103px;
+				height:32px;
+				right:0;
+				background-color:rgba(30,30,30,0.35);
+			}
+
+			#sec5 form + form > input + input
+			{
+				top:479px;
+				right:0;
+			}
+
+			#sec5 > div > img
+			{
+				margin:715px auto 0 auto;
+				display:block;
+				padding-left:28px;
+			}
+
+	#sec6
+	{
+		background-color:#535352;
+		min-height:700px;
+	}
+
+		#sec6 ul
+		{
+			color:#8B8B8B;
+			width:340px;
+			padding:160px 40px 0 55px;
+			float:left;
+			line-height:110%;
+		}
+
+		#sec6 li
+		{
+			margin-bottom:10px;
+		}
+
+			#sec6 li > p:first-child
+			{
+				font-family:"NexaBlack", sans;
+			}
+
+		#sec7
+		{
+			height:320px;
+			background-color:#FFF;
+			line-height:110%;
+			background-image:url("../img/nav_gradient.png");
+			background-repeat:repeat-x;
+		}
+
+			#sec7 > div > section
+			{
+				float:left;
+				height:144px;
+				margin:0 37px;
+				position:relative;
+				width:330px;
+				font-family:"NexaBook", sans;
+				text-transform:uppercase;
+				font-size:11px;
+				color:#A3A3A3;
+			}
+
+			#sec7 > div > section > img
+			{
+				position:absolute;
+				top:24px;
+			}
+
+			#sec7 > div > section + section > img
+			{
+				top:22px;
+				right:0;
+			}
+
+			#sec7 > div > section > p
+			{
+				position:absolute;
+				top:56px;
+			}
+
+			#sec7 ul
+			{
+				position:absolute;
+				top:87px;
+				border-top:2px solid #A3A3A3;
+				width:500px;
+				padding-top:5px;
+			}
+
+				#sec7 > div > section:first-child > ul > li + li + li + li + li + li + li
+				{
+					position:absolute;
+					top:30px;
+					left:0;
+				}
+
+			#sec7 section + section ul
+			{
+				right:0;
+			}
+
+				#sec7 section + section ul > li + li + li + li
+				{
+					margin-right:0;
+				}
+
+			#sec7 li
+			{
+				display:inline-block;
+				font-size:9px;
+				position:relative;
+				margin-right:7px;
+			}
+
+				#sec7 li img
+				{
+					position:relative;
+					top:3px;
+				}
+
+				#sec7 > div > section:first-child + section > ul > li:first-child + li
+				{
+					top:3px;
+				}
+
+				#sec7 > div > section:first-child + section > ul > li:first-child + li + li
+				{
+					top:-1px;
+				}
+
+			#sec7 a
+			{
+				color:#A3A3A3;
+				text-decoration:none;
+			}
+
+			#sec7 > div > section + section
+			{
+				float:right;
+				width:250px;
+				text-align:right;
+			}
+
+				#sec7 > div > section + section > p
+				{
+					right:0;
+				}
+
+				#sec7 > div > section + section > img
+				{
+					display:inline-block;
+				}
+
+			#sec8, #sec9
+			{
+				top:0;
+				left:100%;
+				background-color:#FFF;
+			}
+
+				#sec8 > div, #sec9 > div
+				{
+					width:953px;
+					padding-left:7px;
+				}
+
+			#sec8
+			{
+				min-height:1500px;
+			}
+
+			#sec9
+			{
+				min-height:900px;
+			}
+
+				#sec8 .close, #sec9 .close
+				{
+					font-size:39px;
+					text-transform:uppercase;
+					color:#424242;
+					font-family:"NexaBlack", sans;
+					position:absolute;
+					top:113px;
+					right:0px;
+					display:block;
+					cursor:pointer;
+					text-decoration:none;
+				}
+
+				#sec8 h2 + p, #sec9 h2 + p
+				{
+					padding-top:160px;
+				}
+
+				#sec8 h3, #sec9 h3
+				{
+					margin:0;
+					padding:0;
+					position:relative;
+					font-family:"NexaHeavy", sans;
+					font-size:15px;
+					color:#000;
+					top:auto;
+					left:0;
+					margin-bottom:5px;
+				}
+
+				#sec8 p, #sec9 p
+				{
+					margin:0;
+					padding:0;
+					margin-bottom:10px;
+				}
+
+				#sec8 ul, #sec9 ul
+				{
+					border-top:none;
+					position:relative;
+					padding-left:6px;
+					top:auto;
+					width:auto;
+					margin-top:-10px;
+					margin-bottom:10px;
+					width:876px;
+					left:10px;
+				}
+
+				#sec8 li, #sec9 li
+				{
+					font-size:inherit;
+					display:block;
+				}

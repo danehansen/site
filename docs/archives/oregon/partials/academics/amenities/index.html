@@ -1,0 +1,27 @@
+<section id="{{id}}">
+	<ul class="videos">
+		<li ng-repeat="item in items" class="titleCard">
+			<video loop="true">
+				<source type="video/mp4" ng-src="{{item.video}}.mp4"></source>
+				<source type="video/webm" ng-src="{{item.video}}.webm"></source>
+			</video>
+			<div></div>
+		</li>
+	</ul>
+	<h1>{{id}}</h1>
+	<ul class="items">
+
+		<li ng-repeat="item in items | limitTo:loopLength">
+			<a href="" ng-mouseenter="onOver()">
+				<div class="green"></div>
+				<div class="black"></div>
+				<img ng-src="{{item.greenImg}}"/>
+				<img class="gray" ng-src="{{item.grayImg}}"/>
+				<h2>{{item.title}}</h2>
+			</a>
+		</li>
+	</ul>
+	<ul class="copy">
+		<li ng-repeat="item in items">{{item.copy}}</li>
+	</ul>
+</section>

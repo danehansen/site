@@ -1,0 +1,18 @@
+#loading_information {
+	color:#fff;
+	width:880px;
+	position: absolute;
+	left:50%;
+	top:50%;
+	margin-left: -440px;
+	height:300px;
+}
+	#loading_information h2 {
+		text-align: center;
+		font-size: 16px;
+	}
+	#loading_information h3 {
+		font-family: 'Gin-Round', Arial, sans-serif;
+		font-size:30px;
+	}
+

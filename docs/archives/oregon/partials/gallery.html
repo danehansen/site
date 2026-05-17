@@ -1,0 +1,54 @@
+<section class="slits gallery">
+	<ul class="floaties closed">
+		<li ng-repeat="item in items" class="slanted">
+			<div class="unslanted">
+				<img class="bw" ng-src="{{imgPath}}{{item.assetName}}_BW.jpg"/>
+				<img class="color" ng-src="{{imgPath}}{{item.assetName}}.jpg"/>
+				<video ng-if="videos" preload="auto"></video>
+			</div>
+		</li>
+	</ul>
+	<ul class="absoluties">
+		<li ng-repeat="item in items">
+			<a href="" class="diamondButton">
+				<div class="diagonal">
+					<div class="border top left"></div>
+					<div class="border top right"></div>
+					<div class="border bottom right"></div>
+					<div class="border bottom left"></div>
+					<div class="transGreen">
+						<div class="green">
+							<div class="black"></div>
+						</div>
+					</div>
+				</div>
+				<div class="straight">
+					<div class="outerTitle{{item.title | numlines}}">
+						<h1 ng-bind-html-unsafe="item.title"></h1>
+					</div>
+				</div>
+			</a>
+		</li>
+	</ul>
+</section>
+<div class="slitScrollbar scrollbar"></div>
+<footer class="gallery">
+	<div class="name">
+		<h1>name</h1>
+		<ul>
+			<li ng-repeat="item in items" class="numberedLockup">{{$index | twodigits}}.&nbsp;<span ng-bind-html-unsafe="removeSpaces(item.title)"></span></li>
+		</ul>
+	</div>
+	<div class="description">
+		<h1>description</h1>
+		<ul>
+			<li ng-repeat="item in items">{{item.copy}}</li>
+		</ul>
+	</div>
+	<div class="no">
+		<h1>no</h1>
+		<ul>
+			<li class="numberedLockup" ng-repeat="item in items">{{$index | twodigits}}/{{items.length | twodigitsminusone}}</li>
+		</ul>
+	</div>
+</footer>
