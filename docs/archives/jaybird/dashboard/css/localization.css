@@ -1,0 +1,54 @@
+.hour:after
+{
+	content:"h";
+}
+
+.minute:after
+{
+	content:"m";
+}
+
+.hours:after
+{
+	content:"hours";
+}
+
+.over:after
+{
+	content:"over";
+}
+
+.under:after
+{
+	content:"under";
+}
+
+.am:after
+{
+	content:"am";
+}
+
+.pm:after
+{
+	content:"pm";
+}
+
+.points:after
+{
+	content:"pts";
+}
+
+.week .spanWord:after
+{
+	content:"week";
+}
+
+.month .spanWord:after
+{
+	content:"month";
+}
+
+.year .spanWord:after
+{
+	content:"year";
+}

@@ -1,0 +1,35 @@
+/* TEAM */
+	Company: Super Top Secret
+	Contact: hello [at] wearetopsecret.com
+	Twitter: @wearetopsecret
+	Site: http://www.wearetopsecret.com
+	Location: Salt Lake City, Utah, USA
+
+	Interactive Creative Director: Aaron Sather
+	Twitter: @aaronsather
+	Location: Salt Lake City, Utah, USA
+
+	Creative Director: Ryan Martindale
+	Twitter: @wearetopsecret
+	Location: Salt Lake City, Utah, USA
+
+	Mobile Experience Designer & Developer: Chris Kelley
+	Twitter: @chr1skelley
+	Location: Salt Lake City, Utah, USA
+
+	Developer: Josh Batchelor
+	Twitter: @creativewebdev
+	Location: Salt Lake City, Utah, USA
+
+	Developer: Dane Hansen
+	Twitter: @danehansen
+	Location: Salt Lake City, Utah, USA
+
+	Developer: Pete Rugh
+	Twitter: @peterugh
+	Location: Salt Lake City, Utah, USA
+
+/* SITE */
+	Last update: 2013/10/11
+	Language: English
+	Doctype: HTML5

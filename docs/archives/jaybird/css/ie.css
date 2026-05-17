@@ -1,0 +1,21 @@
+/* Bill Gates better save a lot of children with all the money he got from this POS browser */
+/* we stick 'body' in front of all these declarations in case this stylesheet gets loaded in the wrong order */
+
+/* IE 10 Shit */
+
+body.internet_explorer .button
+{
+	line-height:39px;
+	text-align: center;
+}
+body.internet_explorer .button.small
+{
+	line-height:23px;
+}
+body.internet_explorer > header > div > p {
+	line-height: 35px;
+}
+body.internet_explorer .mainSlideshow button
+{
+	top:1px;
+}

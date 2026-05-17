@@ -1,0 +1,1056 @@
+#fading
+{
+	width:970px;
+	margin:0 auto;
+	overflow-y:hidden;
+	position:relative;
+}
+
+	#fading.transitioning > li
+	{
+		position:absolute;
+		width:100%;
+	}
+
+	#fading.transitioning > .noneAlpha
+	{
+		display:block;
+	}
+
+	#fading > li > .day, #fading > li > .week
+	{
+		overflow:hidden;
+	}
+
+	.day #fading > li > .week
+	{
+		display:none;
+	}
+
+	#fading > li > .day
+	{
+		display:none;
+	}
+
+	.day #fading > li > .day
+	{
+		display:block;
+	}
+
+	#fading .activity
+	{
+		text-transform:uppercase;
+		color:#4D4D4D;
+		font-family:'UniversCom-47LightCond';
+		font-size:14px;
+	}
+
+		#fading .activity .buttons
+		{
+			height:106px;
+			text-align:center;
+			overflow-y:hidden;
+		}
+		
+			#fading .activity .buttons li
+			{
+				display:inline-block;
+				height:104px;
+				width:137px;
+				background-color:#F3F3F3;
+				border-right:1px solid #D5D5D5;
+				margin-top:1px;
+				text-transform:uppercase;
+				font-family:'UniversCom-59UltraCondensed';
+				opacity:0;
+			}
+
+			#fading .activity .buttons li:first-child
+			{
+				border-left:1px solid #D5D5D5;
+			}
+			
+				#fading .activity .buttons li button
+				{
+					color:#BFBFBF;
+					height:100%;
+					width:100%;
+					font-size:20px;
+					line-height:172px;
+					letter-spacing:1px;
+					position:relative;
+					background-repeat:no-repeat;
+					background-position:center 30%;
+					background: -moz-linear-gradient(top,  #ffffff 0%, #ededed 3%, #f4f4f4 49%, #efefef 51%, #f7f7f7 97%, #e8e8e8 100%);
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(3%,#ededed), color-stop(49%,#f4f4f4), color-stop(51%,#efefef), color-stop(97%,#f7f7f7), color-stop(100%,#e8e8e8));
+					background: -webkit-linear-gradient(top,  #ffffff 0%,#ededed 3%,#f4f4f4 49%,#efefef 51%,#f7f7f7 97%,#e8e8e8 100%);
+					background: -o-linear-gradient(top,  #ffffff 0%,#ededed 3%,#f4f4f4 49%,#efefef 51%,#f7f7f7 97%,#e8e8e8 100%);
+					background: -ms-linear-gradient(top,  #ffffff 0%,#ededed 3%,#f4f4f4 49%,#efefef 51%,#f7f7f7 97%,#e8e8e8 100%);
+					background: linear-gradient(to bottom,  #ffffff 0%,#ededed 3%,#f4f4f4 49%,#efefef 51%,#f7f7f7 97%,#e8e8e8 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e8e8e8',GradientType=0 );
+					-webkit-transition:0.2s;
+					-moz-transition:0.2s;
+					-o-transition:0.2s;
+					transition:0.2s;
+				}
+
+				#fading .activity .buttons li button:hover
+				{
+					color:#5C5C5C;
+				}
+
+				#fading .activity .buttons li button:hover:before
+				{
+					opacity:0.64;
+				}
+
+				#fading .activity .buttons li button.selected
+				{
+					color:#5C5C5C;
+					box-shadow:0 0 30px 0 rgba(0,0,0,0.3);
+					z-index:1;
+				}
+
+					#fading .activity .buttons li button svg
+					{
+						width:100%;
+						height:53px;
+						position:absolute;
+						top:50%;
+						left:0;
+						top:15px;
+						fill:#BFBFBF;
+						-webkit-transition:0.2s;
+						-moz-transition:0.2s;
+						-o-transition:0.2s;
+						transition:0.2s;
+					}
+
+					#fading .activity .buttons li button:hover svg
+					{
+						fill:#5C5C5C;
+					}
+
+					#fading .activity .buttons li button.selected svg
+					{
+						fill:url(#activityGradient);
+					}
+			
+		#fading .activity .averages
+		{
+			text-align:center;
+			height:105px;
+			margin-bottom:30px;
+		}
+
+			#fading .activity .averages li
+			{
+				display:inline-block;
+				height:100%;
+				width:150px;
+			}
+
+			#fading .activity .averages li + li
+			{
+				border-left:1px solid #dddddd;
+			}
+
+				#fading .activity .averages h1
+				{
+					margin:23px 0 10px;
+				}
+
+				#fading .activity .averages p
+				{
+					
+				}
+
+					#fading .activity .averages em
+					{
+						font-family: 'UniversCom-59UltraCondensed';
+						text-transform:uppercase;
+						font-size:45px;
+						color:#5C5C5C;
+					}
+
+					#fading .activity .averages em:after
+					{
+						text-transform:lowercase;
+						color:#a4a3a3;
+						font-size:28px;
+						font-family: 'UniversLTStd-LightUltraCn';
+					}
+
+					#fading .activity .averages .minute
+					{
+						margin-left:10px;
+					}
+
+			#fading .activity .detail
+			{
+				
+			}
+
+				#fading .activity .detail h1
+				{
+					margin-bottom:25px;
+				}
+
+				#fading .activity .detail .left
+				{
+					width:700px;
+					float:left;
+				}
+
+					#fading .activity .detail canvas
+					{
+						border:1px solid #D4D4D4;
+						border-bottom:none;
+						height:335px;
+						width:698px;
+					}
+
+					#fading .activity .detail ul
+					{
+						border:1px solid #D4D4D4;
+						position:relative;
+						top:-3px;
+						margin-bottom:20px;
+					}
+
+						#fading .activity .detail li
+						{
+							font-size:21px;
+							color:#929292;
+							display:inline-block;
+							width:210px;
+							padding:8px 10px 5px;
+						}
+
+						#fading .activity .detail li + li
+						{
+							text-align:center;
+						}
+
+						#fading .activity .detail li + li + li
+						{
+							text-align:right;
+						}
+
+					#fading .activity .detail table
+					{
+						text-align:center;
+						width:100%;
+						border:1px solid #D4D4D4;
+						margin-bottom:30px;
+					}
+
+						#fading .activity .detail tr
+						{
+							
+						}
+
+							#fading .activity .detail th
+							{
+								color:#4d4d4d;
+								font-size:16px;
+								border-bottom:1px solid #D4D4D4;
+								padding:6px 0 4px;
+							}
+
+							#fading .activity .detail td
+							{
+								padding:22px 0 15px;
+								letter-spacing:1px;
+							}
+
+							#fading .activity .detail td + td
+							{
+								border-left:1px solid #D4D4D4;
+							}
+
+								#fading .activity .detail em
+								{
+									color:#5c5c5c;
+									font-size:42px;
+									font-family: 'UniversCom-59UltraCondensed';
+								}
+
+								#fading .activity .detail em:after
+								{
+									text-transform:lowercase;
+									color:#b2b1b1;
+									font-size:26px;
+									font-family: 'UniversLTStd-LightUltraCn';
+									margin-left: 5px;
+									letter-spacing: 2px;
+								}
+
+				#fading .activity .detail .right
+				{
+					float:right;
+					width:250px;
+					background-color:rgba(255,255,255,0.5);
+					height:503px;
+				}
+
+		#fading .activity .week
+		{
+			clear:both;
+		}
+
+			#fading .activity .reportCard
+			{
+
+			}
+
+				#fading .activity .reportCard table
+				{
+					border:1px solid #D0D0D0;
+					text-align:center;
+					width:100%;
+					margin:30px 0;
+				}
+
+					#fading .activity .reportCard tr:nth-child(odd)
+					{
+						height:52px;
+					}
+
+					#fading .activity .reportCard tr:nth-child(even)
+					{
+						height:140px;
+					}
+
+					#fading .activity .reportCard tr:nth-child(even) td:nth-child(odd)
+					{
+						border-right:none;
+					}
+
+					#fading .activity .reportCard tr:nth-child(even) td:nth-child(even)
+					{
+						border-left:none;
+					}
+
+						#fading .activity .reportCard th
+						{
+							border:1px solid #D0D0D0;
+							font-size:28px;
+							padding-top:14px;
+						}
+
+						#fading .activity .reportCard td
+						{
+							border:1px solid #D0D0D0;
+						}
+
+						#fading .activity .reportCard td h1
+						{
+							margin-top:25px;
+						}
+
+					#fading .activity .reportCard .circle
+					{
+						position:relative;
+					}
+
+						#fading .activity .reportCard .fillring
+						{
+							top:44px;
+						}
+
+						#fading .activity .reportCard .circle p
+						{
+								font-family: 'UniversCom-59UltraCondensed';
+								vertical-align: top;
+								margin-top: 34px;
+								position: relative;
+							
+						}
+
+							#fading .activity .reportCard .circle em
+							{
+								font-size:26px;
+							}
+						
+					#fading .activity .reportCard .bar
+					{
+						position:relative;
+						width:213px;
+					}
+
+						#fading .activity .reportCard .fillbar
+						{
+							top:43px;
+						}
+
+						#fading .activity .reportCard .bar p
+						{
+							margin-top:45px;
+						}
+
+							#fading .activity .reportCard .bar em
+							{
+								font-size:26px;
+								font-family: 'UniversCom-59UltraCondensed';
+								display: block;
+							}
+
+					#fading .activity .reportCard .slash
+					{
+					}
+
+						#fading .activity .reportCard .slash p
+						{
+							font-family: 'UniversLTStd-LightUltraCn';
+							font-size:73px;
+							color:#b9b8b8;
+							margin-top:10px;
+						}
+
+							#fading .activity .reportCard .slash .numerator
+							{
+								color:#5c5c5c;
+							}
+
+					#fading .activity .reportCard .big
+					{
+						position:relative;
+					}
+
+					#fading .activity .reportCard .big h2
+					{
+						font-size:34px;
+						font-family: 'UniversCom-59UltraCondensed';
+						letter-spacing: 13px;
+						padding-top: 0px;
+						top: 43px;
+						margin-bottom: 115px;
+						position: relative;
+					}
+
+					#fading .activity .reportCard .big svg
+					{
+						position:absolute;
+						width:100%;
+						top:4px;
+						height:129px;
+						left:0;
+						fill:url(#activityGradient);
+						z-index:-1;
+					}
+
+					#fading .activity .reportCard .big p
+					{
+						
+					}
+
+						#fading .activity .reportCard .big em
+						{
+							color:#5c5c5c;
+							text-transform:lowercase;
+							font-family: 'UniversCom-59UltraCondensed';
+							font-size: 45px;
+						}
+
+						#fading .activity .reportCard .big em:after
+						{
+							font-size:28px;
+							color:#a4a3a3;
+							text-transform:lowercase;
+							margin-top:10px;
+							font-family: 'UniversLTStd-LightUltraCn';
+						}
+
+						#fading .activity .reportCard .big em.minute
+						{
+							margin-left:10px;
+						}
+
+	#fading .sleep
+	{
+		font-family:'UniversCom-47LightCond';
+		text-align:center;
+		text-transform:uppercase;
+	}
+
+		#fading .sleep .averages
+		{
+			margin-bottom:30px;
+			position:relative;
+		}
+
+			.day #fading .sleep .averages h1 .avgs, #fading .sleep .averages h1 .totals
+			{
+				display:none;
+			}
+
+			.day #fading .sleep .averages h1 .totals
+			{
+				display:inline-block;
+			}
+
+			.day #fading .sleep .averages h1 .avgs, #fading .sleep .averages h1 .totals
+			{
+				display:none;
+			}
+
+			.day #fading .sleep .averages h1 .totals
+			{
+				display:inline;
+			}
+
+			#fading .sleep .averages table
+			{
+				width:835px;
+				margin:0 auto;
+				position: relative;
+			}
+
+				#fading .sleep .averages tr
+				{
+
+				}
+
+					#fading .sleep .averages th
+					{
+						font-size:12px;
+						color:#808080;
+						padding:25px 0 5px;
+					}
+
+					.day #fading .sleep .averages th span
+					{
+						display:none;
+					}
+
+					#fading .sleep .averages td
+					{
+						padding-bottom:20px;
+						width:210px;
+						
+					}
+
+					#fading .sleep .averages td + td, #fading .sleep .averages th + th
+					{
+						border-left:1px solid #e1e1e1;
+					}
+
+						#fading .sleep .averages em.sleep:before, #fading .sleep .averages em.wake:before
+						{
+							content:"";
+							width:29px;
+							height:21px;
+							display:inline-block;
+							margin:0 10px 7px 0;
+						}
+
+						#fading .sleep .averages em.moon:before
+						{
+							background-image:url("../img/sleep/averages/moon.png");
+						}
+
+						#fading .sleep .averages em.cloud:before
+						{
+							background-image:url("../img/sleep/averages/cloud.png");
+						}
+						
+						#fading .sleep .averages em
+						{
+							font-family: 'UniversCom-59UltraCondensed';
+							color:#5c5c5c;
+							font-size:45px;
+						}
+						
+						#fading .sleep .averages em:after
+						{
+							font-family: 'UniversLTStd-LightUltraCn';
+							font-size:28px;
+							color:#a4a3a3; 
+							text-transform:lowercase;
+						}
+		
+		#fading .sleep .day
+		{
+
+		}
+
+			#fading .sleep .information
+			{
+
+			}
+
+				#fading .sleep .information h1
+				{
+
+				}
+
+				#fading .sleep .information table
+				{
+					font-size:14px;
+					color:#4d4d4d;
+					text-align:center;
+					border:1px solid #D4D4D4;
+					width:100%;
+					margin:25px 0;
+				}
+
+					#fading .sleep .information tr
+					{
+						
+					}
+
+					#fading .sleep .information tr:first-child + tr
+					{
+	
+					}
+
+						#fading .sleep .information th
+						{
+							font-size:28px;
+							border:1px solid #D4D4D4;
+							height:46px;
+							padding-top:4px;
+							vertical-align:middle;
+						}
+						
+						#fading .sleep .information td
+						{
+
+						}
+
+							#fading .sleep .information em
+							{
+								color:#5c5c5c;
+								font-size:26px;
+								font-family: 'UniversCom-59UltraCondensed';
+							}
+
+						#fading .sleep .information .graph
+						{
+							border:1px solid #D4D4D4;
+							width:700px;
+							height:280px;
+						}
+
+							#fading .sleep .information .graph canvas
+							{
+								height:280px;
+								width:700px;
+								position:absolute;
+								left:1px;
+							}
+
+						#fading .sleep .information .dualie
+						{
+							height:134px;
+							position:relative;
+						}
+
+							#fading .sleep .information .dualie h2
+							{
+								margin:15px 0 55px;
+							}
+
+							#fading .sleep .information .dualie em:after
+							{
+								font-size:14px;
+								color:#4d4d4d;
+								font-family:'UniversCom-47LightCond';
+								display:block;
+							}
+
+							#fading .sleep .information .dualie p
+							{
+
+							}
+							
+							#fading .sleep .information .dualie p:after
+							{
+
+							}
+
+							#fading .sleep .information .dualie .fillbar
+							{
+								top:40px;
+							}
+
+						#fading .sleep .information .bar
+						{
+							height:68px;
+							position:relative;
+						}
+
+							#fading .sleep .information .bar p
+							{
+								text-transform:lowercase;
+								top:4px;
+								position:relative;
+							}
+
+								#fading .sleep .information .bar span
+								{
+									text-transform:uppercase;
+								}
+
+								#fading .sleep .information .bar em
+								{
+									
+								}
+
+							#fading .sleep .information .bar .fillbar
+							{
+								top:30px;
+							}
+
+						#fading .sleep .information .times
+						{
+							border:1px solid #D4D4D4;
+						}
+
+							#fading .sleep .information .times p
+							{
+								text-align:left;
+								color:#d4d4d4;
+								font-size:21px;
+								display:inline-block;
+								width:328px;
+								padding:12px 10px 9px;
+							}
+
+							#fading .sleep .information .times p + p
+							{
+								text-align:right;
+							}
+
+		#fading .sleep .week
+		{
+
+		}
+
+			#fading .sleep .report
+			{
+
+			}
+
+				#fading .sleep .report table
+				{
+					width:100%;
+					margin:30px 0;
+					border:1px solid #d0d0d0;
+				}
+				
+					#fading .sleep .report tr
+					{
+
+					}
+
+						#fading .sleep .report th
+						{
+							font-size:28px;
+							color:#4d4d4d;
+							border-bottom:1px solid #dedede;
+							padding:15px 0 10px;
+						}
+
+						#fading .sleep .report th + th, #fading .sleep .report td.circle + td.bar, #fading .sleep .report td.doubleBar
+						{
+							border-left:1px solid #dedede;
+						}
+
+						#fading .sleep .report td
+						{
+							
+						}
+
+							#fading .sleep .report h2
+							{
+								font-size:14px;
+								color:#4d4d4d;
+							}
+
+							#fading .sleep .report p
+							{
+								font-size:27px;
+								color:#5c5c5c;
+								font-family: 'UniversCom-59UltraCondensed';
+								position: relative;
+							}
+
+						#fading .sleep .report td.circle
+						{
+							padding:25px 0 35px;
+							position:relative;
+						}
+
+						#fading .sleep .report td.circle h2
+						{
+							margin-bottom:33px;
+						}
+
+							#fading .sleep .report td.circle p:after
+							{
+								font-size: 15px;
+								content:"%";
+								vertical-align:top;
+							}
+
+							#fading .sleep .report .fillring
+							{
+								top:43px;
+							}
+
+						#fading .sleep .report td.bar
+						{
+							position:relative;
+							width:195px;
+						}
+
+							#fading .sleep .report .fillbar
+							{
+								top:41px;
+							}
+
+							#fading .sleep .report td.bar h2, #fading .sleep .report td.doubleBar h2
+							{
+								margin-bottom:40px;
+							}
+
+							#fading .sleep .report td.bar p:after, #fading .sleep .report td.doubleBar p:after
+							{
+								font-family:'UniversCom-47LightCond';
+								font-size:14px;
+								color:#4d4d4d;
+								display:block;
+							}
+
+						#fading .sleep .report td.doubleBar
+						{
+							position:relative;
+						}
+
+	#fading .goZone
+	{
+
+	}
+
+		#fading .goZone .stats
+		{
+			margin-bottom:40px;
+		}
+
+			#fading .goZone .stats table
+			{
+				border-left:1px solid #dcdcdc;
+				margin:0 auto;
+				height:105px;
+				width:680px;
+			}
+
+				#fading .goZone .stats tr
+				{
+					height:100%;
+				}
+
+					#fading .goZone .stats th
+					{
+						text-transform:uppercase;
+						color:#808080;
+						font-family:'UniversCom-47LightCond';
+						font-size:19px;
+						vertical-align:middle;
+						line-height:130%;
+						padding:0 20px 0 40px;
+					}
+			
+					#fading .goZone .stats td
+					{
+						font-family:'UniversCom-59UltraCondensed';
+						font-size:58px;
+						color:#bcbbbb;
+						border-right:1px solid #dcdcdc;
+						vertical-align:middle;
+						padding-right:40px;
+					}
+
+						#fading .goZone .stats .numerator
+						{
+							color:#5c5c5c;
+						}
+
+			#fading .goZone .videos
+			{
+
+			}
+
+				#fading .goZone .videos .mask
+				{
+					overflow:hidden;
+					position:relative;
+					height:144px;
+					margin:35px 30px 30px;
+				}
+
+					#fading .goZone .videos ul
+					{
+						width:150%;
+						position:absolute;
+						height:100%;
+					}
+
+						#fading .goZone .videos li
+						{
+							height:100%;
+							width:214px;
+							background:no-repeat;
+							background-position:center top;
+							display:inline-block;
+							margin-right:38px;
+						}
+
+							#fading .goZone .videos button
+							{
+								position:relative;
+								height:100%;
+								display:block;
+								width:100%;
+								
+							}
+
+								#fading .goZone .videos p
+								{
+									font-family: 'UniversCom-59UltraCondensed';
+									font-size:29px;
+									color:#d1eb24;
+									text-transform:uppercase;
+									letter-spacing:4px;
+									line-height:110%;
+									position:absolute;
+									top:25px;
+									left:10px;
+									right:10px;
+									-webkit-transition:0.2s;
+									-moz-transition:0.2s;
+									-o-transition:0.2s;
+									transition:0.2s;
+								}
+
+								#fading .goZone .videos button:hover p
+								{
+									top:11px;
+								}
+
+									#fading .goZone .videos button div
+									{
+										
+									}
+
+										#fading .goZone .videos i
+										{
+											font-size:16px;
+											top:-1px;
+											position:relative;
+										}
+
+				#fading .goZone .videos .arrows
+				{
+					position:relative;
+				}
+
+					#fading .goZone .videos .arrow
+					{
+						width:20px;
+						height:20px;
+						position:absolute;
+						left:50%;
+						top:-115px;
+					}
+
+					#fading .goZone .videos .prev
+					{
+						margin-left:-480px;
+					}
+
+					#fading .goZone .videos .next
+					{
+						margin-left:460px;
+					}
+
+			#fading .goZone .faqs
+			{
+				margin-bottom:40px;
+			}
+
+				#fading .goZone .faqs ul
+				{
+					border-bottom:1px solid #dedede;
+				}
+
+					#fading .goZone .faqs li
+					{
+						text-align:center;
+						overflow:hidden;
+						height:69px;
+					}
+
+					#fading .goZone .faqs li.open
+					{
+
+					}
+
+						#fading .goZone .faqs button
+						{
+							font-family: 'UniversCom-59UltraCondensed';
+							color:#3a3a3a;
+							font-size:29px;
+							text-transform:uppercase;
+							border-bottom:1px solid #dedede;
+							letter-spacing:4px;
+							padding-top:5px;
+							width:100%;
+							height:70px;
+						}
+
+						#fading .goZone .faqs li + li button
+						{
+							border-top:1px solid #dedede;
+						}
+
+							#fading .goZone .faqs button i
+							{
+								color:#d1eb24;
+								font-size:15px;
+								vertical-align:middle;
+							}
+						
+							#fading .goZone .faqs button i:before
+							{
+								-webkit-transition:0.2s;
+								-moz-transition:0.2s;
+								-o-transition:0.2s;
+								transition:0.2s;
+							}
+
+							#fading .goZone .faqs .open button i:before
+							{
+								transform:rotate(90deg);
+								-ms-transform:rotate(90deg);
+								-webkit-transform:rotate(90deg);
+							}
+
+						#fading .goZone .faqs p
+						{
+							color:#737373;
+							font-size:19px;
+							font-family:'UniversCom-47LightCond';
+							background: -moz-linear-gradient(left,  rgba(223,223,223,0) 0%, rgba(223,223,223,1) 50%, rgba(223,223,223,0) 100%);
+							background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(223,223,223,0)), color-stop(50%,rgba(223,223,223,1)), color-stop(100%,rgba(223,223,223,0)));
+							background: -webkit-linear-gradient(left,  rgba(223,223,223,0) 0%,rgba(223,223,223,1) 50%,rgba(223,223,223,0) 100%);
+							background: -o-linear-gradient(left,  rgba(223,223,223,0) 0%,rgba(223,223,223,1) 50%,rgba(223,223,223,0) 100%);
+							background: -ms-linear-gradient(left,  rgba(223,223,223,0) 0%,rgba(223,223,223,1) 50%,rgba(223,223,223,0) 100%);
+							background: linear-gradient(to right,  rgba(223,223,223,0) 0%,rgba(223,223,223,1) 50%,rgba(223,223,223,0) 100%);
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00dfdfdf', endColorstr='#00dfdfdf',GradientType=1 );
+							padding: 30px 110px;
+							letter-spacing: 1px;
+							line-height: 130%;
+						}

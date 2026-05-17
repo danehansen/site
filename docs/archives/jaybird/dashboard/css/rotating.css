@@ -1,0 +1,433 @@
+#rotating
+{
+	width:970px;
+	height:590px;
+	margin:0 auto;
+	-webkit-touch-callout:none;
+	-webkit-user-select:none;
+	-khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	position:relative;
+}
+
+	#rotating > div
+	{
+		position:relative;
+	}
+
+	#rotating > div .arrow
+	{
+		position:absolute;
+		left:50%;
+		margin-top:320px;
+		width:40px;
+		height:40px;
+	}
+
+	#rotating > div .prev
+	{
+		margin-left:-525px;
+	}
+		
+	#rotating > div .next
+	{
+		margin-left:485px;
+	}
+
+	.day #rotating > div .prev
+	{
+		margin-left:-315px;
+	}
+		
+	.day #rotating > div .next
+	{
+		margin-left:275px;
+	}
+
+	#rotating > ul
+	{
+		position:absolute;
+		width:100%;
+		text-transform:uppercase;
+	}
+
+		#rotating .headlines > li
+		{
+			font-size:41px;
+			font-family:'UniversCom-47LightCond';
+			color:#4D4D4D;
+			line-height:135px;
+			text-align:center;
+			width:400px;
+			height:90px;
+			position:absolute;
+			left:50%;
+			opacity:0.15;
+		}
+
+			#rotating .headlines .sleep
+			{
+				margin-left:-600px;
+			}
+
+			#rotating .headlines .activity
+			{
+				margin-left:-200px;
+			}
+
+			#rotating .headlines .goZone
+			{
+				margin-left:200px;
+			}
+
+	#rotating .week
+	{
+		opacity:1;
+		visibility:visible;
+		-webkit-transition:opacity 0.5s, visibility 0.5s;
+		-moz-transition:opacity 0.5s, visibility 0.5s;
+		-o-transition:opacity 0.5s, visibility 0.5s;
+		transition:opacity 0.5s, visibility 0.5s;
+	}
+
+			#rotating .week .activity ul:first-child
+			{
+				text-align:center;
+				margin-top:112px;
+			}
+
+				#rotating .week .activity ul:first-child li
+				{
+					color:#4D4D4D;
+					text-transform:uppercase;
+					font-family:'UniversCom-47LightCond';
+					letter-spacing:5px;
+					display:inline-block;
+					font-size:15px;
+					margin:0 40px;
+				}
+
+				#rotating .week .activity ul:first-child li:before
+				{
+					display:inline-block;
+					width:16px;
+					height:16px;
+					content:"";
+					background: #d0ea24;
+					background: -moz-linear-gradient(top,  #d0ea24 0%, #adde22 100%);
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d0ea24), color-stop(100%,#adde22));
+					background: -webkit-linear-gradient(top,  #d0ea24 0%,#adde22 100%);
+					background: -o-linear-gradient(top,  #d0ea24 0%,#adde22 100%);
+					background: -ms-linear-gradient(top,  #d0ea24 0%,#adde22 100%);
+					background: linear-gradient(to bottom,  #d0ea24 0%,#adde22 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0ea24', endColorstr='#adde22',GradientType=0 );
+					-webkit-border-radius: 8px;
+					border-radius: 8px;
+					position:relative;
+					top:-2px;
+					margin-right:10px;
+				}
+
+				#rotating .week .activity ul:first-child li + li:before
+				{
+					background: #cbcbcb;
+					background: -moz-linear-gradient(top,  #cbcbcb 0%, #bdbdbd 100%);
+					background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cbcbcb), color-stop(100%,#bdbdbd));
+					background: -webkit-linear-gradient(top,  #cbcbcb 0%,#bdbdbd 100%);
+					background: -o-linear-gradient(top,  #cbcbcb 0%,#bdbdbd 100%);
+					background: -ms-linear-gradient(top,  #cbcbcb 0%,#bdbdbd 100%);
+					background: linear-gradient(to bottom,  #cbcbcb 0%,#bdbdbd 100%);
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbcbcb', endColorstr='#bdbdbd',GradientType=0 );
+				}
+
+	.day #rotating .week
+	{
+		opacity:0;
+		visibility:hidden;
+	}
+
+		#rotating .week > li
+		{
+			text-align:center;
+			width:1200px;
+			height:590px;
+			position:absolute;
+			left:50%;
+			top:0;
+		}
+
+			#rotating .week canvas
+			{
+				position:absolute;
+				border-left:1px solid #D4D4D4;
+				border-right:1px solid #D4D4D4;
+				width:968px;
+				height:330px;
+				top:140px;
+				left:50%;
+				margin-left:-485px;
+			}
+
+			#rotating .week canvas + ul
+			{
+				border:1px solid #D4D4D4;
+				width:968px;
+				height:60px;
+				left:50%;
+				margin-left:-485px;
+				top:470px;
+				position:absolute;
+			}
+
+			#rotating .week canvas + ul li
+			{
+
+			}
+
+			#rotating .week .sleep
+			{
+				margin-left:-1800px;
+			}
+
+			#rotating .week .activity
+			{
+				margin-left:-600px;
+			}
+
+			#rotating .week .goZone
+			{
+				margin-left:600px;
+			}
+
+	#rotating .day
+	{
+		opacity:0;
+		visibility:hidden;
+		-webkit-transition:opacity 0.5s, visibility 0.5s;
+		-moz-transition:opacity 0.5s, visibility 0.5s;
+		-o-transition:opacity 0.5s, visibility 0.5s;
+		transition:opacity 0.5s, visibility 0.5s;
+	}
+
+	.day #rotating .day
+	{
+		opacity:1;
+		visibility:visible;
+	}
+
+		#rotating .day > li
+		{
+			text-align:center;
+			width:500px;
+			height:590px;
+			position:absolute;
+			left:50%;
+			opacity:0.15;
+		}
+
+			#rotating .day svg .big
+			{
+				text-anchor:middle;
+				font-family:'UniversCom-59UltraCondensed';
+				font-size:38px;
+				position:absolute;
+				text-anchor:middle;
+				display:block;
+			}
+
+				#rotating .day svg .big tspan
+				{
+					display:block;
+				}
+
+			#rotating .day svg .big .shadow
+			{
+				fill:rgba(0,0,0,0.1);
+				filter:url(#shadow);
+			}
+
+				#rotating .day svg .big tspan:first-child
+				{
+					font-size:127px;
+				}
+
+			#rotating .day svg .big .shine
+			{
+				stroke-width:1.5;
+			}
+
+		#rotating .day .sleep
+		{
+			margin-left:-950px;
+			color:#202020;
+		}
+
+			#rotating .day .sleep h2
+			{
+				font-size:16px;
+				font-family:'UniversCom-47LightCond';
+				margin:255px 0 135px 0;
+			}
+
+			#rotating .day .sleep  svg .big .color
+			{
+				fill:url(#sleepGradient);
+			}
+
+			#rotating .day .sleep  svg .big .shine
+			{
+				fill:url(#sleepShine);
+				stroke:url(#sleepShine);
+			}
+
+			#rotating .day .sleep svg .curved
+			{
+				font-family:'UniversCom-47LightCond';
+				font-size:16px;
+				fill:#515151;
+				text-anchor:end;
+			}
+
+			#rotating .day .sleep p
+			{
+				font-family:'UniversCom-47LightCond';
+				font-size:11px;
+				line-height:200%;
+			}
+
+				#rotating .day .sleep p span
+				{
+					display:block;
+					font-size:34px;
+					color:#4D4D4D;
+					font-family:'UniversCom-59UltraCondensed';
+					margin-bottom:-3px; 
+				}
+
+		#rotating .day .activity
+		{
+			margin-left:-250px;
+		}
+
+			#rotating .day .activity svg .h2
+			{
+				fill:url(#activityGradient);
+			}
+
+				#rotating .day .activity svg .h2 tspan
+				{
+					font-family:'UniversCom-59UltraCondensed';
+					font-size:20px;
+					letter-spacing:5px;
+					text-anchor:middle;
+				}
+
+			#rotating .day .activity  svg .big .color
+			{
+				fill:#373737;
+			}
+
+			#rotating .day .activity  svg .big .shine
+			{
+				fill:url(#activityShine);
+				stroke:url(#activityShine);
+			}
+
+			#rotating .day .activity svg .curved
+			{
+				font-family:'UniversCom-47LightCond';
+				font-size:16px;
+				fill:#515151;
+				text-anchor:end;
+			}
+
+		#rotating .day .activity .data
+		{
+			top:430px;
+			position:absolute;
+			width:100%;
+		}
+
+			#rotating .day .activity .data li
+			{
+				position:relative;
+				display:inline-block;
+				width:90px;
+			}
+				
+				#rotating .day .activity h3
+				{
+					font-family:'UniversCom-47LightCond';
+					font-size:15px;
+					color:#A1A1A1;
+				}
+
+				#rotating .day .activity .data p
+				{
+					width:100%;
+					position:absolute;
+					font-family:'UniversCom-59UltraCondensed';
+					font-size:27px;
+					color:#474747;
+				}
+
+				#rotating .day .activity .data p span
+				{
+					color:#C4C3C3;
+				}
+
+		#rotating .day .goZone
+		{
+			margin-left:450px;
+		}
+
+			#rotating .day .goZone h2
+			{
+				font-size:18px;
+				color:#202020;
+				font-family:'UniversCom-47LightCond';
+				margin-top:255px;
+			}
+
+			#rotating .day .goZone  svg .big .color
+			{
+				fill:#373737;
+			}
+
+			#rotating .day .goZone  svg .big .shine
+			{
+				fill:url(#goZoneShine);
+				stroke:url(#goZoneShine);
+			}
+
+			#rotating .day .goZone svg .curved
+			{
+				font-family:'UniversCom-47LightCond';
+				font-size:16px;
+				fill:#515151;
+			}
+
+			#rotating .day .goZone svg .curved.fatigued
+			{
+				text-anchor:end;
+			}
+
+		#rotating .day > li > canvas
+		{
+			width:100%;
+			height:500px;
+			position:absolute;
+			top:90px;
+			left:0;
+		}
+
+		#rotating .day > li > svg
+		{
+			height:500px;
+			top:90px;
+			position:absolute;
+			left:0;
+			width:100%;
+		}

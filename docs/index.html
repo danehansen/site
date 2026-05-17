@@ -21,7 +21,9 @@
     <li><a href="./archives/snapbac" target="_blank" id="snapbac">Snapbac</a></li>
     <li><a href="./archives/oakley" target="_blank" id="oakley">Oakley</a></li>
     <li><a href="./archives/nike" target="_blank" id="nike">Nike</a></li>
-    <li><a href="./archives/db5" target="_blank" id="db5">DB5</a></li>
+    <!-- <li><a href="./archives/db5" target="_blank" id="db5">DB5</a></li> -->
+    <li><a href="./archives/jaybird" target="_blank" id="jaybird">jaybirdsport.com</a></li>
+    <li><a href="./archives/jaybird/dashboard" target="_blank" id="jaybirdreign">jaybirdreign.com</a></li>
   </ul>
 
 </body>
@@ -84,10 +86,24 @@
       });
     })
 
-    document.getElementById('nike').addEventListener('click', () => {
+    document.getElementById('db5').addEventListener('click', () => {
       console.log('db5 click')
       const x = gtag('event', 'custom_select_content', {
         'arg': 'db5',
+      });
+    })
+
+    document.getElementById('jaybird').addEventListener('click', () => {
+      console.log('jaybird click')
+      const x = gtag('event', 'custom_select_content', {
+        'arg': 'jaybird',
+      });
+    })
+
+    document.getElementById('jaybirdreign').addEventListener('click', () => {
+      console.log('jaybirdreign click')
+      const x = gtag('event', 'custom_select_content', {
+        'arg': 'jaybirdreign',
       });
     })
   })()
