@@ -19,6 +19,7 @@
   <p>client examples</p>
   <ul>
     <li><a href="./archives/snapbac" target="_blank" id="snapbac">Snapbac</a></li>
+    <li><a href="./archives/oakley" target="_blank" id="oakley">Oakley</a></li>
   </ul>
 
 </body>
@@ -64,6 +65,13 @@
       console.log('snapbac click')
       const x = gtag('event', 'custom_select_content', {
         'arg': 'snapbac',
+      });
+    })
+
+    document.getElementById('oakley').addEventListener('click', () => {
+      console.log('oakley click')
+      const x = gtag('event', 'custom_select_content', {
+        'arg': 'oakley',
       });
     })
   })()
