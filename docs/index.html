@@ -21,6 +21,7 @@
     <li><a href="./archives/snapbac" target="_blank" id="snapbac">Snapbac</a></li>
     <li><a href="./archives/oakley" target="_blank" id="oakley">Oakley</a></li>
     <li><a href="./archives/nike" target="_blank" id="nike">Nike</a></li>
+    <li><a href="./archives/db5" target="_blank" id="db5">DB5</a></li>
   </ul>
 
 </body>
@@ -80,6 +81,13 @@
       console.log('nike click')
       const x = gtag('event', 'custom_select_content', {
         'arg': 'nike',
+      });
+    })
+
+    document.getElementById('nike').addEventListener('click', () => {
+      console.log('db5 click')
+      const x = gtag('event', 'custom_select_content', {
+        'arg': 'db5',
       });
     })
   })()

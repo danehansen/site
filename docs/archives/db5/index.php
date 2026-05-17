@@ -1,0 +1,590 @@
+<?php
+	$up='<span class="black">&#9650;</span>';
+	$down='<span class="red">&#9660;</span>';
+	// $symbols=["T","FB","GOOG","MCD","PEP","TM","YHOO"];
+	$symbols=array(0=>"T",1=>"FB",2=>"GOOG",3=>"MCD",4=>"PEP",5=>"TM",6=>"YHOO",7=>"AUDVF");
+	$loc="http://finance.yahoo.com/d/quotes.csv?s=" . implode(",",$symbols) . "&f=sl1ox";
+	$csvData = file_get_contents($loc);
+	$csvNumColumns = 1;
+	$csvDelim = "\n";
+	$data = array_chunk(str_getcsv($csvData, $csvDelim), $csvNumColumns);
+	global $stocks;
+	$stocks = array();
+	foreach ($data as $value) {
+		$stockArray = explode(',', $value[0]);
+		$now=floatval($stockArray[1]);
+		$thisMorning=floatval($stockArray[2]);
+		$ex=substr(strtolower(implode(explode('"',$stockArray[3]))),0,6);
+		if($ex=="other ")
+			$ex="otc";
+		$stocks[$stockArray[0]] = array($now, $now>$thisMorning?$up:$down, $ex);
+	}
+	function printStock($key)
+	{
+		global $stocks;
+		echo('<div class="stock">
+								<p class="number">' . $stocks[$key][1] . $stocks[$key][0] . '</p>
+								<p>' . $stocks[$key][2] . ': ' . $key . '</p>
+							</div>
+');
+	}
+?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>DB5</title>
+		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=1280">
+		<link rel='shortcut icon' href='img/favicon.ico'/>
+		<link rel="stylesheet" href="css/reset.css" type="text/css">
+		<link rel="stylesheet" href="css/fontello.css" type="text/css">
+		<link rel="stylesheet" href="css/main.css" type="text/css">
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js'></script>
+		<script type='text/javascript' src='js/jquery.address-1.5.min.js'></script>
+		<script type='text/javascript' src='js/shiv.js'></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.9.3/TweenMax.min.js"></script>
+		<script type='text/javascript' src='js/danehansen/ScrollHijack.js'></script>
+		<script type='text/javascript' src='js/danehansen/MyMath.js'></script>
+		<script type='text/javascript' src='js/scripts.js'></script>
+	</head>
+	<body>
+		<nav>
+			<div>
+				<div></div>
+			</div>
+			<ul>
+				<li>
+					<a href="#top">
+						<img class="five" src="img/nav/logo_5_back.png"/>
+						<img src="img/nav/logo_db.png"/>
+						<img class="five" src="img/nav/logo_5_top.png"/>
+					</a>
+				</li>
+				<li><a href="#hello">Hello</a></li>
+				<li><a href="#solutions">Solutions</a></li>
+				<li><a href="#talent">Talent</a></li>
+				<li><a href="#clients">Clients</a></li>
+				<li><a href="#inventions">Inventions</a></li>
+				<li><a href="#fish">Fish</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+		<div>
+			<section id="thankYou">
+				<div class="bg">
+					<div id="dark"></div>
+					<img src="img/thankyou/red.png"/>
+					<div id="wedge"></div>
+				</div>
+				<div>
+					<h1>
+						<p>New research for a</p>
+						<ul>
+							<li>cool</li>
+							<li>social</li>
+							<li>digital</li>
+							<li>new</li>
+							<li>big</li>
+							<li>tech</li>
+							<li>data</li>
+							<li>fast</li>
+							<li>cool</li>
+							<li>social</li>
+							<li>digital</li>
+							<li>new</li>
+							<li>big</li>
+							<li>tech</li>
+							<li>data</li>
+						</ul>
+						<p>world</p>
+					</h1>
+					<h2>Thank you for <br/>your interest</h2>
+					<p>We are excited about what we do and we hope that you share in our excitement as you explore this brief introduction to our company. We are keen to leverage our collective knowhow to bring you the best possible research solutions. We hope that this first blush is the beginning of a meaningful relationship between us. We do not cold call, we choose our clients carefully based on shared values, a shared belief in what they do and a shared ambition to do something worth talking about in business as in life. Thank you again for your interest.</p>
+				</div>
+			</section>
+			<section id="whatWeDo">
+				<div>
+					<h1>What we do in brief</h1>
+					<ul>
+						<li>
+							<img src="img/whatwedo/carrot.png"/>
+							<p>We help brands and their creative partners succeed in a new world.</p>
+						</li><li>
+							<img src="img/whatwedo/carrot.png"/>
+							<p>We invent new ways to understand people by integrating new technologies into traditional research practice.</p>
+						</li><li>
+							<img src="img/whatwedo/carrot.png"/>
+							<p>We bring together the best minds in research, brands and technology.</p>
+						</li><li>
+							<img src="img/whatwedo/carrot.png"/>
+							<p>We deliver more profound insight into people’s relationships with brands, each other and the world.</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section id="combineBleeding">
+				<div>
+					<p>Combining bleeding <br/>edge technology <br/>with traditional <br/>research practice.</p>
+				</div>
+			</section>
+			<section id="weEnjoy">
+				<div>
+					<p>We enjoy <br/>building bespoke <br/>solutions to answer <br/>big marketing <br/>questions.</p>
+				</div>
+				<div>
+					<p>If a better way <br/>exists, <br/>we find it. <br/>If it doesn’t, <br/>we build it.</p>
+				</div>
+			</section>
+			<section id="ourBusiness">
+				<div>
+					<p>our business is founded on our <br/>unique take of 6 research solutions <br/>– updated for the modern world.</p>
+				</div>
+			</section>
+			<section id="icons">
+				<ul>
+					<li>
+						<h1>Audience Segmentation</h1>
+						<div>
+							<img src="img/icons/audience.jpg"/>
+						</div>
+						<div>
+							<h2>Robust and Vivid.</h2>
+							<p>Our approach is unique. Designed to paint multiple portraits of your audience that are the most true to life and the most actionable.</p>
+						</div>
+					</li><li>
+						<h1>Netnography</h1>
+						<div>
+							<img src="img/icons/netnography.jpg"/>
+						</div>
+						<div>
+							<h2>Beyond Social Analytics. <br/>Way Beyond.</h2>
+							<p>The social life of your brand is richer than volume or sentiment data. Together with tech industry pioneers we have developed ‘netnography’ – the most accurate, insightful and actionable social research available.</p>
+						</div>
+					</li><li>
+						<h1>Copy Testing</h1>
+						<div>
+							<img src="img/icons/copy.jpg"/>
+						</div>
+						<div>
+							<h2>Copytesting <br/>but not as <br/>you know it.</h2>
+							<p>A breakthrough methodology integrating the tried and true with the best of contemporary thinking. Beautiful. Simple. Creative.</p>
+						</div>
+					</li><li>
+						<h1>Model Mix Analysis</h1>
+						<div>
+							<img src="img/icons/model.jpg"/>
+						</div>
+						<div>
+							<h2>The NASA of ROI.</h2>
+							<p>Using the latest technology and brain power from adjacent industries we make simple sense out of the most complex of marketing programs.</p>
+						</div>
+					</li><li>
+						<h1>Dynamic Tracking</h1>
+						<div>
+							<img src="img/icons/dynamic.jpg"/>
+						</div>
+						<div>
+							<h2>Tracking as dynamic as <br/>your brand.</h2>
+							<p>Combining traditional brand tracking with social analytics to fully grasp what moves the needle for your brand.</p>
+						</div>
+					</li><li>
+						<h1>Panel Management</h1>
+						<div>
+							<img src="img/icons/panel.jpg"/>
+						</div>
+						<div>
+							<h2>Big Data. Big Communities.</h2>
+							<p>We treat big panels like a big community. We believe through mutual engagement and understanding we gain bigger insights.</p>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section id="dangerousMinds">
+				<div>
+					<h1>Dangerous minds with a safe pair of hands.</h1>
+					<p>Our team consists of the brightest brains and the most experienced practitioners across technology, marketing and research.</p>
+				</div>
+			</section>
+			<section id="pics">
+				<ul>
+					<li>
+						<img src="img/pics/0.jpg"/>
+						<p>HBs (the crowd pleaser of pencils).</p>
+					</li><li>
+						<img src="img/pics/1.jpg"/>
+						<p>Chris (on the right) the founder of db5 - the ex-CEO of Hall &amp; Partners and the best research mind in the business (according to this author).</p>
+					</li><li>
+						<img src="img/pics/2.jpg"/>
+						<p>Our very own line of mugs.</p>
+					</li><li>
+						<img src="img/pics/3.jpg"/>
+						<p>Dan the CSO of db5 – the ex-strategy lead of Chiat Day the famous ad agency and by all accounts a smart cookie.</p>
+					</li><li>
+						<img src="img/pics/4.jpg"/>
+						<p>The office worry ball.</p>
+					</li><li>
+						<img src="img/pics/5.jpg"/>
+						<p>Making ourselves smarter bit by bit and everyday.</p>
+					</li><li>
+						<img src="img/pics/6.jpg"/>
+						<p>Our very own (cross dressing) baseball moose.</p>
+					</li><li>
+						<img src="img/pics/7.jpg"/>
+						<p>Neva team leader and super smart – she is the very definition of the dogsbollocks.</p>
+					</li><li>
+						<img src="img/pics/8.jpg"/>
+						<p>Our fastest growing company award (we don’t like to talk about it much).</p>
+					</li><li>
+						<img src="img/pics/9.jpg"/>
+						<p>Paul team leader a gentle soul who talks softly (but carries a big stick)!</p>
+					</li><li>
+						<img src="img/pics/10.jpg"/>
+						<p>Don’t forget!</p>
+					</li><li>
+						<img src="img/pics/11.jpg"/>
+						<p>Barika the tech whizz leads db5’s social arm (she’s very social).</p>
+					</li><li>
+						<img src="img/pics/12.jpg"/>
+						<p>At least it said “coffee”.</p>
+					</li><li>
+						<img src="img/pics/13.jpg"/>
+						<p>Our team is the crème de la creme.</p>
+					</li><li>
+						<img src="img/pics/14.jpg"/>
+						<p>Some of our team portraits.</p>
+					</li><li>
+						<img src="img/pics/15.jpg"/>
+						<p>Steve is the MD of db5’s NY office – he is the “nicest guy in research.”</p>
+					</li><li>
+						<img src="img/pics/16.jpg"/>
+						<p>Grrrrrrrr…</p>
+					</li><li>
+						<img src="img/pics/17.jpg"/>
+						<p>Holding court.</p>
+					</li><li>
+						<img src="img/pics/18.jpg"/>
+						<p>Good is the enemy of great.</p>
+					</li><li>
+						<img src="img/pics/19.jpg"/>
+						<p>Two posers waiting for the photo shoot.</p>
+					</li><li>
+						<img src="img/pics/20.jpg"/>
+						<p>Separated at birth runDMC and db5.</p>
+					</li>
+				</ul>
+			</section>
+			<section id="siliconValley">
+				<div>
+					<h1>from Silicon Valley to Wall Street.</h1>
+					<p>
+						We attract clients who don't simply want to be remembered they want to be talked about, not just satisfy a
+						need but fulﬁll people's dreams, they're not solely interested in selling products and services but also in
+						creating meaningful brand experiences. Our clients embrace the 21st Century rules of marketing and we build
+						research solutions to help them succeed.
+					</p>
+				</div>
+			</section>
+			<section id="logos">
+				<ul>
+					<li>
+						<div class="out">
+							<img src="img/logos/att.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/att/bell.jpg" />
+							<img src="img/logos/att/kids.jpg" />
+							<img src="img/logos/att/tower.jpg" />
+							<img src="img/logos/att/text1.jpg" />
+							<img src="img/logos/att/park.jpg" />
+							<img src="img/logos/att/text2.jpg" />
+							<img src="img/logos/att/plants.jpg" />
+							<?php printStock("T"); ?>
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/audi.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/audi/dirt.jpg" />
+							<img src="img/logos/audi/girl.jpg" />
+							<img src="img/logos/audi/snow.jpg" />
+							<img src="img/logos/audi/r8.jpg" />
+							<img src="img/logos/audi/sky.jpg" />
+							<img src="img/logos/audi/plane.jpg" />
+							<img src="img/logos/audi/logo.jpg" />
+							<?php printStock("AUDVF"); ?>
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/coffeeBean.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/coffeeBean/twoDrinks.jpg" />
+							<img src="img/logos/coffeeBean/iphone.jpg" />
+							<img src="img/logos/coffeeBean/teatime.jpg" />
+							<img src="img/logos/coffeeBean/linda.jpg" />
+							<img src="img/logos/coffeeBean/gq.jpg" />
+							<img src="img/logos/coffeeBean/napkin.jpg" />
+							<img src="img/logos/coffeeBean/iceBlend.jpg" />
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/crateAndBarrel.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/crateAndBarrel/plants.jpg" />
+							<img src="img/logos/crateAndBarrel/family.jpg" />
+							<img src="img/logos/crateAndBarrel/room.jpg" />
+							<img src="img/logos/crateAndBarrel/store.jpg" />
+							<img src="img/logos/crateAndBarrel/display.jpg" />
+							<img src="img/logos/crateAndBarrel/couple.jpg" />
+							<img src="img/logos/crateAndBarrel/ribbon.jpg" />
+							<img src="img/logos/crateAndBarrel/rug.jpg" />
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/facebook.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/facebook/molly.jpg" />
+							<img src="img/logos/facebook/thumbsUp.jpg" />
+							<img src="img/logos/facebook/follow.jpg" />
+							<img src="img/logos/facebook/claudia.jpg" />
+							<img src="img/logos/facebook/beatlemania.jpg" />
+							<img src="img/logos/facebook/kid.jpg" />
+							<img src="img/logos/facebook/status.jpg" />
+							<img src="img/logos/facebook/buttons.jpg" />
+							<?php printStock("FB"); ?>
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/google.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/google/neon.jpg" />
+							<img src="img/logos/google/halo.jpg" />
+							<img src="img/logos/google/bikes.jpg" />
+							<img src="img/logos/google/perfection.jpg" />
+							<img src="img/logos/google/guys.jpg" />
+							<img src="img/logos/google/androidEatsApple.jpg" />
+							<img src="img/logos/google/city.jpg" />
+							<img src="img/logos/google/googleGlass.jpg" />
+							<img src="img/logos/google/android.jpg" />
+							<?php printStock("GOOG"); ?>
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/landOfNod.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/landOfNod/birds.jpg" />
+							<img src="img/logos/landOfNod/bags.jpg" />
+							<img src="img/logos/landOfNod/kid.jpg" />
+							<img src="img/logos/landOfNod/chair.jpg" />
+							<img src="img/logos/landOfNod/grayChair.jpg" />
+							<img src="img/logos/landOfNod/signs.jpg" />
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/mcdonalds.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/mcdonalds/sultan.jpg" />
+							<img src="img/logos/mcdonalds/burgerFries.jpg" />
+							<img src="img/logos/mcdonalds/iceCream.jpg" />
+							<img src="img/logos/mcdonalds/girl.jpg" />
+							<img src="img/logos/mcdonalds/pickles.jpg" />
+							<img src="img/logos/mcdonalds/retro.jpg" />
+							<img src="img/logos/mcdonalds/apple.jpg" />
+							<img src="img/logos/mcdonalds/fries.jpg" />
+							<img src="img/logos/mcdonalds/cone.jpg" />
+							<img src="img/logos/mcdonalds/table.jpg" />
+							<img src="img/logos/mcdonalds/walking.jpg" />
+							<?php printStock("MCD"); ?>
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/paramount.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/paramount/take.jpg" />
+							<img src="img/logos/paramount/posters.jpg" />
+							<img src="img/logos/paramount/noParking.jpg" />
+							<img src="img/logos/paramount/girl.jpg" />
+							<img src="img/logos/paramount/waterTower.jpg" />
+							<img src="img/logos/paramount/headPhones.jpg" />
+							<img src="img/logos/paramount/set.jpg" />
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/participant.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/participant/endHungerNow.jpg" />
+							<img src="img/logos/participant/pivot.jpg" />
+							<img src="img/logos/participant/noMas.jpg" />
+							<img src="img/logos/participant/table.jpg" />
+							<img src="img/logos/participant/girl.jpg" />
+							<img src="img/logos/participant/fixEducation.jpg" />
+							<img src="img/logos/participant/theater.jpg" />
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/pepsico.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/pepsico/mango.jpg" />
+							<img src="img/logos/pepsico/pomegranate.jpg" />
+							<img src="img/logos/pepsico/heart.jpg" />
+							<img src="img/logos/pepsico/carrots.jpg" />
+							<img src="img/logos/pepsico/berryBlast.jpg" />
+							<img src="img/logos/pepsico/naked.jpg" />
+							<?php printStock("PEP"); ?>
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/redBull.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/redBull/glass.jpg" />
+							<img src="img/logos/redBull/cars.jpg" />
+							<img src="img/logos/redBull/girl.jpg" />
+							<img src="img/logos/redBull/dragon.jpg" />
+							<img src="img/logos/redBull/cityGross.jpg" />
+							<img src="img/logos/redBull/document.jpg" />
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/toyota.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/toyota/white.jpg" />
+							<img src="img/logos/toyota/toy.jpg" />
+							<img src="img/logos/toyota/aloha.jpg" />
+							<img src="img/logos/toyota/race.jpg" />
+							<img src="img/logos/toyota/truck.jpg" />
+							<img src="img/logos/toyota/red.jpg" />
+							<img src="img/logos/toyota/wrist.jpg" />
+							<?php printStock("TM"); ?>
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/twitter.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/twitter/characters.jpg" />
+							<img src="img/logos/twitter/nathan.jpg" />
+							<img src="img/logos/twitter/apple.jpg" />
+							<img src="img/logos/twitter/tenderloin.jpg" />
+							<img src="img/logos/twitter/painceso.jpg" />
+							<img src="img/logos/twitter/mustache.jpg" />
+							<img src="img/logos/twitter/natalee.jpg" />
+						</div>
+					</li><li>
+						<div class="out">
+							<img src="img/logos/yahoo.jpg">
+						</div>
+						<div class="over">
+							<img src="img/logos/yahoo/carrie.jpg" />
+							<img src="img/logos/yahoo/girls.jpg" />
+							<img src="img/logos/yahoo/football.jpg" />
+							<img src="img/logos/yahoo/news.jpg" />
+							<img src="img/logos/yahoo/halo.jpg" />
+							<img src="img/logos/yahoo/room.jpg" />
+							<img src="img/logos/yahoo/smiles.jpg" />
+							<?php printStock("YHOO"); ?>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<section id="researchAndDestroy">
+				<div>
+					<div class="relative">
+						<h1>research <span>and</span> destroy</h1>
+					</div>
+				</div>
+			</section>
+			<section id="signUp">
+				<div>
+					<img src="img/signup/battery.png" />
+					<p>
+						“Powered By” is our laboratory. Here we incubate, hatch and launch industry-upsetting solutions. We believe it is only by destroying the practice of the past that we can create the new practices for a better tomorrow. If you want to know more sign up here for updates.
+					</p>
+					<div>
+						<a href="#">Sign Up</a>
+						<form>
+							<input type="text" name="email" placeholder="e-mail"/>
+							<input type="submit" value="&#9654">
+						</form>
+						<p>Thank you</p>
+					</div>
+				</div>
+			</section>
+			<section id="sushi">
+				<div>
+					<div class="relative">
+						<h1>if it ain’t sushi <br />
+						<span>it’s cold dead ﬁsh.</span></h1>
+					</div>
+				</div>
+			</section>
+			<section id="deadFish">
+				<div id="fish1">
+					<img src="img/deadfish/fish.png"/>
+				</div>
+				<div id="fish2">
+					<img src="img/deadfish/fish.png"/>
+				</div>
+				<div id="fish3">
+					<img src="img/deadfish/fish.png"/>
+				</div>
+				<div id="fish4">
+					<img src="img/deadfish/fish.png"/>
+				</div>
+				<article>
+					<p>
+						you can ﬁnd our growing points of view here and sign up for new ideas as we spawn them. sometimes inspiring, sometimes cryptic but always provocative, cold dead fish is where we share ideas, where they swim upstream and every so often scale : )
+					</p>
+					<div class="left">
+						<a href="#">Sign Up</a>
+						<form>
+							<input type="text" name="email" placeholder="e-mail"/>
+							<input type="submit" value="&#9654">
+						</form>
+						<p>Thank you</p>
+					</div>
+					<a class="right" href="http://colddeadfish.tumblr.com/" target="_blank">Learn More</a>
+				</article>
+			</section>
+			<section id="con">
+				<div class="left">
+					<h1>la</h1>
+					<p>202 N Ave 64<br />Los Angeles, CA 90042<br/><span>P: <a href="tel:646-884-3940">646 884 3940</a><br />or <a href="tel:626-660-5484">626 660 5484</a><br/>e: <a href="mailto:hello@dogsbollocks5.com">hello@dogsbollocks5.com</a></span></p>
+				</div>
+				<div class="right">
+					<h1>ny</h1>
+					<p>73 Spring Street<br/>Suite 502<br/>New York, NY 10012 <br /><span>P: <a href="tel:646-522-5509">646 522 5509</a><br/>e: <a href="mailto:hello@dogsbollocks5.com">hello@dogsbollocks5.com</a></span></p>
+				</div>
+				<ul>
+					<li>
+						<a href="https://www.facebook.com/DogsBollocks5" target="_blank">
+							<i class="icon-facebook"></i>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.linkedin.com/company/822102?trk=prof-exp-company-name" target="_blank">
+							<i class="icon-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+			</section>
+			<footer>
+				<p>Copyright &copy; 2013 - Dogsbollocks5</p>
+			</footer>
+		</div>
+		<a id="scrollbar">
+			<div id="thumb"></div>
+		</a>
+	</body>
+</html>
