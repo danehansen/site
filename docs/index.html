@@ -11,14 +11,14 @@
   <p>This is a basic paragraph of text on a simple HTML page.</p>
 
   <ul>
-    <li><a href="./dane_hansen_resume.pdf" target="_blank" id="resume">resume</li>
-    <li><a href="https://github.com/danehansen" target="_blank" id="gitHub">GitHub</li>
-    <li><a href="https://www.linkedin.com/in/danehanes/" target="_blank" id="linkedIn">LinkedIn</li>
+    <li><a href="./dane_hansen_resume.pdf" target="_blank" id="resume">resume</a></li>
+    <li><a href="https://github.com/danehansen" target="_blank" id="gitHub">GitHub</a></li>
+    <li><a href="https://www.linkedin.com/in/danehanes/" target="_blank" id="linkedIn">LinkedIn</a></li>
   </ul>
 
   <p>client examples</p>
   <ul>
-    <li><a href="./archives/snapbac" target="_blank" id="resume">Snapbac</li>
+    <li><a href="./archives/snapbac" target="_blank" id="snapbac">Snapbac</a></li>
   </ul>
 
 </body>
@@ -57,6 +57,13 @@
       console.log('LinkedIn click')
       const x = gtag('event', 'custom_select_content', {
         'arg': 'LinkedIn',
+      });
+    })
+
+    document.getElementById('snapbac').addEventListener('click', () => {
+      console.log('snapbac click')
+      const x = gtag('event', 'custom_select_content', {
+        'arg': 'snapbac',
       });
     })
   })()
