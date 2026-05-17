@@ -16,7 +16,7 @@
 
   <h2>client examples</h2>
   <ul>
-    <!-- <li><a href="./archives/db5" target="_blank" data-track-link="DB5">DB5</a></li> -->
+    <li><a href="./archives/db5" target="_blank" data-track-link="DB5">DB5</a></li>
     <li><a href="./archives/jaybird" target="_blank" data-track-link="Jaybird">Jaybird</a></li>
     <li><a href="./archives/jaybird/dashboard" target="_blank" data-track-link="JaybirdReign">Jaybird Reign</a></li>
     <li><a href="./archives/nike" target="_blank" data-track-link="Nike">Nike</a></li>
@@ -31,32 +31,29 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XCRQF0PSH"></script>
 <script>
   (function () {
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-8XCRQF0PSH');
-
-    setTimeout(() => {
-      console.log('calling gtag...')
-      const x = gtag('event', 'custom_page_view', {
-        'arg': 'page view',
-      });
-    }, 1000)
-
-    function trackClick(evt) {
-      const val = evt.target.getAttribute('data-track-link');
-      console.log(`clicked ${val}`);
-      gtag('event', 'custom_select_content', {
-        'arg': val,
+    (function () {
+      window.dataLayer = window.dataLayer || [];
+      gtag('js', new Date());
+      gtag('config', 'G-8XCRQF0PSH');
+      setTimeout(() => {
+        gtag('event', 'custom_page_view', {
+          'arg': 'page view',
+        });
+      }, 1000)
+      document.querySelectorAll('[data-track-link]').forEach((e) => {
+        e.addEventListener('click', trackClick)
       })
+    })();
+
+    function gtag() {
+      dataLayer.push(arguments);
     }
 
-    document.querySelectorAll('[data-track-link]').forEach((e) => {
-      const val = e.getAttribute('data-track-link');
-      console.log(val)
-      e.addEventListener('click', trackClick)
-    })
+    function trackClick(evt) {
+      gtag('event', 'custom_select_content', {
+        'arg': evt.target.getAttribute('data-track-link'),
+      })
+    }
   })()
 </script>
 
