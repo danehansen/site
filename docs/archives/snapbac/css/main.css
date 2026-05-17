@@ -1,0 +1,1306 @@
+@font-face
+{
+	font-family:'UrbanoBlack';
+	src:url('../fonts/urbano-black-webfont.eot');
+	src:url('../fonts/urbano-black-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-black-webfont.woff') format('woff'),
+		url('../fonts/urbano-black-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-black-webfont.svg#urbano_blackregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+/*@font-face
+{
+	font-family:'UrbanoBlackExpanded';
+	src:url('../fonts/urbano-blackexpanded-webfont.eot');
+	src:url('../fonts/urbano-blackexpanded-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-blackexpanded-webfont.woff') format('woff'),
+		url('../fonts/urbano-blackexpanded-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-blackexpanded-webfont.svg#urbano_blk_expregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoBlackItalic';
+	src:url('../fonts/urbano-blackitalic-webfont.eot');
+	src:url('../fonts/urbano-blackitalic-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-blackitalic-webfont.woff') format('woff'),
+		url('../fonts/urbano-blackitalic-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-blackitalic-webfont.svg#urbano_blackitalic') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+@font-face
+{
+	font-family:'UrbanoBold';
+	src:url('../fonts/urbano-bold-webfont.eot');
+	src:url('../fonts/urbano-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-bold-webfont.woff') format('woff'),
+		url('../fonts/urbano-bold-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-bold-webfont.svg#urbanobold') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+/*@font-face
+{
+	font-family:'UrbanoBoldCondensed';
+	src:url('../fonts/urbano-boldcond-webfont.eot');
+	src:url('../fonts/urbano-boldcond-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-boldcond-webfont.woff') format('woff'),
+		url('../fonts/urbano-boldcond-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-boldcond-webfont.svg#urbano_condbold') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoBoldItalicCondensed';
+	src:url('../fonts/urbano-boldconditalic-webfont.eot');
+	src:url('../fonts/urbano-boldconditalic-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-boldconditalic-webfont.woff') format('woff'),
+		url('../fonts/urbano-boldconditalic-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-boldconditalic-webfont.svg#urbano_condbold') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoBoldExpanded';
+	src:url('../fonts/urbano-boldexpanded-webfont.eot');
+	src:url('../fonts/urbano-boldexpanded-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-boldexpanded-webfont.woff') format('woff'),
+		url('../fonts/urbano-boldexpanded-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-boldexpanded-webfont.svg#urbano_expbold') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoBoldItalic';
+	src:url('../fonts/urbano-bolditalic-webfont.eot');
+	src:url('../fonts/urbano-bolditalic-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-bolditalic-webfont.woff') format('woff'),
+		url('../fonts/urbano-bolditalic-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-bolditalic-webfont.svg#urbanobold_italic') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoCondensed';
+	src:url('../fonts/urbano-cond-webfont.eot');
+	src:url('../fonts/urbano-cond-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-cond-webfont.woff') format('woff'),
+		url('../fonts/urbano-cond-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-cond-webfont.svg#urbano_condregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoCondensedItalic';
+	src:url('../fonts/urbano-conditalic-webfont.eot');
+	src:url('../fonts/urbano-conditalic-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-conditalic-webfont.woff') format('woff'),
+		url('../fonts/urbano-conditalic-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-conditalic-webfont.svg#urbano_conditalic') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoExpanded';
+	src:url('../fonts/urbano-expanded-webfont.eot');
+	src:url('../fonts/urbano-expanded-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-expanded-webfont.woff') format('woff'),
+		url('../fonts/urbano-expanded-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-expanded-webfont.svg#urbano_expregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoExtraBoldCondensed';
+	src:url('../fonts/urbano-extrabdcond-webfont.eot');
+	src:url('../fonts/urbano-extrabdcond-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-extrabdcond-webfont.woff') format('woff'),
+		url('../fonts/urbano-extrabdcond-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-extrabdcond-webfont.svg#urbano_exbd_condregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoExtraBoldCondensedItalic';
+	src:url('../fonts/urbano-extrabdcondit-webfont.eot');
+	src:url('../fonts/urbano-extrabdcondit-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-extrabdcondit-webfont.woff') format('woff'),
+		url('../fonts/urbano-extrabdcondit-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-extrabdcondit-webfont.svg#urbano_exbd_conditalic') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoExtraBoldExpanded';
+	src:url('../fonts/urbano-extraboldexpanded-webfont.eot');
+	src:url('../fonts/urbano-extraboldexpanded-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-extraboldexpanded-webfont.woff') format('woff'),
+		url('../fonts/urbano-extraboldexpanded-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-extraboldexpanded-webfont.svg#urbano_exbd_expregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoExtraCondensed';
+	src:url('../fonts/urbano-extracond-webfont.eot');
+	src:url('../fonts/urbano-extracond-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-extracond-webfont.woff') format('woff'),
+		url('../fonts/urbano-extracond-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-extracond-webfont.svg#urbano_ext_condregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoItalic';
+	src:url('../fonts/urbano-italic-webfont.eot');
+	src:url('../fonts/urbano-italic-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-italic-webfont.woff') format('woff'),
+		url('../fonts/urbano-italic-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-italic-webfont.svg#urbanoitalic') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+@font-face
+{
+	font-family:'UrbanoLight';
+	src:url('../fonts/urbano-light-webfont.eot');
+	src:url('../fonts/urbano-light-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-light-webfont.woff') format('woff'),
+		url('../fonts/urbano-light-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-light-webfont.svg#urbano_lightregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+/*@font-face
+{
+	font-family:'UrbanoLightCondensed';
+	src:url('../fonts/urbano-lightcond-webfont.eot');
+	src:url('../fonts/urbano-lightcond-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-lightcond-webfont.woff') format('woff'),
+		url('../fonts/urbano-lightcond-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-lightcond-webfont.svg#urbano_lt_condregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoLightCondensedItalic';
+	src:url('../fonts/urbano-lightconditalic-webfont.eot');
+	src:url('../fonts/urbano-lightconditalic-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-lightconditalic-webfont.woff') format('woff'),
+		url('../fonts/urbano-lightconditalic-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-lightconditalic-webfont.svg#urbano_lt_conditalic') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoLightItalic';
+	src:url('../fonts/urbano-lightitalic-webfont.eot');
+	src:url('../fonts/urbano-lightitalic-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-lightitalic-webfont.woff') format('woff'),
+		url('../fonts/urbano-lightitalic-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-lightitalic-webfont.svg#urbano_lightitalic') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+/*@font-face
+{
+	font-family:'UrbanoLightExtraCondensed';
+	src:url('../fonts/urbano-ltextracond-webfont.eot');
+	src:url('../fonts/urbano-ltextracond-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-ltextracond-webfont.woff') format('woff'),
+		url('../fonts/urbano-ltextracond-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-ltextracond-webfont.svg#urbano_lt_ext_condregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+@font-face
+{
+	font-family:'Urbano';
+	src:url('../fonts/urbano-regular-webfont.eot');
+	src:url('../fonts/urbano-regular-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-regular-webfont.woff') format('woff'),
+		url('../fonts/urbano-regular-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-regular-webfont.svg#urbanoregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+@font-face
+{
+	font-family:'UrbanoUltra';
+	src:url('../fonts/urbano-ultra-webfont.eot');
+	src:url('../fonts/urbano-ultra-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-ultra-webfont.woff') format('woff'),
+		url('../fonts/urbano-ultra-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-ultra-webfont.svg#urbano_ultraregular') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+/*@font-face
+{
+	font-family:'UrbanoUltraItalic';
+	src:url('../fonts/urbano-ultraitalic-webfont.eot');
+	src:url('../fonts/urbano-ultraitalic-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/urbano-ultraitalic-webfont.woff') format('woff'),
+		url('../fonts/urbano-ultraitalic-webfont.ttf') format('truetype'),
+		url('../fonts/urbano-ultraitalic-webfont.svg#urbano_ultraitalic') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}*/
+
+html
+{
+	width:100%;
+	min-width:960px;
+	height:100%;
+	overflow:hidden;
+	position:relative;
+}
+
+body
+{
+	font-family:'Urbano',sans-serif;
+	font-size:14px; 
+	color:#393939;
+	line-height:170%;
+	min-width:960px;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background-image:url("../img/sec1_gray.png");
+	position:relative;
+	background-position:0 0;
+}
+
+h2, h3
+{
+	text-transform:uppercase;
+	left:30px;
+	position:absolute;
+	line-height:80%;
+	color:#47C0ED;
+}
+
+	h2
+	{
+		z-index:3;
+		font-family:'UrbanoBlack',sans-serif;
+		font-size:44px;
+		top:70px;
+	}
+
+		h2.tiny
+		{
+			top:10px;
+		}
+
+	h3
+	{
+		z-index:4;
+		font-family:'UrbanoLight',sans-serif;
+		font-size:37px;
+		top:116px;
+	}
+
+		h3.tiny
+		{
+			top:45px;
+		}
+
+	h4
+	{
+		font-family:'UrbanoLight',sans-serif;
+		font-size:27px;
+		margin-bottom:15px;
+		line-height:95%;
+		text-transform:uppercase;
+	}
+
+a.button, input.button
+{
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+	background-color:#159FD2;
+	color:#FFF;
+	font-family:'UrbanoBlack',sans-serif;
+	text-transform:uppercase;
+	padding:6px 16px 4px 16px;
+	text-decoration:none;
+	-webkit-box-shadow:0px 1px 0px 0px rgba(0, 0, 0, 0.65);
+	box-shadow:0px 1px 0px 0px rgba(0, 0, 0, 0.65);
+}
+
+article
+{
+	width:260px;
+	position:absolute;
+}
+
+	article ul
+	{
+		list-style-type:disc;
+		list-style-position:inside;
+	}
+
+	article li
+	{
+		margin-bottom:10px;
+	}
+
+	article > p
+	{
+		margin-bottom:15px;
+	}
+
+	article > div
+	{
+		position:absolute;
+		width:50px;
+		border-top:1px solid rgba(71, 192, 237, 0.5);
+		left:270px;
+		top:11px;
+		height:0;
+	}
+
+	article > div.gray
+	{
+		border-color:rgba(55, 55, 55, 0.5);
+	}
+
+	article > div.white
+	{
+		border-color:rgba(255, 255, 255, 0.5);
+	}
+
+		article > div > div:first-child
+		{
+			position:absolute;
+			width:0 !important;
+			height:0 !important;
+			border:16px solid transparent;
+			border-bottom:16px solid rgba(71, 192, 237, 0.5);
+			right:-32px;
+			top:-32px;
+		}
+
+			article > div.gray > div:first-child
+			{
+				border-bottom-color:rgba(55, 55, 55, 0.5);
+			}
+
+			article > div.gray > div:first-child + div + div
+			{
+				border-top-color:rgba(55, 55, 55, 0.5);
+			}
+
+			article > div.gray > div:first-child + div
+			{
+				border-bottom-color:rgba(55, 55, 55, 1);
+			}
+
+			article > div.gray > div:first-child + div + div + div
+			{
+				border-top-color:rgba(55, 55, 55, 1);
+			}
+
+			article > div.white > div:first-child
+			{
+				border-bottom-color:rgba(255, 255, 255, 0.5);
+			}
+
+			article > div.white > div:first-child + div + div
+			{
+				border-top-color:rgba(255, 255, 255, 0.5);
+			}
+
+			article > div.white > div:first-child + div
+			{
+				border-bottom-color:rgba(255, 255, 255, 1);
+			}
+
+			article > div.white > div:first-child + div + div + div
+			{
+				border-top-color:rgba(255, 255, 255, 1);
+			}
+
+		article > div > div:first-child + div
+		{
+			position:absolute;
+			width:0 !important;
+			height:0 !important;
+			border:8px solid transparent;
+			border-bottom:8px solid rgba(71, 192, 237, 1);
+			right:-24px;
+			top:-16px;
+		}
+
+		article > div > div:first-child + div + div
+		{
+			position:absolute;
+			width:0 !important;
+			height:0 !important;
+			border:16px solid transparent;
+			border-top:16px solid rgba(71, 192, 237, 0.5);
+			right:-31px;
+		}
+
+		article > div > div:first-child + div + div + div
+		{
+			position:absolute;
+			width:0 !important;
+			height:0 !important;
+			border:8px solid transparent;
+			border-top:8px solid rgba(71, 192, 237, 1);
+			right:-23px;
+		}
+
+			article > div.left
+			{
+				right:100%;
+				margin-right:10px;
+				left:auto;
+			}
+
+			article > div.left > div:first-child
+			{
+				left:-31px;
+			}
+
+			article > div.left > div:first-child + div
+			{
+				left:-23px;
+			}
+
+			article > div.left > div:first-child + div + div
+			{
+				left:-32px;
+			}
+
+			article > div.left > div:first-child + div + div + div
+			{
+				left:-24px;
+			}
+
+	body > nav
+	{
+		position:fixed;
+		height:36px;
+		z-index:5;
+		width:100%;
+		background-color:#FFF;
+		-webkit-box-shadow:  0px 1px 9px 0px rgba(0, 0, 0, 0.3);
+		box-shadow:  0px 1px 9px 0px rgba(0, 0, 0, 0.3);
+	}
+
+	body > nav + div
+	{
+		position:absolute;
+		width:100%;
+		height:100%;
+		bottom:0;
+	}
+
+	body > nav > div
+	{
+		width:960px;
+		margin:0 auto;
+	}
+
+	body > div > section
+	{
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:100%;
+		left:0%;
+		overflow:hidden;
+	}
+
+	body > div > section > div
+	{
+		position:relative;
+		width:960px;
+		height:100%;
+		margin:0 auto;
+	}
+
+		body > div > section >div img, body > div > section > div div
+		{
+			position:absolute;
+		}
+
+			body > nav > div > img
+			{
+				margin:9px 45px;
+				float:left;
+			}
+
+			body > nav > div > ul
+			{
+				font-family:'UrbanoBlack',sans-serif;
+				font-size:14px;
+				text-transform:uppercase;
+				text-align:center;
+				position:relative;
+			}
+
+				body > nav > div > ul > li
+				{
+					display:inline-block;
+					margin:-6px 25px 0 25px;
+				}
+
+					body > nav > div > ul > li img
+					{
+						top:9px;
+						position:relative;
+					}
+
+					body > nav > div > ul > li > a
+					{
+						color:#BBB;
+						text-decoration:none;
+					}
+
+					body > nav > div > ul > li > a:hover
+					{
+						color:#DDD;
+					}
+
+					body > nav > div > ul > li > a.selected
+					{
+						color:#009CDA;
+					}
+
+					body > nav > div > ul > li > a.selected:hover
+					{
+						color:#009CDA;
+					}
+
+				body > nav > div > ul > img
+				{
+					display:block;
+					position:absolute;
+					bottom:0;
+				}
+
+#sec1
+{
+	top:0;
+	min-height:450px;
+	color:#FFF;
+}
+	
+	#sec1 > div:first-child
+	{
+		width:100%;
+		height:100%;
+		position:absolute;
+		left:-500px;
+		margin-left:-50%; 
+	}
+
+		#sec1 > div:first-child > img
+		{
+			right:-1200px;
+		}
+
+		#sec1 > div:first-child > div
+		{
+			background-color:#47C0ED;
+			height:100%;
+			width:100%;
+		}
+
+	#sec1 div + div h1
+	{
+		font-family:'UrbanoUltra',sans-serif;
+		position:absolute;
+		top:50%;
+		margin-top:-210px;
+		left:30px;
+		font-size:53px;
+		width:450px;
+		line-height:85%;
+		text-transform:uppercase;
+	}
+
+	#sec1 div + div p
+	{
+		font-family:'UrbanoBold',sans-serif;
+		font-size:14px;
+		position:absolute;
+		top:50%;
+		margin-top:-15px;
+		left:30px;
+		line-height:185%;
+		width:333px;
+	}
+
+	#sec1 div + div img
+	{
+		top:50%;
+		left:382px;
+		margin-top:-300px;
+	}
+
+#sec2, #sec4, #sec7, #sec8, #sec9
+{
+	background: #fcfcfc;
+	/*background: -moz-linear-gradient(top, #fcfcfc 0%, #f0efef 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfcfc), color-stop(100%,#f0efef));
+	background: -webkit-linear-gradient(top, #fcfcfc 0%,#f0efef 100%);
+	background: -o-linear-gradient(top, #fcfcfc 0%,#f0efef 100%);
+	background: -ms-linear-gradient(top, #fcfcfc 0%,#f0efef 100%);
+	background: linear-gradient(to bottom, #fcfcfc 0%,#f0efef 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#f0efef',GradientType=0 );*/
+	background-position:center bottom;
+	background-repeat:no-repeat;
+}
+
+	#sec2
+	{
+		background-image:url("../img/blob1.png");
+	}
+
+	#sec2 div > div
+	{
+		height:100%;
+		width:100%;
+	}
+
+	#sec2 > div > div + div
+	{
+		top:100%;
+	}
+
+	#sec2 div h3 + div img
+	{
+		top:50%;
+		left:333px;
+		margin-top:-253px;
+	}
+
+	#sec2 div h3 + div article
+	{
+		top:50%;
+		left:30px;
+		margin-top:-50px;
+		width:290px;
+	}
+
+		#sec2 div h3 + div article > div
+		{
+			left:281px;
+			width:65px;
+		}
+
+	#sec2 div h3 + div + div img
+	{
+		top:50%;
+		left:412px;
+		margin-top:-218px;
+	}
+
+	#sec2 div h3 + div + div article
+	{
+		top:50%;
+		left:157px;
+		margin-top:-50px;
+		width:300px;
+	}
+
+		#sec2 div h3 + div + div article > div
+		{
+			left:281px;
+			width:90px;
+		}
+
+	#sec2 div h3 + div + div + div img
+	{
+		top:50%;
+		left:194px;
+		margin-top:-227px;
+	}
+
+	#sec2 div h3 + div + div + div article
+	{
+		top:50%;
+		left:427px;
+		margin-top:-30px;
+		width:300px;
+	}
+
+		#sec2 div h3 + div + div + div article > div
+		{
+			width:47px;
+		}
+
+#sec3
+{
+	color:#47C0ED;
+}
+
+	#sec3 h2, #sec3 h3
+	{
+		color:#FFF;
+	}
+
+	#sec3 h2 + h3
+	{
+		color:#9F9F9F;
+		font-size:26px;
+	}
+
+	#sec3 > div > div
+	{
+		height:100%;
+		width:100%;
+	}
+
+	#sec3 h3 + div img
+	{
+		top:50%;
+		margin-top:-136px;
+		left:299px;
+	}
+
+	#sec3 h3 + div article
+	{
+		top:50%;
+		margin-top:-136px;
+		left:30px;
+	}
+
+	#sec3 > div > div + div
+	{
+		top:100%;
+	}
+
+	#sec3 h3 + div + div > div
+	{
+		width:100%;
+		height:100%;
+	}
+
+	#sec3 h3 + div + div img
+	{
+		margin-top:-200px;
+		top:50%;
+		left:290px;
+	}
+
+	#sec3 h3 + div + div + div h4
+	{
+		left:30px;
+		top:50%;
+		margin-top:-150px;
+		width:250px;
+		position:absolute;
+	}
+
+	#sec3 h3 + div + div + div h4 + article
+	{
+		top:50%;
+		left:30px;
+		margin-top:-50px;
+		width:200px;
+	}
+		#sec3 h3 + div + div + div h4 + article > div
+		{
+			left:160px;
+			width:160px;
+		}
+
+	#sec3 h3 + div + div + div h4 + article + article
+	{
+		top:50%;
+		left:120px;
+		margin-top:90px;
+		width:200px;
+	}
+
+		#sec3 h3 + div + div + div h4 + article + article > div
+		{
+			left:196px;
+			width:130px;
+		}
+
+	#sec3 h3 + div + div + div h4 + article + article + article
+	{
+		top:50%;
+		margin-top:-80px;
+		left:780px;
+		width:160px;
+	}
+
+		#sec3 h3 + div + div + div h4 + article + article + article > div
+		{
+			width:110px;
+		}
+
+	#sec3 h3 + div + div + div h4 + article + article + article + article
+	{
+		width:140px;
+		top:50%;
+		left:720px;
+		margin-top:130px;
+	}
+
+		#sec3 h3 + div + div + div h4 + article + article + article + article > div
+		{
+			width:110px;
+		}
+
+	#sec3 h3 + div + div + div + div article
+	{
+		left:30px;
+		top:50%;
+		margin-top:-155px;
+		width:250px;
+		position:absolute;
+	}
+
+	#sec3 h3 + div + div h4
+	{
+		position:absolute;
+		left:30px;
+		top:50%;
+		margin-top:-140px;
+		width:240px;
+	}
+
+	#sec3 h3 + div + div h4 + article
+	{
+		left:30px;
+		top:50%;
+		margin-top:-70px;
+		width:170px;
+	}
+
+		#sec3 h3 + div + div h4 + article > div
+		{
+			width:240px;
+			left:168px;
+		}
+
+	#sec3 h3 + div + div h4 + article + article
+	{
+		left:750px;
+		top:50%;
+		margin-top:-120px;
+		width:140px;
+	}
+		
+		#sec3 h3 + div + div h4 + article + article > div
+		{
+			width:180px;
+		}
+
+	#sec3 h3 + div + div h4 + article + article + article
+	{
+		left:700px;
+		top:50%;
+		margin-top:-40px;
+		width:180px;
+	}
+
+		#sec3 h3 + div + div h4 + article + article + article > div 
+		{
+			width:100px;
+		}
+
+
+#sec4
+{
+	background-image:url("../img/blob2.png");
+}
+
+	#sec4 > div > div
+	{
+		width:100%;
+		height:100%;
+		position:absolute;
+	}
+
+		#sec4 h3 + div img
+		{
+			margin-top:-20px;
+			top:50%;
+			left:340px;
+		}
+
+		#sec4 h3 + div article
+		{
+			margin-top:0px;
+			top:50%;
+			left:30px;
+			width:260px;
+		}
+
+	#sec4 h3 + div + div
+	{
+		top:100%;
+	}
+
+		#sec4 h3 + div + div h4
+		{
+			position:absolute;
+			left:30px;
+			top:50%;
+			margin-top:-70px;
+			width:200px;
+		}
+
+		#sec4 h3 + div + div img
+		{
+			margin-top:-120px;
+			top:50%;
+			left:220px;
+		}
+
+		#sec4 h3 + div + div h4 + article
+		{
+			margin-top:0;
+			top:50%;
+			left:30px;
+			width:190px;
+		}
+
+			#sec4 h3 + div + div h4 + article > div
+			{
+				left:194px;
+				width:100px;
+			}
+
+		#sec4 h3 + div + div h4 + article + article
+		{
+			margin-top:-50px;
+			top:50%;
+			left:700px;
+			width:215px;
+		}
+			#sec4 h3 + div + div h4 + article + article > div
+			{
+				width:100px;
+			}
+
+		#sec4 h3 + div + div h4 + article + article + article
+		{
+			margin-top:160px;
+			top:50%;
+			left:640px;
+			width:205px;
+		}
+
+			#sec4 h3 + div + div h4 + article + article + article > div
+			{
+				width:115px;
+			}
+
+#sec5
+{
+	background: #94d4e1;
+	background: -moz-linear-gradient(top, #94d4e1 0%, #21acdb 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#94d4e1), color-stop(100%,#21acdb));
+	background: -webkit-linear-gradient(top, #94d4e1 0%,#21acdb 100%);
+	background: -o-linear-gradient(top, #94d4e1 0%,#21acdb 100%);
+	background: -ms-linear-gradient(top, #94d4e1 0%,#21acdb 100%);
+	background: linear-gradient(to bottom, #94d4e1 0%,#21acdb 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#94d4e1', endColorstr='#21acdb',GradientType=0 );
+	color:#FFF;
+}
+
+	#sec5, #sec5b, #sec5c, #sec5c h2, #sec5c h3 
+	{
+		color:#FFF;
+	}
+
+	#sec5 > div > img, #sec5b > div > img
+	{
+		top:50%;
+		margin-top:-164px;
+		left:280px;
+	}
+
+	#sec5 > div > img + article
+	{
+		top:50%;
+		margin-top:-50px;
+		left:740px;
+		width:130px;
+	}
+
+		#sec5 > div > img + article > div
+		{
+			width:140px;
+		}
+
+	#sec5 > div > img + article + article
+	{
+		top:50%;
+		margin-top:90px;
+		left:700px;
+		width:150px;
+	}
+
+		#sec5 > div > img + article + article > div
+		{
+			width:120px;
+		}
+
+#sec5b
+{
+	background: #ffc52e;
+	background: -moz-linear-gradient(top, #ffc52e 0%, #ff621b 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffc52e), color-stop(100%,#ff621b));
+	background: -webkit-linear-gradient(top, #ffc52e 0%,#ff621b 100%);
+	background: -o-linear-gradient(top, #ffc52e 0%,#ff621b 100%);
+	background: -ms-linear-gradient(top, #ffc52e 0%,#ff621b 100%);
+	background: linear-gradient(to bottom, #ffc52e 0%,#ff621b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffc52e', endColorstr='#ff621b',GradientType=0 );
+}
+
+	#sec5b > div
+	{
+		position:absolute;
+		margin:0;
+	}
+
+	#sec5b > div > img + article
+	{
+		top:50%;
+		margin-top:45px;
+		left:30px;
+		width:270px;
+	}
+
+		#sec5b > div > img + article > div
+		{
+			width:91px;
+			left:280px;
+		}
+
+	#sec5b > div > img + article + article
+	{
+		top:50%;
+		margin-top:145px;
+		left:30px;
+		width:210px;
+	}
+
+		#sec5b > div > img + article + article > div
+		{
+			width:171px;
+			left:200px;
+		}
+
+	#sec5c article
+	{
+		top:170px;
+		left:30px;
+		width:300px;
+	}
+
+#sec6
+{
+	color:#47C0ED;
+}
+
+	#sec6 h2
+	{
+		color:#FFF;
+	}
+
+	#sec6 img
+	{
+		top:50%;
+		left:360px;
+		margin-top:-244px;
+	}
+
+	#sec6 > div > div
+	{
+		width:100%;
+		height:100%;
+		position:absolute;
+	}
+
+		#sec6 > div > div + div
+		{
+			top:100%;
+		}
+
+	#sec6 article
+	{
+		left:30px;
+		top:50%;
+		margin-top:-130px;
+		width:320px;
+	}
+
+#sec7
+{
+	background-image:url("../img/blob3.png");
+}
+
+	#sec7 img
+	{
+		bottom:0;
+		left:-90px;
+	}
+
+	#sec7 > div > div
+	{
+		width:100%;
+		height:100%;
+		position:absolute;
+	}
+
+		#sec7 > div > div + div
+		{
+			top:100%;
+		}
+
+	#sec7 article
+	{
+		left:430px;
+		top:50%;
+		margin-top:-130px;
+		width:470px;
+	}
+
+	#sec7 h4 + p + p
+	{
+		text-transform:uppercase;
+		font-family:'UrbanoBold',sans-serif;
+	}
+
+#sec8
+{
+	background-image:url("../img/blob4.png");
+	min-height:614px;
+}
+
+	#sec8 article
+	{
+		left:175px;
+		top:50%;
+		margin-top:-75px;
+		width:630px;
+	}
+
+#sec9
+{
+	background-image:url("../img/blob_blue.png");
+	min-height:500px;
+}
+
+	#sec9 form
+	{
+		position:absolute;
+		top:50%;
+		left:172px;
+		width:615px;
+		margin-top:-132px;
+	}
+
+		#sec9 ::-webkit-input-placeholder{
+		    color:#FFF;
+		}
+		#sec9 :-moz-placeholder {
+		    color:#FFF;
+		}
+
+		#sec9 form > input[type=text]
+		{
+			width:130px;
+			height:30px;
+			font-family:'UrbanoBlack',sans-serif;
+			background-color:#40a7cd;
+			color:#FFF;
+			font-size:14px;
+			border:none;
+			text-transform:uppercase;
+			padding:1px 15px 1px 15px;
+			margin:0 20px 20px 0;
+			color:#FFF;
+		}
+		
+		#sec9 form > textarea, #sec9 form > p
+		{
+			font-size:20px;
+			border:none;
+			background-color:#40a7cd;
+			color:#FFF;
+			font-family:'UrbanoLight',sans-serif;
+			width:585px;
+			height:250px;
+			display:block;
+			resize:none;
+			padding:15px 15px;
+			margin-bottom:10px;
+		}
+
+		#sec9 form > p
+		{
+			position:absolute;
+			top:53px;
+			padding:114px 132px 0 133px;
+			height:166px;
+			width:350px;
+			pointer-events:none;
+		}
+
+		#sec9 form > p + p
+		{
+			
+		}
+
+		#sec9 form input[type=submit]
+		{
+			font-size:14px;
+			border:none;
+			position:absolute;
+			right:0;
+			cursor:pointer;
+		}
