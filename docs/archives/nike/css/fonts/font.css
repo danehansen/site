@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Trade Gothic for Nike 365 BdCn';
+  src: url('Trade Gothic for Nike 365 BdCn.eot'); /* IE9 Compat Modes */
+  src: url('Trade Gothic for Nike 365 BdCn.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Trade Gothic for Nike 365 BdCn.woff') format('woff'), /* Modern Browsers */
+       url('Trade Gothic for Nike 365 BdCn.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Trade Gothic for Nike 365 BdCn.svg#9a48afb098405cc2ddee73f7204821f7') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'FuturaNDforNike365-CnXBd';
+  src: url('Futura ND for Nike 365 Cn XBd.eot'); /* IE9 Compat Modes */
+  src: url('Futura ND for Nike 365 Cn XBd.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Futura ND for Nike 365 Cn XBd.woff') format('woff'), /* Modern Browsers */
+       url('Futura ND for Nike 365 Cn XBd.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Futura ND for Nike 365 Cn XBd.svg#838931b8b962afa50e449acf1e6f7c3b') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}

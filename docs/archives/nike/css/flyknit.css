@@ -1,0 +1,681 @@
+.headline
+{
+	color:#27C3EF;
+}
+
+.quote span
+{
+	color:#25b7e0;
+}
+
+body > footer li:hover h1, body > footer li:hover p
+{
+	background-color:#25b7e0;
+}
+
+#sec1
+{
+	height:693px;
+	position:relative;
+	text-transform:uppercase;
+	background-image:url("../img/flyknit/1bg.jpg");
+}
+
+	#sec1 h1
+	{
+		font-family:'Trade Gothic for Nike 365 BdCn';
+		color:#fff;
+		font-size: 40px;
+		position: absolute;
+		margin-left: -560px;
+		top: 220px;
+		left: 50%;
+		line-height:100%;
+		width: 500px;
+}
+
+	#sec1 h2
+	{
+		font-family:'FuturaNDforNike365-CnXBd';
+		color:#25a3c7;
+		font-size: 75px;
+		width: 500px;
+		position: absolute;
+		left: 50%;
+		margin-left: -560px;
+		line-height: 85%;
+		top: 268px;
+		letter-spacing:-2px;
+	}
+
+	.diamond.gray p
+	{
+		color:#F7644D;
+	}
+
+#sec2
+{
+	position:relative;
+	padding-top:75px;
+	padding-bottom: 100px;
+}
+
+	#sec2 h1
+	{
+		font-family:'Trade Gothic for Nike 365 BdCn';
+		width:540px;
+		margin:0 auto 70px;
+		text-transform:uppercase;
+		color:#454645;
+		font-size: 40px;
+		line-height: 90%;
+		letter-spacing: -1px;
+		padding-right: 160px;
+}
+
+	#sec2 h1:before, #sec2 h1:after
+	{
+		content:"";
+		display:block;
+		height:3px;
+		width:540px;
+		margin:34px auto 30px;
+		background-color:#CBCBCB;
+	}
+
+		#sec2 h1 span
+		{
+			color:#A3C736;
+		}
+
+	#sec2 p
+	{
+		width:540px;
+		margin:0px auto 30px;
+		padding-right: 160px;
+}
+
+		#sec2 img:first-child
+		{
+			position:absolute;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+		}
+
+		#sec2 img + img
+		{
+			position:absolute;
+			z-index: -1;
+			bottom:0;
+			right:0;
+		}
+
+#sec3
+{
+	background-image:url("../img/flyknit/3bg.jpg");
+}
+
+#sec4
+{
+	width:1020px;
+	margin:0 auto;
+	padding-top:156px;
+	position: relative;
+	padding-bottom: 100px;
+}
+
+	#sec4 img
+	{
+		float:left;
+		margin-bottom: 70px;
+	}
+
+	#sec4 .photoCred
+	{
+		top:797px;
+		margin-left:-495px;
+	}
+
+	#sec4 p
+	{
+		float:right;
+		width:380px;
+		margin-top: -6px;
+	}
+
+	#sec4 p + p
+	{
+		margin-top:20px;
+	}
+
+	#sec4 .quote
+	{
+		width: 385px;
+		float: right;
+		font-size: 25px;
+		margin-left: -70px;
+		padding-left: 45px;
+		padding-right: 40px;
+	}
+
+	#sec4 .quote:before
+	{
+		left:3px;
+	}
+
+	#sec4 h1 + p + p + h1
+	{
+		float:left;
+		clear:both;
+		font-family:'FuturaNDforNike365-CnXBd';
+		text-transform:uppercase;
+		line-height:80%;
+		font-size:60px;
+		margin-right:0;
+		width:200px;
+	}
+
+	#sec4 ul
+	{
+
+	}
+
+		#sec4 li
+		{
+			float:left;
+			height:100px;
+			margin-bottom:60px;
+			width:430px;
+			border-left:10px solid #25b7e0;
+			margin-right: 10px;
+			padding-left: 10px;
+			margin-top: 20px;
+			position: relative;
+}
+
+			#sec4 li div
+			{
+				position:absolute;
+				width:100%;
+				height:140%;
+				background-color:#E9E9E9;
+				top:0;
+				right:0;
+			}
+
+		#sec4 li + li
+		{
+			width:330px;
+		}
+
+		#sec4 li + li + li
+		{
+			margin-right:10px;
+			width:320px;
+		}
+
+		#sec4 li + li + li + li
+		{
+			width:350px;
+		}
+
+		#sec4 li + li + li + li + li
+		{
+			width:270px;
+			margin-right:0;
+		}
+#showMoreShoe {
+	background-image:url("../img/flyknit/showMoreShoe.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 825px;
+}
+#sec5
+{
+	background-image:url("../img/flyknit/5bg.jpg");
+}
+
+#sec6
+{
+	width:1016px;
+	margin:0 auto;
+	padding-top:156px;
+	padding-bottom:190px;
+	position:relative;
+}
+
+	#sec6 article
+	{
+		margin-bottom:110px;
+	}
+
+	#sec6 article:first-child
+	{
+		float:right;
+		width:620px;
+		position:relative;
+	}
+
+		#sec6 article img
+		{
+			display:block;			
+		}
+
+		#sec6 .photoCred
+		{
+			top:768px;
+			margin-left:-295px;
+		}
+
+		#sec6 .photoCred + .photoCred
+		{
+			margin-left:120px;
+		}
+
+		#sec6 article:first-child .quote
+		{
+			padding-left:50px;
+			margin-top:83px;
+		}
+
+		#sec6 article:first-child .quote:before
+		{
+			left:0;
+		}
+
+	#sec6 article + article
+	{
+		margin-top:-6px;
+		float:left;
+		width:380px;
+	}
+
+		#sec6 p
+		{
+		}
+
+		#sec6 p + p
+		{
+			margin-top:20px;
+		}
+
+		#sec6 h1 + p
+		{
+		}
+
+		#sec6 article + article .quote
+		{
+			font-size:32px;
+			padding-left:49px;
+			padding-right:40px;
+			width:327px;
+			margin-bottom:0;
+		}
+
+		#sec6 article + article .quote:before
+		{
+			left:0;
+		}
+
+		#sec6 article + article .quote:after
+		{
+			right:2px;
+		}
+
+	#sec6 > div
+	{
+		clear:both;
+		margin-bottom: 35px;
+		position:relative;
+		width:1016px;
+		height:632px;
+		background-image:url("../img/hyperfeel/sec6/shoe_bg.jpg");
+	}
+
+		#sec6 #insole
+		{
+			position:absolute;
+			top:216px;
+			left:494px;
+		}
+
+		#sec6 #clear
+		{
+			position:absolute;
+			top:153px;
+			left:275px;
+		}
+
+		#sec6 #upper
+		{
+			position:absolute;
+			top:152px;
+			left:38px;
+		}
+
+		#sec6 #sole
+		{
+			position:absolute;
+			top:215px;
+			left:689px;
+		}
+
+		#sec6 > div h1
+		{
+			color:#AACA4D;
+			position:absolute;
+			text-transform:uppercase;
+			font-size:85px;
+			font-family:'FuturaNDforNike365-CnXBd';
+			line-height: 80%;
+			top:-46px;
+		}
+
+	#sec6 nav
+	{
+		height:3px;
+		background-color:#CDCDCD;
+		position:relative;
+	}
+
+		#sec6 a
+		{
+			display:block;
+			height:3px;
+			background-color:#A3C736;
+			width:340px;
+			text-transform:uppercase;
+			color:#A3C736;
+			font-family:'Trade Gothic for Nike 365 BdCn';
+			font-size: 21px;
+			text-align: center;
+			line-height: 70px;
+			position: absolute;
+			left:0;
+		}
+
+		#sec6 a:before, #sec6 a:after
+		{
+			border:10px solid transparent;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			content:"";
+			margin-left: -10px;
+		}
+
+		#sec6 a:before
+		{
+			border-bottom-color:#A3C736;
+			top: -20px;
+		}
+
+		#sec6 a:after
+		{
+			border-top-color:#A3C736;
+			top: 3px;
+		}
+
+#sec7
+{
+	background-image:url("../img/flyknit/7bg.jpg");
+}
+
+#sec8
+{
+	position:relative;
+	width:1020px;
+	margin:0 auto;
+	padding: 150px 0;
+}
+
+	#sec8 div:first-child
+	{
+		width:480px;
+		float:left;
+	}
+
+	#sec8 div:first-child + div
+	{
+		width:480px;
+		float:right;
+	}
+
+		#sec8 p
+		{
+			margin-bottom:20px;
+		}
+
+		#sec8 div .quote
+		{
+			width: 390px;
+			margin-bottom:-20px;
+			font-size: 32px;
+			padding-left: 45px;
+			z-index:1;
+}
+
+		#sec8 div .quote:before
+		{
+			left: 0;
+		}
+		
+		#sec8 div .quote:after
+		{
+
+		}
+		
+	#sec8 div + div + div
+	{
+		clear: both;
+		position: relative;
+	}
+
+	#sec8 .photoCred
+	{
+		left:14px;
+		top: 449px;
+}
+		#sec8 .photoCred .right {
+			margin-left: 823px;
+			margin-top: -40px;
+		}
+	
+	#sec8 > .quote
+	{
+		width: 409px;
+		float: left;
+		margin-top:40px;
+		font-size: 32px;
+		padding-right: 40px;
+		padding-left: 50px;
+	}
+
+	#sec8 > .quote:before
+	{
+		left:0;
+	}
+	#sec8 > .quote:after
+	{
+		
+		right: 0;
+}
+	#sec8 .quote + img
+	{
+		float:right;
+		margin-top:10px;
+	}
+
+#sec9
+{
+	background-image:url("../img/flyknit/9bg.jpg");
+}
+
+#sec10
+{
+	padding:160px 0 60px;
+	margin: 0 auto;
+	width: 1020px;
+}
+
+	#sec10 > div + div
+	{
+		width: 365px;
+		float:left;
+}
+
+		#sec10 p
+		{
+
+		}
+
+		#sec10 p + p
+		{
+			margin-top:30px;
+		}
+
+		#sec10 .quote
+		{
+			padding-left:38px;
+	font-size: 26px;
+	width: 330px;
+	margin-bottom: 0;
+}
+
+		#sec10 .quote:before
+		{
+			left:-6px;
+		}
+
+		#sec10 .quote:after
+		{
+
+			right: 20px;
+}
+
+	#sec10 > div:first-child
+	{
+		width:620px;
+		float:right;
+		position: relative;
+	}
+
+		#sec10 img
+		{
+
+			margin-bottom: 10px;
+}
+
+		#sec10 img:first-child + .photoCred
+		{
+			left:15px;
+			top:557px;
+		}
+
+#sec11
+{
+	background-image:url("../img/flyknit/11bg.jpg");
+}
+
+#sec12
+{
+	margin:0 auto;
+	width:1020px;
+	padding: 170px 0;
+	position:relative;
+}
+
+	#sec12 img
+	{
+		float:right;
+	}
+
+	#sec12 .photoCred
+	{
+		margin-left:-20px;
+		top:830px;
+		line-height: 130%;
+	width: 230px;
+}
+
+	#sec12 p
+	{
+		width: 410px;
+	}
+
+	#sec12 p + p
+	{
+		margin-top:30px;
+	}
+
+	#sec12 .quote
+	{
+		width: 412px;
+		padding-left: 40px;
+	margin-bottom: 0;
+}
+
+	#sec12 .quote:before
+	{
+		left:-5px;
+	}
+
+	#sec12 .quote:after
+	{
+		right:15px;
+	}
+
+#sec13
+{
+	height:771px;
+	position:relative;
+	background-image:url("../img/flyknit/13bg.jpg");
+}
+
+	#sec13 a
+	{
+		display:block;
+		height:100%;
+	}
+
+		#sec13 h1
+		{
+			font-family:'Trade Gothic for Nike 365 BdCn';
+			color:#fff;
+			font-size:40px;
+			line-height:140%;
+			bottom: 180px;
+			position:absolute;
+			left:50%;
+			margin-left:-500px;
+			text-transform:uppercase;
+		}
+
+			#sec13 span
+			{
+				font-family:'FuturaNDforNike365-CnXBd';
+				color:#1B1B1B;
+				font-size:120px;
+				line-height: 82%;
+				letter-spacing:-3px;
+			}
+
+	#sec13 .diamond
+	{
+		color:#f7644d;
+		display:none;
+	}
+
+		#sec13 .diamond .back, #sec13 .diamond .ghost
+		{
+			background-color:#1B1B1B; 
+		}
+
+	#sec13 .arrow
+	{
+		border:2px solid #f7644d;
+		border-left:none;
+		border-bottom:none;
+	}

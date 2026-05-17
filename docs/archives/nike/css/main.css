@@ -1,0 +1,693 @@
+html
+{
+
+}
+
+	body
+	{
+		font-family:'Helvetica', Arial, Sans-Serif;;
+		background-color:#E9E9E9;
+		padding-top:45px;
+		color:#6E6E6E;
+		font-size:15px;
+		line-height: 180%;
+		font-weight:lighter;
+		min-width:1020px;
+	}
+
+	video
+	{
+		background-color:#E9E9E9;
+	}
+
+		body > header
+		{
+			height:45px;
+			position:fixed;
+			width:100%;
+			z-index:2;
+			top:0;
+			background-color:#000;
+		}
+
+			body > header > div
+			{
+				background-image:url("../img/header/swoosh_small.png");
+				background-repeat:no-repeat;
+				width:1020px;
+				margin:0 auto;
+				height:100%;
+				background-position:0 13px;
+			}
+
+				body > header > div > a
+				{
+					text-transform:uppercase;
+					font-family:'Trade Gothic for Nike 365 BdCn';
+					height:100%;
+					display:inline-block;
+					font-size:20px;
+					padding:0 20px;
+					line-height:43px;
+					color:#999;
+				}
+
+				body > header > div > a.selected
+				{
+					color:#FFF;
+				}
+
+				body > header > div > a:first-child
+				{
+					border-left:1px solid #4D4D4D;
+					margin-left:100px;
+				}
+				
+				body > header > div > a + a
+				{
+				}
+
+				body > header > div a div
+				{
+					-webkit-transform:rotate(45deg);
+					-ms-transform:rotate(45deg);
+					transform:rotate(45deg);
+					width:7px;
+					height:7px;
+					border:2px solid #FFF;
+					border-left:none;
+					border-top:none;
+					display:inline-block;
+					position:relative;
+					top:-4px;
+					left:10px;
+				}
+
+			body > header ul
+			{
+				-webkit-transition:top 0.5s;
+				-moz-transition:top 0.5s;
+				transition:top 0.5s;
+				height:737px;
+				top:-737px;
+				position:absolute;
+				width:100%;
+			}
+
+			body > header.open ul
+			{
+				top:0;
+			}
+
+				body > header li
+				{
+					text-transform:uppercase;
+					width:20%;
+					height:100%;
+					overflow:hidden;
+					position:absolute;
+					top:0;
+					left:0;
+				}
+
+				body > header li + li
+				{
+					margin-left:-1px;
+					border-left:1px solid #2E2E2E;
+					left:20%;
+				}
+
+				body > header li + li + li
+				{
+					left:40%;
+				}
+
+				body > header li + li + li + li
+				{
+					left:60%;
+				}
+
+				body > header li + li + li + li + li
+				{
+					left:80%;
+				}
+
+					body > header li a
+					{
+						display:block;
+						height:100%;
+						color:#FFF;
+					}
+
+						body > header h1
+						{
+							background-repeat:no-repeat;
+							background-size:cover;
+							background-position:center center;
+							height:210px; 
+							font-family:'FuturaNDforNike365-CnXBd';
+							font-size:82px;
+							line-height:85%;
+							padding-left:15px;
+							padding-top:470px;
+							background-color:#000;
+						}
+
+						body > header li:first-child h1
+						{
+							background-size:auto;
+							background-position:center 540px;
+							background-image:url("../img/header/swoosh.png");
+						}
+
+						body > header li:first-child + li h1
+						{
+							background-image:url("../img/header/1.jpg");
+						}
+
+						body > header li:first-child + li + li h1
+						{
+							background-image:url("../img/header/2.jpg");
+						}
+
+						body > header li:first-child + li + li + li h1
+						{
+							background-image:url("../img/header/3.jpg");
+						}
+
+						body > header li:first-child + li + li + li + li h1
+						{
+							background-image:url("../img/header/4.jpg");
+						}
+
+						body > header.open li h1
+						{
+							text-shadow:0 0 10px rgba(0,0,0,0.3);
+							filter:dropshadow(color=#000, offx=0, offy=0); 
+						}
+
+						body > header h2
+						{
+							height:56px;
+							line-height:56px;
+							font-family:'Trade Gothic for Nike 365 BdCn';
+							background-color:#000;
+							font-size:20px;
+							padding-left: 15px;
+							-webkit-transition:background-color 0.5s;
+							-moz-transition:background-color 0.5s;
+							transition:background-color 0.5s;
+							border-top:1px solid #2E2E2E;
+						}
+
+						body > header li:first-child h2
+						{
+							text-align:center;
+						}
+						
+						body > header li:first-child + li:hover h2
+						{
+							background-color:#A6EF00;
+						}
+
+						body > header li:first-child + li + li:hover h2
+						{
+							background-color:#232A36;
+						}
+
+						body > header li:first-child + li + li + li:hover h2
+						{
+							background-color:#1AB5DC;
+						}
+
+						body > header li:first-child + li + li + li + li:hover h2
+						{
+							background-color:#8498A5;
+						}
+
+						body > header h2:after
+						{
+							background-color:rgba(0,0,0,0.6);
+							position:absolute;
+							width:100%;
+							height:680px;
+    						-webkit-transition:background-color 0.5s;
+							-moz-transition:background-color 0.5s;
+							transition:background-color 0.5s;
+							top:0;
+							content:"";
+							left:0;
+						}
+
+						body > header li.open h2:after
+						{
+							background-color:rgba(0,0,0,0);
+						}
+
+body > section + section
+{
+	overflow:hidden;
+	position:relative;
+}
+
+video
+{
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+
+.end
+{
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+	background-attachment:fixed;
+	background-color:#828282; 
+}
+
+.headline
+{
+	background-color:#828282; 
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+	position:relative;
+	text-transform:uppercase;
+	background-attachment:fixed;
+	text-align: center;
+	padding:200px 50px;
+}
+
+	.headline h1
+	{
+		font-size:115px;
+		font-family:'FuturaNDforNike365-CnXBd';
+		margin:0 auto;
+		font-size:118px;
+		line-height:100%;
+		letter-spacing:-3px;
+	}
+
+	.headline h2
+	{
+		font-size:38px;
+		font-family:'Trade Gothic for Nike 365 BdCn';
+		line-height: 100%;
+		margin:0 auto;
+		color:#FFF;
+	}
+	
+		.headline h2 span
+		{
+			font-family:'FuturaNDforNike365-CnXBd';
+			font-size:37px;
+		}
+
+.photoCred
+{
+	text-transform:uppercase;
+	color:#FFF;
+	position:absolute;
+	left:50%;
+	text-shadow:0 0 10px rgba(0,0,0,0.5);
+	filter:dropshadow(color=#000, offx=0, offy=0); 
+}
+
+	.photoCred h1
+	{
+		font-family:'FuturaNDforNike365-CnXBd';
+		font-size:20px;
+		line-height:90%;
+		margin-bottom:5px;
+	}
+
+	.photoCred h2
+	{
+		line-height:110%;
+		font-size:15px;
+		font-family:'Trade Gothic for Nike 365 BdCn';
+	}
+
+.quote
+{
+	background-color:#E9E9E9;
+	font-family:'Trade Gothic for Nike 365 BdCn';
+	text-transform:uppercase;
+	font-size:33px;
+	color:#454646;
+	position:relative;
+	line-height:95%;
+	margin-bottom:20px;
+	padding:18px 50px 17px 60px;
+}
+
+	.quote::before, .quote::after
+	{
+		content:"“";
+		font-size:100px;
+		top:43px;
+		left:10px;
+		position:absolute;
+	}
+
+	.quote::after
+	{
+		content:"”";
+		left:auto;
+		right:0;
+		top:41px;
+		
+	}
+
+	.quote span
+	{
+		color:#A3C736;
+		font-size:22px;
+		display:block;
+	}
+
+.diamond
+{
+	position:absolute;
+	width:0;
+	height:0;
+	left:50%;
+	bottom:50%;
+}
+
+section + section .diamond
+{
+	cursor:pointer;
+}
+
+#sec1 .diamond
+{
+	bottom:15px;
+}
+
+	.diamond .back
+	{
+		position:absolute;
+		width:80px;
+		height:80px;
+		left:-40px;
+		top:-40px;
+		-webkit-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+		transform:rotate(45deg);
+	}
+
+	.diamond:hover .back
+	{
+		width:90px;
+		height:90px;
+		left:-45px;
+		top:-45px;
+	}
+
+	.diamond.green .back, .diamond.green .ghost
+	{
+		background-color:#A3C736;
+	}
+
+	.diamond.gray .back, .diamond.gray .ghost
+	{
+		background-color:#2D3841;
+	}
+
+	.diamond.blue .back, .diamond.blue .ghost
+	{
+		background-color:#25B7E0;
+	}
+
+	.diamond.orange .back, .diamond.orange .ghost
+	{
+		background-color:#F7644D;
+	}
+
+	.diamond.white .back, .diamond.white .ghost
+	{
+		background-color:#FFF;
+	}
+
+	.diamond p
+	{
+		position:absolute;
+		font-family:'Trade Gothic for Nike 365 BdCn';
+		text-transform:uppercase;
+		font-size:20px;
+		text-align: center;
+		width:110px;
+		left:-55px;
+		line-height:100%;
+	}
+
+	.diamond.green p, .diamond.blue p, .diamond.orange p
+	{
+		color:#FFF;
+	}
+
+	.diamond.white p, .diamond.gray p
+	{
+		color:#A3C736;
+	}
+
+	.diamond p.oneLine
+	{
+		top:-10px;
+	}
+
+	.diamond p.twoLine
+	{
+		top:-20px;
+	}
+
+	.diamond.green .arrow, .diamond.blue .arrow, .diamond.orange .arrow
+	{
+		border-color:#FFF;
+	}
+
+	.diamond.white .arrow, .diamond.gray .arrow
+	{
+		border-color:#A3C736;
+	}
+
+	.diamond .arrow
+	{
+		border:2px solid;
+		border-left:none;
+		width:6px;
+		height:6px;
+		-webkit-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+		transform:rotate(45deg);
+		position: absolute;
+		-webkit-animation-duration:1s;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-timing-function: linear;
+		animation-duration:1s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+	}
+
+	.diamond.down .arrow
+	{
+		top:30px;
+		left:50%;
+		margin-left:-4px;
+		border-top:none;
+		-webkit-animation-name: slideDown;
+		animation-name: slideDown;
+	}
+
+	.diamond.over .arrow
+	{
+		top:-4px;
+		left:35px;
+		border-bottom:none;
+		-webkit-animation-name: slideOver;
+		animation-name: slideOver;
+	}
+
+	.diamond .ghost
+	{
+		position:absolute;
+		-webkit-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+		transform:rotate(45deg);
+		opacity:0.5;
+		width:80px;
+		height:80px;
+	}
+
+	.diamond.down .ghost
+	{
+		left:-40px;
+		top:-25px;
+	}
+
+	.diamond.over .ghost
+	{
+		left:-25px;
+		top:-40px;
+	}
+
+	@-webkit-keyframes slideDown
+	{
+		from
+		{
+			top:30px;
+			opacity:1;
+		}
+
+		to
+		{
+			top:40px;
+			opacity:0;
+		}
+	}
+
+	@-webkit-keyframes slideOver
+	{
+		from
+		{
+			margin-left:0px;
+			opacity:1;
+		}
+
+		to
+		{
+			margin-left:10px;
+			opacity:0;
+		}
+	}
+
+	@keyframes slideDown
+	{
+		from
+		{
+			top:30px;
+			opacity:1;
+		}
+
+		to
+		{
+			top:40px;
+			opacity:0;
+		}
+	}
+
+	@keyframes slideOver
+	{
+		from
+		{
+			left:35px;
+			opacity:1;
+		}
+
+		to
+		{
+			left:45px;
+			opacity:0;
+		}
+	}
+
+#simplemodal-overlay
+{
+	background-color:#000;
+}
+
+.simplemodal-close
+{
+	color:#000;
+	position:absolute;
+	right:20px;
+	top:10px;
+}
+
+#simplemodal-container
+{
+	padding-top:5px;
+	padding-bottom:5px;
+	background-color:#FFF;
+}
+
+body > footer
+{
+	position:fixed;
+	bottom:0;
+	left:15%;
+	z-index:1;
+}
+
+	body > footer ul
+	{
+
+	}
+
+		body > footer li
+		{
+			line-height:34px;
+			text-transform:uppercase;
+			color:#7A7B7B;
+			float:left;
+			font-size:22px;
+			font-family:'Trade Gothic for Nike 365 BdCn';
+			vertical-align:bottom;
+			position:relative;
+			height:64px;
+			width:32px;
+			-webkit-transition:color 0.2s;
+			-moz-transition:color 0.2s;
+			transition:color 0.2s;
+		}
+
+		body > footer li:hover
+		{
+			color:#FFF;
+		}
+
+			body > footer a
+			{
+				
+			}
+
+				body > footer h1
+				{
+					background-color:#454646;
+					height:0;
+					padding: 0 9px;
+					overflow:hidden;
+					position:absolute;
+					bottom:32px;
+					left:0;
+					-webkit-transition:height 0.2s, background-color 0.2s;
+					-moz-transition:height 0.2s, background-color 0.2s;
+					transition:height 0.2s, background-color 0.2s;
+				}
+
+				body > footer li:hover h1
+				{
+					background-color:#A3C736;
+					height:32px;
+				}
+
+				body > footer p
+				{
+					position:absolute;
+					top:32px;
+					left:0;
+					background-color:#454646;
+					width:32px;
+					height:32px;
+					text-align:center;
+					-webkit-transition:background-color 0.2s;
+					-moz-transition:background-color 0.2s;
+					transition:background-color 0.2s;
+				}
+
+				body > footer li:hover p
+				{
+					background-color:#A3C736;
+				}

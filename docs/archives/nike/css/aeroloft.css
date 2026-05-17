@@ -1,0 +1,479 @@
+.headline h1
+{
+	color:#BFEA3D;
+	line-height: 100%;
+}
+
+#sec1
+{
+	height:693px;
+	position:relative;
+	text-transform:uppercase;
+	text-align: center;
+	background-image:url("../img/aeroloft/1bg.jpg");
+}
+
+	#sec1 h1
+	{
+		font-family:'Trade Gothic for Nike 365 BdCn';
+		color:#A3C736;
+		font-size: 40px;
+		position: absolute;
+		margin-left: -560px;
+		top: 220px;
+		left: 50%;
+		line-height:100%;
+		width: 500px;
+}
+
+	#sec1 h2
+	{
+		font-family:'FuturaNDforNike365-CnXBd';
+		color:#FFF;
+		font-size: 75px;
+		width: 500px;
+		position: absolute;
+		left: 50%;
+		margin-left: -560px;
+		line-height: 85%;
+		top: 268px;
+		letter-spacing:-2px;
+	}
+
+	.diamond.white p
+	{
+		color:#25B7E0;
+	}
+
+	.diamond.white .arrow, .diamond.gray .arrow
+	{
+		border-color:#25B7E0;
+	}
+
+#sec2
+{
+	position:relative;
+	padding-top:485px;
+	background-image:url('../img/aeroloft/2vest.jpg');
+	background-position:47% 90px;
+	background-repeat: no-repeat;
+}
+
+	#sec2 h1
+	{
+		font-family:'Trade Gothic for Nike 365 BdCn';
+		text-align:center;
+		width:850px;
+		margin:0 auto 70px;
+		text-transform:uppercase;
+		color:#454645;
+		font-size: 40px;
+		line-height: 90%;
+		letter-spacing: -1px;
+	}
+
+	#sec2 h1:before, #sec2 h1:after
+	{
+		content:"";
+		display:block;
+		height:3px;
+		width:540px;
+		margin:34px auto 30px;
+		background-color:#CBCBCB
+	}
+
+		#sec2 h1 span
+		{
+			color:#A3C736;
+		}
+
+	#sec2 p
+	{
+		width:710px;
+		margin:0 auto 130px;
+	}
+
+#sec3
+{
+	background-image:url("../img/aeroloft/3bg.jpg");
+}
+
+#sec4
+{
+	width:1020px;
+	margin:0 auto;
+	padding: 150px 0 170px;
+}
+
+	#sec4 img
+	{
+		float:left;
+	}
+
+	#sec4 p
+	{
+		float:right;
+		width:380px;
+	}
+
+	#sec4 p + p
+	{
+		margin-top:30px;
+	}
+
+	#sec4 .quote
+	{
+		float:right;
+		width:323px;
+		font-size: 25px;
+		margin-left: -72px;
+		margin-bottom: 0;
+}
+
+	#sec4 .photoCred
+	{
+		left:15px;
+		top: 924px;
+	}
+
+#sec5
+{
+	background-image:url("../img/aeroloft/5bg.jpg");
+}
+
+#sec6
+{
+	width:1021px;
+	margin:0 auto;
+	padding: 150px 0;
+}
+
+	#sec6 article
+	{
+		width:470px;
+		float:left;
+	}
+
+		#sec6 p + p
+		{
+			margin-top:30px;
+		}
+
+		#sec6 .quote
+		{	
+			padding-left: 50px;
+			padding-right: 30px;
+			margin-bottom: 0;
+			margin-top: 46px;
+			width: 410px;
+		}
+
+		#sec6 .quote:before
+		{
+			left:0;
+		}
+		
+	#sec6 article + article
+	{
+		float:right;
+	}
+
+		#sec6 >div
+		{
+			clear:both;
+			position: relative;
+		}
+
+		#sec6 img
+		{
+			padding-top: 80px;
+	}
+
+		#sec6 img + .photoCred
+		{
+			top:529px;
+			left:15px;
+		}
+
+		#sec6 img + .photoCred + .photoCred
+		{
+			top:529px;
+			left:370px;
+		}
+
+		#sec6 .photoCred + .photoCred + .photoCred
+		{
+			top:529px;
+			left:770px;
+		}
+
+#secVid
+{
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+	position:relative;
+	height:770px;
+	background-image:url("../img/aeroloft/vidBG.jpg");
+	background-color:#828282;
+}
+
+	#secVid iframe
+	{
+		margin:192.5px auto;
+		display:block;
+	}
+
+	#secVid .diamond
+	{
+		top: 50%;
+		opacity:0;
+		display:none;
+	}
+
+	#secVid div
+	{
+		text-transform:uppercase;
+		color:#FFF;
+		font-family:'FuturaNDforNike365-CnXBd';
+		font-size:75px;
+		line-height:70px;
+		letter-spacing: 39px;
+		position:relative;
+		z-index:1;
+		cursor:pointer;
+	}
+
+		#secVid div > h1
+		{
+
+		}
+
+			#secVid div > span
+			{
+				width:70px;
+				height:70px;
+				background-color:rgba(233,233,233,1);
+				text-align:center;
+				letter-spacing:0;
+				position:absolute;
+			}
+
+#sec8
+{
+	background-image:url("../img/aeroloft/8bg.jpg");
+}
+
+#sec9
+{
+	width: 1020px;
+	margin:0 auto;
+	padding: 110px 0px;
+}
+
+	#sec9 img
+	{
+		float:right;
+	}
+
+	#sec9 p
+	{
+		float:left;
+		width:380px;
+	}
+
+	#sec9 p + p
+	{
+		margin-top:30px;
+	}
+
+	#sec9 .quote
+	{
+		float:left;
+		width:320px;
+		margin-right: -20px;
+	padding-left: 50px;
+	margin-bottom: 0;
+}
+	#sec9 .quote:before
+	{
+		left:-6px;
+	}
+
+	#sec9 .quote:after
+	{
+		
+		right: 17px;
+}
+
+	#sec9 .photoCred
+	{
+		top:842px;
+		left:417px;
+	}
+
+#sec10
+{
+	background-image:url("../img/aeroloft/10bg.jpg");
+}
+
+#sec11
+{
+	width:1020px;
+	margin:0 auto;
+	padding: 160px 0;
+}
+
+	#sec11 div
+	{
+		float:right;
+		width:620px;
+	}
+
+		#sec11 p + p
+		{
+			margin-top:30px;
+		}
+
+	#sec11 div:first-child
+	{
+		width:365px;
+		float:left;
+	}
+
+		#sec11 .quote
+		{
+			padding-left: 50px;
+			margin-top: 30px;
+		}
+
+		#sec11 .quote:before
+		{
+			left:0;
+		}
+
+		#sec11 .quote:after
+		{
+			right:0;
+		}
+
+	#sec11 .photoCred
+	{
+		top: 508px;
+		left: 415px;
+	}
+		#sec11 .photoCred .mannequin {
+			left: 795px;
+		}
+
+#sec12
+{
+	background-image:url("../img/aeroloft/12bg.jpg");
+}
+
+	#sec13
+	{
+		width:1020px;
+		margin:0 auto;
+		padding: 180px 0px 100px;
+	}
+
+		#sec13 div
+		{
+			width:539px;
+			float:right;
+		}
+
+		#sec13 div:first-child
+		{
+			width:420px;
+			float:left;
+		}
+
+			#sec13 p + p
+			{
+				margin-top:30px;
+			}
+
+		#sec13 .quote
+		{
+			padding-left:50px;
+			margin-bottom:0;
+			font-size: 28px;
+			width:416px;
+		}
+
+			#sec13 .quote:before
+			{
+				left:0;
+			}
+
+			#sec13 .quote:after
+			{
+
+			}
+
+			#sec13 .photoCred
+			{
+				top:818px;
+				left:496px;
+			}
+
+#sec14
+{
+	height:778px;
+	position:relative;
+	background-image:url("../img/aeroloft/14bg.jpg");
+}
+
+	#sec14 a
+	{
+		display:block;
+		height:100%;
+	}
+
+		#sec14 h1
+		{
+			font-family:'Trade Gothic for Nike 365 BdCn';
+			color:#FFF;
+			font-size:40px;
+			line-height:140%;
+			bottom: 180px;
+			position:absolute;
+			left:50%;
+			margin-left:-500px;
+			text-transform:uppercase;
+		}
+
+			#sec14 span
+			{
+				font-family:'FuturaNDforNike365-CnXBd';
+				color:#62cbe9;
+				font-size:120px;
+				line-height: 82%;
+				letter-spacing:-3px;
+			}
+
+		#sec14 .diamond
+		{
+			color:#62cbe9;
+			display:none;
+		}
+
+		.black.diamond::before, .black.diamond .ghost::before
+	{
+		border-bottom-color:#FFF;
+	}
+
+	.black.diamond::after, .black.diamond .ghost::after
+	{
+		top: 16px;
+		border-top-color:#FFF;
+	}
+
+	.black.diamond .arrow
+	{
+		border:2px solid #62cbe9;
+		border-left:none;
+		border-bottom:none;
+	}

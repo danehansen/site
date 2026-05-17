@@ -1,0 +1,77 @@
+body > header > div a div, .arrow, .ghost, .diamond .back, #flyknit #sec2 > div, video, #secVid > div
+{
+	display:none;
+}
+
+.diamond
+{
+	height:77px;
+	width:110px;
+	margin-left:-55px;
+	background-repeat:no-repeat;
+	background-position:center 0;
+	padding-top:48px;
+	margin-bottom:-70px;
+}
+
+	.diamond p
+	{
+		margin-top:55px;
+		margin-left:55px;	
+	}
+
+.diamond.over
+{
+	margin-left:-62px;
+	width:124px;
+	padding-top:37px;
+	height:74px;
+	background-image:url("../img/diamond_h.png");
+	padding-right:13px;
+}
+
+#secVid .diamond
+{
+	display:block;
+	opacity:1;
+}
+
+#hyperfeel #sec1 .diamond, #aeroloft #sec1 .diamond
+{
+	background-image:url("../img/diamond_green_white_down.png");
+}
+
+#hyperfeel #secVid .diamond
+{
+	background-image:url("../img/diamond_white_green_down.png");
+}
+
+#hyperfeel #sec13 .diamond
+{
+	background-image:url("../img/diamond_gray_green_over.png");
+}
+
+#aeroloft #sec14 .diamond
+{
+	background-image:url("../img/diamond_white_blue_over.png");
+}
+
+#flyknit #sec1 .diamond
+{
+	background-image:url("../img/diamond_blue_white_down.png");
+}
+
+#flyknit #sec13 .diamond
+{
+	background-image:url("../img/diamond_black_orange_over.png");
+}
+
+#drifit #sec1 .diamond
+{
+	background-image:url("../img/diamond_orange_white_down.png");
+}
+
+#drifit #sec13 .diamond
+{
+	background-image:url("../img/diamond_black_green_over.png");
+}

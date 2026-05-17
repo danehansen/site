@@ -1,0 +1,700 @@
+.headline h1
+{
+	color:#BFEA3D;
+}
+
+#sec1
+{
+	height:693px;
+	position:relative;
+	background-image:url("../img/hyperfeel/sec1/bg.jpg");
+	text-transform:uppercase;
+	text-align: center;
+}
+
+	#sec1 h1
+	{
+		font-family:'Trade Gothic for Nike 365 BdCn';
+		color:#A3C736;
+		font-size: 40px;
+		position: absolute;
+		margin-left: -560px;
+		top: 220px;
+		left: 50%;
+		line-height:100%;
+		width: 500px;
+}
+
+	#sec1 h2
+	{
+		font-family:'FuturaNDforNike365-CnXBd';
+		color:#252525;
+		font-size: 75px;
+		width: 500px;
+		position: absolute;
+		left: 50%;
+		margin-left: -560px;
+		line-height: 85%;
+		top: 268px;
+		letter-spacing:-2px;
+	}
+
+#sec2
+{
+	position:relative;
+	padding-top:225px;
+}
+
+	#sec2 h1
+	{
+		font-family:'Trade Gothic for Nike 365 BdCn';
+		text-align:center;
+		width:700px;
+		margin:0 auto 70px;
+		text-transform:uppercase;
+		color:#454645;
+		font-size: 40px;
+		line-height: 90%;
+		letter-spacing: -1px;
+	}
+
+	#sec2 h1:before, #sec2 h1:after
+	{
+		content:"";
+		display:block;
+		height:3px;
+		width:540px;
+		margin:34px auto 30px;
+		background-color:#CBCBCB
+	}
+
+		#sec2 h1 span
+		{
+			color:#A3C736;
+		}
+
+	#sec2 p
+	{
+		width:690px;
+		margin:0 auto 130px;
+	}
+
+		#sec2 img:first-child
+		{
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:-1;
+		}
+
+		#sec2 img + img
+		{
+			z-index:-1;
+			position:absolute;
+			bottom:0;
+			right:0;
+		}
+
+#sec3
+{
+	background-image:url("../img/hyperfeel/sec3/bg.jpg");
+}
+
+#sec4
+{
+	width:1020px;
+	margin:0 auto;
+	padding-top:156px;
+	position: relative;
+	padding-bottom: 100px;
+}
+
+	#sec4 img
+	{
+		float:left;
+		margin-bottom: 70px;
+	}
+
+	#sec4 .photoCred
+	{
+		top:802px;
+		margin-left:-495px;
+	}
+
+	#sec4 p
+	{
+		float:right;
+		width:380px;
+		margin-top: -6px;
+	}
+
+	#sec4 p + p
+	{
+		margin-top:20px;
+	}
+
+	#sec4 .quote
+	{
+		width:328px;
+		float:right;
+		font-size: 25px;
+		margin-left: -31px;
+		padding-left:53px;
+	}
+
+	#sec4 p + p + h1
+	{
+		float:left;
+		clear:both;
+		font-family:'FuturaNDforNike365-CnXBd';
+		text-transform:uppercase;
+		line-height:80%;
+		font-size:60px;
+		margin-right:30px;
+		width:200px;
+	}
+
+	#sec4 ul
+	{
+
+	}
+
+		#sec4 li
+		{
+			float:left;
+			height:100px;
+			margin-bottom:60px;
+			width:350px;
+			border-left:10px solid #AACA4D;
+			margin-right: 50px;
+			padding-left: 10px;
+			margin-top: 20px;
+			position: relative;
+		}
+
+			#sec4 li div
+			{
+				position:absolute;
+				width:100%;
+				height:140%;
+				background-color:#E9E9E9;
+				top:0;
+				right:0;
+			}
+
+		#sec4 li:first-child + li
+		{
+			margin-right:0px;
+		}
+
+		#sec4 li:first-child + li + li
+		{
+			margin-left:230px;
+		}
+
+		#sec4 li + li + li + li
+		{
+			margin-right:0;
+		}
+
+
+#secVid
+{
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+	position:relative;
+	height:700px;
+	background-image:url("../img/hyperfeel/secVid/bg.jpg");
+	background-color:#828282;
+}
+
+	#secVid iframe
+	{
+		margin:192.5px auto;
+		display:block;
+	}
+
+	#secVid .diamond
+	{
+		display:none;
+	}
+
+	#secVid > div
+	{
+		text-transform:uppercase;
+		color:#FFF;
+		font-family:'FuturaNDforNike365-CnXBd';
+		font-size:75px;
+		line-height:70px;
+		letter-spacing: 39px;
+		position:relative;
+		z-index:1;
+		cursor:pointer;
+	}
+
+		#secVid div > h1
+		{
+
+		}
+
+			#secVid div > span
+			{
+				width:70px;
+				height:70px;
+				background-color:rgba(233,233,233,1);
+				text-align:center;
+				letter-spacing:0;
+				position:absolute;
+				line-height: 87px;
+}
+
+	#secVid > p
+	{
+		text-transform:uppercase;
+		font-family:'Trade Gothic for Nike 365 BdCn';
+		background-color:#FFF;
+		color:#000;
+		position:absolute;
+		top:50px;
+		left:50px;
+		z-index:1;
+		font-size:17px;
+		padding: 7px 7px 3px;
+		line-height: 100%;
+		display:none;
+		left:-500px;
+	}
+
+		#secVid > p:after
+		{
+			content:"";
+			position:absolute;
+			left:50%;
+			margin-left:-6px;
+			top:-12px;
+			border:6px solid transparent;
+			border-bottom-color:#FFF;
+		}
+
+#sec5
+{
+	background-image:url("../img/hyperfeel/sec5/bg.jpg");
+}
+
+#sec6
+{
+	width:1016px;
+	margin:0 auto;
+	padding-top:156px;
+	padding-bottom:190px;
+	position:relative;
+}
+
+	#sec6 article
+	{
+		margin-bottom:110px;
+	}
+
+	#sec6 article:first-child
+	{
+		float:right;
+		width:620px;
+		position:relative;
+	}
+
+		#sec6 article img
+		{
+			display:block;			
+		}
+
+		#sec6 .photoCred
+		{
+			top:733px;
+			margin-left:-295px;
+		}
+
+		#sec6 .photoCred + .photoCred
+		{
+			margin-left:120px;
+		}
+
+		#sec6 article:first-child .quote
+		{
+			padding-left:45px;
+			padding-right: 35px;
+			margin-top: 14px;
+			margin-left:30px;
+			margin-right:30px;
+		}
+
+		#sec6 article:first-child .quote:before
+		{
+			left:0;
+		}
+
+	#sec6 article + article
+	{
+		margin-top:-6px;
+		float:left;
+		width:380px;
+	}
+
+		#sec6 p
+		{
+		}
+
+		#sec6 p + p
+		{
+			margin-top:20px;
+		}
+
+		#sec6 h1 + p
+		{
+		}
+
+		#sec6 article + article .quote
+		{
+			padding-left:36px;
+			padding-right:10px;
+			width:370px;
+			margin-bottom:0;
+		}
+
+		#sec6 article + article .quote:before
+		{
+			left:-6px;
+		}
+
+		#sec6 article + article .quote:after
+		{
+			right:12px;
+		}
+
+	#sec6 > div
+	{
+		clear:both;
+		margin-bottom: 35px;
+		position:relative;
+		width:1016px;
+		height:632px;
+		background-image:url("../img/hyperfeel/sec6/shoe_bg.jpg");
+	}
+
+		#sec6 #insole
+		{
+			position:absolute;
+			top:216px;
+			left:494px;
+		}
+
+		#sec6 #clear
+		{
+			position:absolute;
+			top:153px;
+			left:275px;
+		}
+
+		#sec6 #upper
+		{
+			position:absolute;
+			top:152px;
+			left:38px;
+		}
+
+		#sec6 #sole
+		{
+			position:absolute;
+			top:215px;
+			left:689px;
+		}
+
+		#sec6 > div h1
+		{
+			color:#AACA4D;
+			position:absolute;
+			text-transform:uppercase;
+			font-size:85px;
+			font-family:'FuturaNDforNike365-CnXBd';
+			line-height: 80%;
+			top:-46px;
+		}
+
+	#sec6 nav
+	{
+		height:3px;
+		background-color:#CDCDCD;
+		position:relative;
+	}
+
+		#sec6 a
+		{
+			display:block;
+			height:3px;
+			background-color:#A3C736;
+			width:340px;
+			text-transform:uppercase;
+			color:#A3C736;
+			font-family:'Trade Gothic for Nike 365 BdCn';
+			font-size: 21px;
+			text-align: center;
+			line-height: 70px;
+			position: absolute;
+			left:0;
+		}
+
+		#sec6 a:before, #sec6 a:after
+		{
+			border:10px solid transparent;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			content:"";
+			margin-left: -10px;
+		}
+
+		#sec6 a:before
+		{
+			border-bottom-color:#A3C736;
+			top: -20px;
+		}
+
+		#sec6 a:after
+		{
+			border-top-color:#A3C736;
+			top: 3px;
+		}
+
+#sec7
+{
+	background-image:url("../img/hyperfeel/sec7/bg.jpg");
+}
+
+#sec8
+{
+	position:relative;
+	width:1020px;
+	margin:0 auto;
+	padding: 150px 0;
+}
+
+	#sec8 div:first-child
+	{
+		width:480px;
+		float:left;
+	}
+
+	#sec8 div:first-child + div
+	{
+		width:480px;
+		float:right;
+	}
+
+		#sec8 p
+		{
+			margin-bottom:20px;
+		}
+
+		#sec8 .quote
+		{
+			width: 392px;
+			margin-bottom:-20px;
+			font-size: 30px;
+			padding-left: 45px;
+			padding-right: 43px;
+			position:relative;
+			z-index:1;
+}
+
+		#sec8 div .quote:before
+		{
+			left: 0;
+		}
+		
+	#sec8 div + div + div
+	{
+		clear: both;
+		position:relative;
+	}
+
+	#sec8 .photoCred
+	{
+		margin-left:-494px;
+		top:449px;
+	}
+	
+#sec9
+{
+	background-image:url("../img/hyperfeel/sec9/bg.jpg");
+}
+
+#sec10
+{
+	padding:160px 0 60px;
+	margin: 0 auto;
+	width: 1020px;
+}
+
+	#sec10 > div:first-child
+	{
+		width: 360px;
+		float:left;
+}
+
+		#sec10 p
+		{
+
+		}
+
+		#sec10 p + p
+		{
+			margin-top:30px;
+		}
+
+		#sec10 .quote
+		{
+			padding-left:38px;
+			font-size: 30px;
+			width: 320px;
+			margin-bottom: 0;
+		}
+
+		#sec10 .quote:before
+		{
+			left:-6px;
+		}
+
+		#sec10 .quote:after
+		{
+
+			right: 20px;
+}
+
+	#sec10 > div + div
+	{
+		width:620px;
+		float:right;
+		position: relative;
+	}
+
+		#sec10 img
+		{
+
+			margin-bottom: 10px;
+}
+
+		#sec10 img:first-child + .photoCred
+		{
+			left:15px;
+			top:348px;
+		}
+
+		#sec10 .photoCred + img + .photoCred
+		{
+			top:755px;
+			left:15px;
+		}
+
+#sec11
+{
+	background-image:url("../img/hyperfeel/sec11/bg.jpg");
+}
+
+#sec12
+{
+	margin:0 auto;
+	width:1020px;
+	padding: 170px 0;
+	position:relative;
+}
+
+	#sec12 img
+	{
+		float:right;
+	}
+
+	#sec12 .photoCred
+	{
+		margin-left: 315px;
+		text-align: right;
+		top:810px;
+	}
+
+	#sec12 p
+	{
+		width: 410px;
+	}
+
+	#sec12 p + p
+	{
+		margin-top:30px;
+	}
+
+	#sec12 .quote
+	{
+		width: 410px;
+		padding-left: 40px;
+		padding-right: 0px;
+		margin-bottom: 0;
+		font-size: 30px;
+	}
+
+	#sec12 .quote:before
+	{
+		left:-5px;
+	}
+
+	#sec12 .quote:after
+	{
+		right:11px;
+	}
+
+#sec13
+{
+	height:771px;
+	position:relative;
+	background-image:url("../img/hyperfeel/sec13/bg.jpg");
+}
+
+	#sec13 a
+	{
+		display:block;
+		height:100%;
+	}
+
+		#sec13 h1
+		{
+			font-family:'Trade Gothic for Nike 365 BdCn';
+			color:#fff;
+			font-size:40px;
+			line-height:140%;
+			bottom: 220px;
+			position:absolute;
+			left:50%;
+			margin-left:-500px;
+			text-transform:uppercase;
+		}
+
+			#sec13 span
+			{
+				font-family:'FuturaNDforNike365-CnXBd';
+				color:#a3c736;
+				font-size:120px;
+				line-height: 82%;
+				letter-spacing:-3px;
+}
+
+	#sec13 .diamond
+	{
+		display:none;
+	}
+
+	#sec13 .diamond:before, #sec13 .ghost:before
+	{
+		border-bottom-color:#2d3841;
+	}
+
+	#sec13 .diamond:after, #sec13 .ghost:after
+	{
+		border-top-color:#2d3841;
+	}
