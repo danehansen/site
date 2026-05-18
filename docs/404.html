@@ -3,26 +3,21 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Dane Hansen's website</title>
 </head>
 
 <body>
-  <h1>404 - page not found</h1>
 </body>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XCRQF0PSH"></script>
 <script>
   (function () {
-    (function () {
-      window.dataLayer = window.dataLayer || [];
-      gtag('js', new Date());
-      gtag('config', 'G-8XCRQF0PSH');
-      gtag('event', 'custom_page_view', { arg: '404' });
-      const { pathname } = window.location;
-      localStorage.setItem('pathname', pathname);
-      console.log('404', { pathname });
-      window.location.href = '/';
-    })();
+    window.dataLayer = window.dataLayer || [];
+    gtag('js', new Date());
+    gtag('config', 'G-8XCRQF0PSH');
+    const { pathname } = window.location;
+    gtag('event', 'custom_page_view', { arg: '404', pathname });
+    localStorage.setItem('pathname', pathname);
+    window.location.href = '/';
 
     function gtag() {
       dataLayer.push(arguments);
