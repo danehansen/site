@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <link rel='shortcut icon' href='./favicon.ico'>
   <title>Dane Hansen's website</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8XCRQF0PSH"></script>
 </head>
 
 <body>
@@ -411,36 +412,34 @@
     </li>
   </ul>
 
-</body>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8XCRQF0PSH"></script>
-<script>
-  (function () {
+  <script>
     (function () {
-      window.dataLayer = window.dataLayer || [];
-      gtag('js', new Date());
-      gtag('config', 'G-8XCRQF0PSH');
-      setTimeout(() => {
-        gtag('event', 'custom_page_view', { arg: 'page view' });
-      }, 1000)
-      document.querySelectorAll('[data-track-link]').forEach((e) => {
-        e.addEventListener('click', trackClick)
-      })
-      const pathname = localStorage.getItem('pathname');
-      if (pathname) {
-        localStorage.removeItem('pathname');
-        console.log('index', { pathname });
+      (function () {
+        window.dataLayer = window.dataLayer || [];
+        gtag('js', new Date());
+        gtag('config', 'G-8XCRQF0PSH');
+        setTimeout(() => {
+          gtag('event', 'custom_page_view', { arg: 'page view' });
+        }, 1000)
+        document.querySelectorAll('[data-track-link]').forEach((e) => {
+          e.addEventListener('click', trackClick)
+        })
+        const pathname = localStorage.getItem('pathname');
+        if (pathname) {
+          localStorage.removeItem('pathname');
+          console.log('index', { pathname });
+        }
+      })();
+
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    })();
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    function trackClick(evt) {
-      gtag('event', 'custom_select_content', { arg: evt.target.getAttribute('data-track-link') })
-    }
-  })()
-</script>
+      function trackClick(evt) {
+        gtag('event', 'custom_select_content', { arg: evt.target.getAttribute('data-track-link') })
+      }
+    })()
+  </script>
+</body>
 
 </html>
